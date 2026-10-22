@@ -402,30 +402,17 @@ function buildViewUI(fc) {
   const hint = $('#view-mode-hint');
   if (!box) return;
 
-  const setHint = (mode) => {
+  const setHint = () => {
     if (!hint) return;
-    hint.textContent = mode === 'fly'
-      ? '拖动看 · WASD 走 · 滚轮缩放 · 空格/C 升降'
-      : '拖拽环绕 · 滚轮缩放 · 右键平移';
+    hint.textContent = '拖动看 · WASD 走 · 滚轮缩放 · 空格/C 升降';
   };
 
   box.innerHTML = '';
 
-  // ① 飞行 / 环绕 切换
-  const modeBtn = document.createElement('button');
-  modeBtn.className = 'btn small ghost preset-btn';
-  modeBtn.type = 'button';
-  const syncMode = () => {
-    const m = (fc.getInfo ? fc.getInfo().mode : fc.mode) || 'fly';
-    modeBtn.textContent = m === 'fly' ? '✈ 飞行中' : '◎ 环绕中';
-    modeBtn.title = '按 V 或 F 切换飞行 / 环绕';
-    modeBtn.classList.toggle('active', m === 'fly');
-    setHint(m);
-  };
-  modeBtn.addEventListener('click', () => { fc.toggleMode(); syncMode(); });
-  box.appendChild(modeBtn);
+  // 固定飞行模式（环绕功能已移除）：提示固定为飞行操作
+  setHint('fly');
 
-  // ② 沉浸观看
+  // 沉浸观看
   const imBtn = document.createElement('button');
   imBtn.id = 'btn-immersive';
   imBtn.className = 'btn small ghost preset-btn';
@@ -435,13 +422,6 @@ function buildViewUI(fc) {
   imBtn.addEventListener('click', () => setImmersive(!app.immersive));
   box.appendChild(imBtn);
 
-  window.addEventListener('keydown', (e) => {
-    const k = (e.key || '').toLowerCase();
-    if (k === 'v' || k === 'f') setTimeout(syncMode, 0);   // Esc 不参与任何切换
-  });
-  if (fc.onModeChange) fc.onModeChange = () => syncMode();
-
-  syncMode();
 }
 
 /** 沉浸观看：隐藏全部 UI + 进入全屏 + 重算渲染尺寸 */

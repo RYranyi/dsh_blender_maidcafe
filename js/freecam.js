@@ -12,7 +12,6 @@
  *   空格 / R        —— 上升
  *   C               —— 下降
  *   Shift           —— 加速
- *   V 或 F          —— 切换「飞行 ↔ 环绕」
  *   鼠标左键拖拽     —— 转头（yaw/pitch）
  *   滚轮            —— 缩放 FOV（30–80°）
  *
@@ -346,7 +345,6 @@ export class FreeCam {
     if (NAV.includes(k)) e.preventDefault();
     this.keys[k] = true;
 
-    if (k === 'v' || k === 'f') { this.toggleMode(); e.preventDefault(); }
     if (k === 'home') this.reset();
   }
 
