@@ -1,0 +1,648 @@
+{
+ "materials": {
+  "M_Brow": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.147,
+    0.061,
+    0.03,
+    1.0
+   ],
+   "rough": 0.5,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_EyeLight": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 4,
+   "base_color_linked": false,
+   "base_color": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "rough": 0.06,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.4,
+   "blend": "HASHED"
+  },
+  "M_EyeRed": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 4,
+   "base_color_linked": false,
+   "base_color": [
+    0.546,
+    0.019,
+    0.01,
+    1.0
+   ],
+   "rough": 0.35,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Hair": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ],
+    [
+     "TEX_COORD",
+     "Texture Coordinate"
+    ],
+    [
+     "SEPXYZ",
+     "Separate XYZ"
+    ],
+    [
+     "VALTORGB",
+     "Color Ramp"
+    ]
+   ],
+   "users": 4,
+   "base_color_linked": true,
+   "rough": 0.36,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Iris": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ],
+    [
+     "VERTEX_COLOR",
+     "Color Attribute"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": true,
+   "rough": 0.46,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_IrisLine": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 12,
+   "base_color_linked": false,
+   "base_color": [
+    0.025,
+    0.144,
+    0.27,
+    1.0
+   ],
+   "rough": 0.3,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Lash": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.01,
+    0.007,
+    0.006,
+    1.0
+   ],
+   "rough": 0.38,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Mouth": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 1,
+   "base_color_linked": false,
+   "base_color": [
+    0.366,
+    0.07,
+    0.061,
+    1.0
+   ],
+   "rough": 0.45,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Navy": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 5,
+   "base_color_linked": false,
+   "base_color": [
+    0.024,
+    0.033,
+    0.08,
+    1.0
+   ],
+   "rough": 0.6,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Pearl": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.863,
+    0.839,
+    0.807,
+    1.0
+   ],
+   "rough": 0.16,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Satin": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 1,
+   "base_color_linked": false,
+   "base_color": [
+    0.956,
+    0.939,
+    0.922,
+    1.0
+   ],
+   "rough": 0.26,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Sclera": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.939,
+    0.913,
+    0.93,
+    1.0
+   ],
+   "rough": 0.32,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Shoe": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.147,
+    0.044,
+    0.016,
+    1.0
+   ],
+   "rough": 0.32,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Skin": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ],
+    [
+     "TEX_COORD",
+     "Texture Coordinate"
+    ],
+    [
+     "VECT_MATH",
+     "Vector Math"
+    ],
+    [
+     "VECT_MATH",
+     "Vector Math.001"
+    ],
+    [
+     "MAP_RANGE",
+     "Map Range"
+    ],
+    [
+     "MAP_RANGE",
+     "Map Range.001"
+    ],
+    [
+     "MATH",
+     "Math"
+    ],
+    [
+     "VECT_MATH",
+     "Vector Math.002"
+    ],
+    [
+     "MAP_RANGE",
+     "Map Range.002"
+    ],
+    [
+     "MATH",
+     "Math.001"
+    ],
+    [
+     "MIX",
+     "Mix"
+    ]
+   ],
+   "users": 11,
+   "base_color_linked": true,
+   "rough": 0.42,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Sock": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 7,
+   "base_color_linked": false,
+   "base_color": [
+    0.896,
+    0.871,
+    0.88,
+    1.0
+   ],
+   "rough": 0.75,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_Sole": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 2,
+   "base_color_linked": false,
+   "base_color": [
+    0.056,
+    0.015,
+    0.005,
+    1.0
+   ],
+   "rough": 0.62,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  },
+  "M_White": {
+   "use_nodes": true,
+   "nodes": [
+    [
+     "BSDF_PRINCIPLED",
+     "Principled BSDF"
+    ],
+    [
+     "OUTPUT_MATERIAL",
+     "Material Output"
+    ]
+   ],
+   "users": 5,
+   "base_color_linked": false,
+   "base_color": [
+    0.905,
+    0.88,
+    0.871,
+    1.0
+   ],
+   "rough": 0.55,
+   "metal": 0.0,
+   "alpha": 1.0,
+   "emit": 0.0,
+   "blend": "HASHED"
+  }
+ },
+ "uv": {
+  "Headband": [],
+  "Panties": [],
+  "IrisTick.004": [],
+  "IrisTick.008": [],
+  "Lash": [],
+  "Lash.001": [],
+  "Brow": [],
+  "EyeHL1.001": [
+   "UVMap"
+  ],
+  "EyeHL2": [
+   "UVMap"
+  ],
+  "EyeWhite": [
+   "UVMap"
+  ],
+  "Head": [],
+  "IrisTick.003": [],
+  "IrisTick.009": [],
+  "IrisTick.005": [],
+  "RedAccentB.001": [],
+  "Iris.001": [],
+  "IrisTick.001": [],
+  "Brow.001": [],
+  "Mouth": [],
+  "RedAccentA.001": [],
+  "RedAccentB": [],
+  "EyeHL2.001": [
+   "UVMap"
+  ],
+  "IrisTick": [],
+  "IrisTick.006": [],
+  "RedAccentA": [],
+  "EyeHL1": [
+   "UVMap"
+  ],
+  "Iris": [],
+  "EyeWhite.001": [
+   "UVMap"
+  ],
+  "LowerLid": [],
+  "LowerLid.001": [],
+  "Neck": [],
+  "IrisTick.002": [],
+  "IrisTick.007": [],
+  "FringeMass": [],
+  "HairCap": [],
+  "Lock_0": [],
+  "Lock_0_mir": [],
+  "Arm": [],
+  "Arm.001": [],
+  "Leg.001": [],
+  "Hand": [],
+  "Leg": [],
+  "Hand.001": [],
+  "Torso": [],
+  "Foot": [],
+  "Foot.001": [],
+  "Apron": [],
+  "Sock": [],
+  "Collar": [],
+  "Cuff.001": [],
+  "LoaferL": [],
+  "LoaferR": [],
+  "Sock.001": [],
+  "SockRim.001": [],
+  "Cuff": [],
+  "Sleeve": [],
+  "Button0": [],
+  "LoaferL_sole": [],
+  "LoaferR_sole": [],
+  "SockRim": [],
+  "Button1": [],
+  "BackBow": [],
+  "Bodice": [],
+  "Placket": [],
+  "SockFoot.001": [],
+  "Skirt": [],
+  "Sleeve.001": [],
+  "SockFoot": []
+ },
+ "color_attrs": {
+  "Headband": [],
+  "Panties": [],
+  "IrisTick.004": [],
+  "IrisTick.008": [],
+  "Lash": [],
+  "Lash.001": [],
+  "Brow": [],
+  "EyeHL1.001": [],
+  "EyeHL2": [],
+  "EyeWhite": [],
+  "Head": [],
+  "IrisTick.003": [],
+  "IrisTick.009": [],
+  "IrisTick.005": [],
+  "RedAccentB.001": [],
+  "Iris.001": [
+   [
+    "Col",
+    "POINT",
+    "FLOAT_COLOR"
+   ]
+  ],
+  "IrisTick.001": [],
+  "Brow.001": [],
+  "Mouth": [],
+  "RedAccentA.001": [],
+  "RedAccentB": [],
+  "EyeHL2.001": [],
+  "IrisTick": [],
+  "IrisTick.006": [],
+  "RedAccentA": [],
+  "EyeHL1": [],
+  "Iris": [
+   [
+    "Col",
+    "POINT",
+    "FLOAT_COLOR"
+   ]
+  ],
+  "EyeWhite.001": [],
+  "LowerLid": [],
+  "LowerLid.001": [],
+  "Neck": [],
+  "IrisTick.002": [],
+  "IrisTick.007": [],
+  "FringeMass": [],
+  "HairCap": [],
+  "Lock_0": [],
+  "Lock_0_mir": [],
+  "Arm": [],
+  "Arm.001": [],
+  "Leg.001": [],
+  "Hand": [],
+  "Leg": [],
+  "Hand.001": [],
+  "Torso": [],
+  "Foot": [],
+  "Foot.001": [],
+  "Apron": [],
+  "Sock": [],
+  "Collar": [],
+  "Cuff.001": [],
+  "LoaferL": [],
+  "LoaferR": [],
+  "Sock.001": [],
+  "SockRim.001": [],
+  "Cuff": [],
+  "Sleeve": [],
+  "Button0": [],
+  "LoaferL_sole": [],
+  "LoaferR_sole": [],
+  "SockRim": [],
+  "Button1": [],
+  "BackBow": [],
+  "Bodice": [],
+  "Placket": [],
+  "SockFoot.001": [],
+  "Skirt": [],
+  "Sleeve.001": [],
+  "SockFoot": []
+ }
+}

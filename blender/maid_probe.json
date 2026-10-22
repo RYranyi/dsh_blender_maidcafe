@@ -1,0 +1,755 @@
+{
+ "total_tris": 1334760,
+ "total_verts": 669518,
+ "meshes": [
+  {
+   "n": "Headband",
+   "tris": 4784,
+   "verts": 2394,
+   "cols": [
+    "Scene Collection"
+   ],
+   "mats": [
+    "M_White"
+   ]
+  },
+  {
+   "n": "Panties",
+   "tris": 68736,
+   "verts": 34822,
+   "cols": [
+    "06_Details",
+    "Maid"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "IrisTick.004",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "IrisTick.008",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "Lash",
+   "tris": 126,
+   "verts": 128,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Lash"
+   ]
+  },
+  {
+   "n": "Lash.001",
+   "tris": 126,
+   "verts": 128,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Lash"
+   ]
+  },
+  {
+   "n": "Brow",
+   "tris": 58,
+   "verts": 60,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Brow"
+   ]
+  },
+  {
+   "n": "EyeHL1.001",
+   "tris": 1064,
+   "verts": 561,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeLight"
+   ]
+  },
+  {
+   "n": "EyeHL2",
+   "tris": 600,
+   "verts": 321,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeLight"
+   ]
+  },
+  {
+   "n": "EyeWhite",
+   "tris": 2576,
+   "verts": 1345,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Sclera"
+   ]
+  },
+  {
+   "n": "Head",
+   "tris": 57216,
+   "verts": 28610,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "IrisTick.003",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "IrisTick.009",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "IrisTick.005",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "RedAccentB.001",
+   "tris": 30,
+   "verts": 32,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeRed"
+   ]
+  },
+  {
+   "n": "Iris.001",
+   "tris": 17472,
+   "verts": 8833,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Iris"
+   ]
+  },
+  {
+   "n": "IrisTick.001",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "Brow.001",
+   "tris": 58,
+   "verts": 60,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Brow"
+   ]
+  },
+  {
+   "n": "Mouth",
+   "tris": 420,
+   "verts": 212,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Mouth"
+   ]
+  },
+  {
+   "n": "RedAccentA.001",
+   "tris": 30,
+   "verts": 32,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeRed"
+   ]
+  },
+  {
+   "n": "RedAccentB",
+   "tris": 30,
+   "verts": 32,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeRed"
+   ]
+  },
+  {
+   "n": "EyeHL2.001",
+   "tris": 600,
+   "verts": 321,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeLight"
+   ]
+  },
+  {
+   "n": "IrisTick",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "IrisTick.006",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "RedAccentA",
+   "tris": 30,
+   "verts": 32,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeRed"
+   ]
+  },
+  {
+   "n": "EyeHL1",
+   "tris": 1064,
+   "verts": 561,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_EyeLight"
+   ]
+  },
+  {
+   "n": "Iris",
+   "tris": 17472,
+   "verts": 8833,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Iris"
+   ]
+  },
+  {
+   "n": "EyeWhite.001",
+   "tris": 2576,
+   "verts": 1345,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Sclera"
+   ]
+  },
+  {
+   "n": "LowerLid",
+   "tris": 86,
+   "verts": 88,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "LowerLid.001",
+   "tris": 86,
+   "verts": 88,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "Neck",
+   "tris": 2176,
+   "verts": 1152,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "IrisTick.002",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "IrisTick.007",
+   "tris": 2,
+   "verts": 4,
+   "cols": [
+    "01_Head"
+   ],
+   "mats": [
+    "M_IrisLine"
+   ]
+  },
+  {
+   "n": "FringeMass",
+   "tris": 134048,
+   "verts": 67026,
+   "cols": [
+    "02_Hair"
+   ],
+   "mats": [
+    "M_Hair"
+   ]
+  },
+  {
+   "n": "HairCap",
+   "tris": 75572,
+   "verts": 37790,
+   "cols": [
+    "02_Hair"
+   ],
+   "mats": [
+    "M_Hair"
+   ]
+  },
+  {
+   "n": "Lock_0",
+   "tris": 860,
+   "verts": 432,
+   "cols": [
+    "02_Hair"
+   ],
+   "mats": [
+    "M_Hair"
+   ]
+  },
+  {
+   "n": "Lock_0_mir",
+   "tris": 860,
+   "verts": 432,
+   "cols": [
+    "02_Hair"
+   ],
+   "mats": [
+    "M_Hair"
+   ]
+  },
+  {
+   "n": "Arm",
+   "tris": 7676,
+   "verts": 3840,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Arm.001",
+   "tris": 7676,
+   "verts": 3840,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Leg.001",
+   "tris": 4316,
+   "verts": 2160,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Hand",
+   "tris": 6184,
+   "verts": 3204,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Leg",
+   "tris": 4316,
+   "verts": 2160,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Hand.001",
+   "tris": 6184,
+   "verts": 3204,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Torso",
+   "tris": 13628,
+   "verts": 6816,
+   "cols": [
+    "03_Body"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Foot",
+   "tris": 12960,
+   "verts": 6494,
+   "cols": [
+    "04_Dress"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Foot.001",
+   "tris": 12960,
+   "verts": 6494,
+   "cols": [
+    "04_Dress"
+   ],
+   "mats": [
+    "M_Skin"
+   ]
+  },
+  {
+   "n": "Apron",
+   "tris": 209488,
+   "verts": 104752,
+   "cols": [
+    "05_Apron"
+   ],
+   "mats": [
+    "M_White"
+   ]
+  },
+  {
+   "n": "Sock",
+   "tris": 24752,
+   "verts": 12378,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "Collar",
+   "tris": 41056,
+   "verts": 20530,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_White"
+   ]
+  },
+  {
+   "n": "Cuff.001",
+   "tris": 332,
+   "verts": 168,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_White"
+   ]
+  },
+  {
+   "n": "LoaferL",
+   "tris": 28476,
+   "verts": 14432,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Shoe"
+   ]
+  },
+  {
+   "n": "LoaferR",
+   "tris": 28476,
+   "verts": 14432,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Shoe"
+   ]
+  },
+  {
+   "n": "Sock.001",
+   "tris": 24752,
+   "verts": 12378,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "SockRim.001",
+   "tris": 1040,
+   "verts": 522,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "Cuff",
+   "tris": 332,
+   "verts": 168,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_White"
+   ]
+  },
+  {
+   "n": "Sleeve",
+   "tris": 18144,
+   "verts": 9074,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Navy"
+   ]
+  },
+  {
+   "n": "Button0",
+   "tris": 1280,
+   "verts": 672,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Pearl"
+   ]
+  },
+  {
+   "n": "LoaferL_sole",
+   "tris": 4992,
+   "verts": 2498,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sole"
+   ]
+  },
+  {
+   "n": "LoaferR_sole",
+   "tris": 4992,
+   "verts": 2498,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sole"
+   ]
+  },
+  {
+   "n": "SockRim",
+   "tris": 1040,
+   "verts": 522,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "Button1",
+   "tris": 1280,
+   "verts": 672,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Pearl"
+   ]
+  },
+  {
+   "n": "BackBow",
+   "tris": 7080,
+   "verts": 3582,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Satin"
+   ]
+  },
+  {
+   "n": "Bodice",
+   "tris": 166400,
+   "verts": 83200,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Navy"
+   ]
+  },
+  {
+   "n": "Placket",
+   "tris": 28,
+   "verts": 16,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Navy"
+   ]
+  },
+  {
+   "n": "SockFoot.001",
+   "tris": 12960,
+   "verts": 6494,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  },
+  {
+   "n": "Skirt",
+   "tris": 262080,
+   "verts": 131040,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Navy"
+   ]
+  },
+  {
+   "n": "Sleeve.001",
+   "tris": 18144,
+   "verts": 9074,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Navy"
+   ]
+  },
+  {
+   "n": "SockFoot",
+   "tris": 12960,
+   "verts": 6494,
+   "cols": [
+    "06_Details"
+   ],
+   "mats": [
+    "M_Sock"
+   ]
+  }
+ ]
+}

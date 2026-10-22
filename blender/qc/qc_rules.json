@@ -1,0 +1,1087 @@
+{
+  "_doc": "QC 判定规则唯一来源。判据全部对应 CONTRACT.md §11。改判据先改这里，不要在脚本里硬编码。",
+  "schema": 1,
+  "contract_rev": "2026-10-21",
+  "root": "E:\\dsh\\maid_cafe",
+  "room": {
+    "x": [
+      -4.0,
+      4.0
+    ],
+    "y": [
+      -3.0,
+      3.0
+    ],
+    "z": [
+      0.0,
+      3.0
+    ],
+    "wall_t": 0.16,
+    "floor_z": 0.0,
+    "ceil_z": 3.0,
+    "note": "室内净尺寸；墙厚向室外伸出，故内墙面就在 x=±4.0 / y=±3.0，天花板内面 z=3.0",
+    "display_contract": {
+      "x": [
+        -1.6,
+        -0.05
+      ],
+      "y": [
+        0.55,
+        1.14
+      ],
+      "z": [
+        0.0,
+        1.38
+      ],
+      "_note": "Lead 2026-10-21 第二轮裁决（C2 变体）：DISPLAY 前移到吧台端头顾客侧，y(0.55,1.14) 与 BAR_MAIN(y>=1.15) 留 10mm 缝；x 守契约 (-1.60,-0.05)。原契约 y(1.25,1.95) 与 BAR_MAIN 在 x 上重叠 150mm —— 契约自身冲突，据此修正。"
+    },
+    "maid_pos_contract": {
+      "pos": [
+        -1.85,
+        -0.25
+      ],
+      "_note": "Lead 裁决随展示柜前移，女仆左前挪 0.4m"
+    }
+  },
+  "tolerances": {
+    "min_overlap_mm": 5.0,
+    "contact_epsilon_mm": 1.5,
+    "ground_band_mm": [
+      -2.0,
+      2.0
+    ],
+    "rest_on_max_gap_mm": 2.0,
+    "rest_on_sink_mm": 20.0,
+    "wall_gap_mm": [
+      0.0,
+      6.0
+    ],
+    "wall_penetration_min_mm": 5.0,
+    "ceil_penetration_min_mm": 5.0,
+    "aabb_inflate_mm": 2.0,
+    "support_search_mm": 300.0,
+    "prop_overflow_tolerance_mm": 5.0,
+    "min_tris_to_check": 4,
+    "component_containment_min": 0.85,
+    "component_footprint_min": 0.95,
+    "component_footprint_over": 0.85,
+    "component_attach_mm": 3.0,
+    "_note_contact_epsilon": "两个物体『恰好贴面接触』（杯子底面 = 桌面）时，浮点会让 AABB 出现亚毫米级重叠、BVH 也会因共面三角形报 overlap。零体积接触不是干涉。校准 10_REST_ON_TABLE 抓到过这个误报。",
+    "_note_rest_on_sink": "物体略微陷进支撑物（杯底嵌托盘 10mm）仍视为被支撑，不额外报 floating，避免同一缺陷报两条。",
+    "_note_depth": [
+      "报告里 depth_mm 是**判定用**深度（顶点法，且被 AABB MTV 封顶 —— 穿透不可能超过两包围盒重叠量）。",
+      "depth_vertex_mm 是顶点法原始值，在小物体深埋于大块内部时法线符号判定会失效，可能给出远超 MTV 的荒谬值（实测 3180mm vs 真实 100mm）。",
+      "depth_centroid_mm 是质心法，只作诊断，同样会虚高（实测 3518mm）。",
+      "读报告时以 depth_mm 为准；depth_vertex/centroid 只用于判断估计是否可信（depth_uncertain）。"
+    ],
+    "_note_component": "装配子部件识别阈值：AABB 体积 ≥85% 落在同集合某更大物体内 → 构件，不参与个体落地判据。v1 实测：C_Bar 211 个物体里的抽屉把手/柜门若逐个判 min_z 会产出 138 条 floating 误报。",
+    "_attached_note": "role=attached 的物体（把手/旋钮/贴纸/支架/门/导轨/拉手）不参与落地与悬空判据，它们附着在最近的主体上。v5 实测不豁免会产生 28 条 cbar handle 悬空（650–1941mm）。",
+    "_floating_report_semantics": [
+      "floating finding 的 metrics 必须同时给：",
+      "  min_z_mm        —— 最低点**离地绝对高度**（便于定位，但不等于缺陷量）",
+      "  nearest_support —— 正下方最近物体名",
+      "  support_gap_mm  —— 与它的**间隙**（这才是『悬空多少』的正确数字）",
+      "  support_top_z   —— 支撑面高度",
+      "v5 实测教训：DC_WinPot_0 坐在窗台（RM_WinSill 顶面 z=0.722）上，盆栽底 0.770，",
+      "实际只差 48mm，但报告只写 min_z=770mm，容易被误读成『飘在 0.77m 高空』。",
+      "报告里「悬空量」一律以 support_gap_mm 为准，min_z_mm 仅作定位参考。"
+    ],
+    "merged_obj_span_m": 2.0,
+    "merged_obj_verts": 1000,
+    "_merged_obj_note": [
+      "单个物体若 AABB 跨度 >2m 且顶点数 >1000，标记为 merged（多实体合并体）。",
+      "v5 实测：DC_PlantLeaves 一个物体 6849 顶点、x 跨 4.99m、x 方向 2 个簇 ——",
+      "是多株植物叶子 join 成的一件。它的整体 AABB 无参考意义（会与整面后墙『相交』），",
+      "但 BVH 三角形求交仍准确，所以真的穿墙时仍会报（377 对三角形确实相交）。",
+      "报告对 merged 物体额外给『簇数』与提示，让模块负责人知道是其中几株超界。"
+    ],
+    "wall_gap_mm_by_pattern": [
+      [
+        "DC_Frame_*",
+        12.0,
+        "画框分件：框料 40mm 深、中心 x=3.97 → 箱体内表面到墙面 10mm（实测），是挂画留缝（藏挂钩），非缺陷。env-decor-v2 确认 + 我方实测 real_gap=10.0mm"
+      ],
+      [
+        "DC_ChalkFrame_*",
+        12.0,
+        "黑板框分件：中心 x=-3.958、框厚 0.064 → 内表面到墙面 10mm（实测 real_gap=10.0mm），同上按挂画留缝处理"
+      ]
+    ],
+    "_wall_gap_by_pattern_doc": [
+      "wall_gap_mm 是默认容差（0–6mm）。按类型的覆盖写在 wall_gap_mm_by_pattern。",
+      "基准面**取自实测墙体内表面**（RM_WallLeft.max_x = -4.0、RM_WallRight.min_x = +4.0），",
+      "与 qc_rules.room.x = [-4.0, 4.0] 一致 —— 不是拍的常量，也不含饰面偏移。",
+      "v8 实测复核：画框 10.0mm、黑板框 10.0mm，两者都正确（此前 env-decor-v2 推测黑板为 0mm，",
+      "系引用旧版数据；13:21 的 cdecor.py 已把框圆心从 -3.968 收到 -3.958）。"
+    ],
+    "wall_gap_warn_band_mm": 4.0,
+    "_wall_gap_warn_band_doc": "贴墙间隙超出容差但在 warn_band 内（如画框 10mm 超 6mm 容差 4mm）记 WARN 而非 FAIL。Lead 2026-10-21 裁决：画框/黑板框的 10mm 是挂画安装间隙（藏挂钩），保留判据但记 WARN 不阻塞交付。"
+  },
+  "modules": {
+    "C_Room": {
+      "module": "croom",
+      "owner": "Lead"
+    },
+    "C_Bar": {
+      "module": "cbar",
+      "owner": "Lead"
+    },
+    "C_Display": {
+      "module": "cdisplay",
+      "owner": "furn-modeler"
+    },
+    "C_Seating": {
+      "module": "cseating",
+      "owner": "decor-modeler"
+    },
+    "C_Decor": {
+      "module": "cdecor",
+      "owner": "env-decor-v2"
+    },
+    "C_Outdoor": {
+      "module": "coutdoor",
+      "owner": "env-decor-v2"
+    },
+    "C_Maid": {
+      "module": "cmaid",
+      "owner": "Lead"
+    },
+    "C_Light": {
+      "module": "clight",
+      "owner": "Lead"
+    },
+    "C_QC": {
+      "module": "qc",
+      "owner": "qc-inspector"
+    },
+    "C_Default": {
+      "module": "coutdoor",
+      "owner": "env-decor-v2"
+    },
+    "_note_C_Default": "C_Default 是 Blender 未指定集合时对象落入的默认集合。v5 实测里面是 9 个 OD_Bench_*（室外长椅），应归 coutdoor。若后续 C_Default 出现非室外物体，需在 cbuild 里显式分集合。",
+    "cdecor": {}
+  },
+  "prefix_map": {
+    "RM_": "croom",
+    "BA_": "cbar",
+    "DS_": "cdisplay",
+    "TB_": "cseating",
+    "CH_": "cseating",
+    "DC_": "cdecor",
+    "OD_": "coutdoor",
+    "MD_": "cmaid",
+    "LT_": "clight"
+  },
+  "module_owner": {
+    "croom": "Lead",
+    "cbar": "Lead",
+    "cdisplay": "furn-modeler",
+    "cseating": "decor-modeler",
+    "cdecor": "env-decor-v2",
+    "coutdoor": "env-decor-v2",
+    "cmaid": "Lead",
+    "clight": "Lead",
+    "qc": "qc-inspector",
+    "_note": "v6 实测归属（依据 blender/*.py mtime + Lead 改派）：cdecor.py/coutdoor.py → env-decor-v2；cdisplay.py → furn-modeler；cseating.py → decor-modeler；croom/cbar/cmaid/clight/cbuild → Lead。若 Lead 再次改派，请同步更新本表。"
+  },
+  "collide": {
+    "ignore_collections": [
+      "C_QC",
+      "C_Light"
+    ],
+    "ignore_patterns": [
+      "LT_*",
+      "MD_Steam",
+      "MD_Steam*",
+      "MD_Cream_*",
+      "MD_CreamTop"
+    ],
+    "_ignore_patterns_note": "MD_Cream_*/MD_CreamTop 是咖啡拉花与蒸汽类薄面片（非实体），不判干涉；MD_Steam* 同理（§7 半透明蒸汽面片）。",
+    "allow_same_collection": [
+      "C_Room",
+      "C_Maid"
+    ],
+    "_allow_same_collection_doc": [
+      "同集合豁免只给『同一连续模型/同一构件组』：",
+      "C_Room —— 墙/地/顶/窗/门是互相拼接的建筑构件；",
+      "C_Maid —— 106 个网格是同一个女仆模型，内部天然嵌套（袖子套手臂、裙子套腿、手捧托盘）。",
+      "C_Seating / C_Bar / C_Display / C_Decor / C_Outdoor 【不豁免】——",
+      "  同模块内两件家具互穿是真 bug，必须报。",
+      "已知盲区：C_Maid 内部穿模（手臂穿裙摆、托盘穿手）本规则抓不到；",
+      "  用 qc_collide 的 critical_pairs 或 qc_pairs.py 点名精确查。"
+    ],
+    "allow_pairs": [
+      [
+        "BA_CupRailRod",
+        "BA_Hook_*",
+        "Lead 裁决：倒挂杯架挂钩必须穿过挂杆才能挂住（9.2mm），设计意图"
+      ],
+      [
+        "BA_*Kick",
+        "BA_*Kick",
+        "Lead 裁决：L 台转角两段踢脚重叠（同一转角两块踢脚拼接）"
+      ],
+      [
+        "BA_BackBar_Body",
+        "BA_SinkBasin",
+        "Lead 裁决：水槽嵌入后吧台面（70mm，嵌入式安装）"
+      ],
+      [
+        "BA_*Door*",
+        "BA_*Body",
+        "Lead 裁决：吧台柜门嵌入柜体（装配内部件）"
+      ],
+      [
+        "DS_Post_*",
+        "DS_TopCap",
+        "Lead 裁决：展示柜立柱插入顶盖（装配内部件）"
+      ],
+      [
+        "DS_BackStrip_*",
+        "DS_TopCap",
+        "Lead 裁决：展示柜背板压条插入顶盖（装配内部件）"
+      ],
+      [
+        "DS_Vent*",
+        "DS_*",
+        "Lead 裁决：展示柜通风条/凹槽/边框彼此嵌入（装配内部件）"
+      ],
+      [
+        "DS_BackPanel",
+        "DS_ShelfBracket*",
+        "Lead 裁决：层板托架固定在背板上（装配内部件）"
+      ],
+      [
+        "DS_*",
+        "DS_*",
+        "Lead 裁决：展示柜模块内其余装配件互嵌。注意：跨模块（DS_* ↔ BA_*/TB_*/RM_*）照判不豁免"
+      ],
+      [
+        "DC_DessertTray_*",
+        "BA_BarTop*",
+        "Lead 裁决：糕点托盘放在吧台台面上，托盘本身有厚度，20–25mm 嵌入可接受"
+      ],
+      [
+        "DC_DessertTray_*",
+        "BA_BarTopRet",
+        "Lead 裁决：同上（回折段台面）"
+      ],
+      [
+        "DC_DessertTray_Rim*",
+        "DC_DessertTray_Slice*",
+        "Lead 裁决：切片放在托盘内（装饰件装配意图）"
+      ],
+      [
+        "DC_Candle_Flame*",
+        "DC_Candle_Jar*",
+        "Lead 裁决：烛焰位于烛杯内（装饰件装配意图）"
+      ],
+      [
+        "DC_Cove_*",
+        "DC_Cove_*",
+        "Lead 裁决：天花灯带四角对接（同族装配）"
+      ],
+      [
+        "DC_PendantCanopy*",
+        "DC_PendantWire*",
+        "Lead 裁决：吊线穿过吸顶盘（装饰件装配意图）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ChalkFrame*",
+        "Lead 裁决：粉笔/黑板贴图压在框上（贴面，非穿模）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ShelfBoard*",
+        "Lead 裁决：粉笔/黑板贴图压在板上（贴面，非穿模）"
+      ],
+      [
+        "DC_NorenMain*",
+        "RM_DoorLeaf*",
+        "Lead 裁决：门帘贴门（薄布贴面，非穿模）"
+      ],
+      [
+        "DC_DoorSign*",
+        "RM_DoorLeaf*",
+        "Lead 裁决：门牌上移到门洞上方后仍需容差，按贴面处理"
+      ],
+      [
+        "DC_ShelfPlinth",
+        "DC_ShelfSide_*",
+        "Lead 裁决：层架底座嵌侧板 30mm（装饰件装配意图，记 WARN 不阻塞）"
+      ],
+      [
+        "DC_ShelfPlinth*",
+        "DC_ShelfSide_*",
+        "env-decor-v2 批准：层架底座嵌侧板（装配接触）"
+      ],
+      [
+        "DC_Candle_Flame*",
+        "DC_Candle_Jar*",
+        "env-decor-v2 批准：烛焰位于烛杯内（装配）"
+      ],
+      [
+        "DC_DessertTray_Rim*",
+        "DC_DessertTray_Slice*",
+        "env-decor-v2 批准：切片放在托盘内（装配）"
+      ],
+      [
+        "DC_DessertTray_*",
+        "DC_DessertTray_*",
+        "env-decor-v2 批准：托盘各件互相装配"
+      ],
+      [
+        "DC_Cove_*",
+        "DC_Cove_*",
+        "env-decor-v2 批准：天花灯带四角对接（同族装配）"
+      ],
+      [
+        "DC_Cove_*",
+        "RM_Cove*",
+        "env-decor-v2 批准：灯带槽贴吸顶跌级（装配）"
+      ],
+      [
+        "DC_PendantCanopy*",
+        "DC_PendantWire*",
+        "env-decor-v2 批准：吊线穿吸顶盘（装配）"
+      ],
+      [
+        "DC_PendantBulb*",
+        "DC_PendantWire*",
+        "env-decor-v2 批准：灯泡挂吊线（装配）"
+      ],
+      [
+        "DC_PendantBulb*",
+        "DC_PendantShade*",
+        "env-decor-v2 批准：灯泡在灯罩内（装配）"
+      ],
+      [
+        "DC_BarSpotBody*",
+        "RM_CeilCenter",
+        "env-decor-v2 批准：吧台射灯吸顶（装配）"
+      ],
+      [
+        "DC_DispSpotBody*",
+        "RM_CeilCenter",
+        "env-decor-v2 批准：展示柜射灯吸顶（装配）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ChalkFrame*",
+        "env-decor-v2 批准：粉笔/黑板贴图压框（贴面）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ShelfBoard*",
+        "env-decor-v2 批准：粉笔/贴图压层板（贴面）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ShelfSide_*",
+        "env-decor-v2 批准：黑板/贴图贴书架侧板（贴面）"
+      ],
+      [
+        "DC_Chalk_*",
+        "DC_ShelfTop*",
+        "env-decor-v2 批准：黑板/贴图贴层板顶（贴面）"
+      ],
+      [
+        "DC_ChalkBoard*",
+        "DC_ShelfTop*",
+        "env-decor-v2 批准：黑板压书架顶（贴面）"
+      ],
+      [
+        "DC_ChimeBar*",
+        "DC_ChimeWire*",
+        "env-decor-v2 批准：风铃管挂线（装配）"
+      ],
+      [
+        "DC_NorenRing*",
+        "DC_NorenRod*",
+        "env-decor-v2 批准：暖帘环套杆（装配）"
+      ],
+      [
+        "DC_BarSpotBody*",
+        "DC_BarSpotBulb*",
+        "env-decor-v2 批准：射灯灯泡在灯体内（装配）"
+      ],
+      [
+        "DC_ChalkFrame_*",
+        "DC_ShelfSide_*",
+        "env-decor-v2 分析：P.CHALKBOARD y(0.90,2.10) 与 P.BOOKSHELF y(1.55,2.95) 在 y 向重叠 0.55m，两个锚点本身冲突（待 Lead 决定是否挪黑板）。当前几何交叉 10mm，按锚点冲突豁免"
+      ],
+      [
+        "DC_ChalkTex*",
+        "DC_ShelfSide_*",
+        "同上：黑板贴图面压在书架侧板上（锚点 y 向冲突连带）"
+      ]
+    ],
+    "_allow_pairs_doc": [
+      "本表是 Lead 明确裁决过的『设计意图』与『同模块内部装配件』豁免，每条都注明裁决来源。",
+      "原则：只收『具体物体对/模式 + 明确理由』，不做无理由的宽泛兜底 ——",
+      "历史教训：曾用 ['TB_*','TB_*'] 把真实 20mm 干涉一起豁免，校准 01_PEN 抓到漏报。",
+      "DS_*↔DS_* 只覆盖展示柜内部；DS_*↔BA_*/TB_*/RM_* 这类跨模块照样判。"
+    ],
+    "soft_kind_exempt": true,
+    "soft_exempt_against": [
+      "same_module"
+    ],
+    "_soft_exempt_against_doc": [
+      "soft 豁免的**范围**，关键口子。same_module —— 只对同集合内的物体豁免。",
+      "理由（v1 实测教训）：manifest 把 MD_Body 声明成 kind=soft（『女仆是软体，与地面接触正常』）。",
+      "若 soft 对所有物体豁免，女仆穿吧台 BA_BarMain 就被无声放过 —— Lead 明确要求这条必须判。",
+      "若某 soft 物体确实允许插进特定物体，用 colliders[].allow_overlap_with=[\"OBJ\"] 表达。"
+    ],
+    "component_exempt_collections_excluded": [
+      "C_Maid"
+    ],
+    "assembly_tag_rules": [
+      [
+        "TB_*",
+        "^([A-Z]{2}_\\d+)"
+      ],
+      [
+        "CH_*",
+        "^([A-Z]{2}_\\d+)"
+      ],
+      [
+        "BA_Hook*",
+        "^(BA_CupRail)"
+      ],
+      [
+        "BA_CupRail*",
+        "^(BA_CupRail)"
+      ],
+      [
+        "DS_VentSlat*",
+        "^(DS_Vent)"
+      ],
+      [
+        "DS_VentRecess*",
+        "^(DS_Vent)"
+      ],
+      [
+        "DS_VentFrame*",
+        "^(DS_Vent)"
+      ],
+      [
+        "BA_Espresso_Rail*",
+        "^(BA_Espresso_Rail)"
+      ],
+      [
+        "BA_Espresso_*",
+        "^(BA_Espresso)"
+      ],
+      [
+        "BA_Teapot*",
+        "^(BA_Teapot)"
+      ],
+      [
+        "BA_Grinder_*",
+        "^(BA_Grinder)"
+      ],
+      [
+        "BA_CupRailBracket*",
+        "^(BA_CupRailBracket)"
+      ],
+      [
+        "BA_ShelfUpright*",
+        "^(BA_ShelfUpright)"
+      ]
+    ],
+    "_assembly_tag_rules_doc": [
+      "同族装配豁免：同名族的结构件之间的穿插是设计意图（挂钩必须穿过挂杆、桌腿必须插进桌底）。",
+      "v3 实测：TB_01 内部 13 对互穿、BA_CupRailRod↔BA_Hook 12 对 —— 全是装配关系，不是穿模缺陷。",
+      "**故意不覆盖整个 BA_ 前缀**：那样会把「吧台 A 件插进吧台 B 件」的真问题一起豁免掉。",
+      "C_Maid 整个集合都不参与本豁免（见 component_exempt_collections_excluded）。"
+    ],
+    "soft_fallback_patterns": [
+      "CH_*"
+    ],
+    "_soft_fallback_doc": "manifest 缺失时按 §11.1『椅子可插入桌下』把椅子当 soft；manifest 存在时以 manifest 为准。",
+    "report_grazing_as": "WARN"
+  },
+  "classify": {
+    "_doc": "空间角色分类。顺序：overrides 匹配 → 装配子件 → 几何启发式。role ∈ ground|wall|hang|elevated|component|ignore",
+    "overrides": [
+      [
+        "DC_Frame_*_Mat",
+        "attached",
+        "env-decor-v2：画框衬板在框内，距墙=框厚，不是挂墙物"
+      ],
+      [
+        "DC_Incense_Dish*",
+        "ground",
+        "env-decor-v2：香座坐窗台面（z=0.7285），不是挂墙物"
+      ],
+      [
+        "DC_Candle_Jar*",
+        "ground",
+        "env-decor-v2：烛罐坐窗台面（z=0.765），不是挂墙物，应判落地/支撑"
+      ],
+      [
+        "LT_*",
+        "ignore",
+        "灯光对象仅 Blender QC 用，不导出（§2）"
+      ],
+      [
+        "MD_Steam*",
+        "ignore",
+        "半透明蒸汽面片（视觉特效，非实体）"
+      ],
+      [
+        "RM_Floor*",
+        "ignore",
+        "地面是判定基准面"
+      ],
+      [
+        "RM_*",
+        "ignore",
+        "建筑构件是容器本身，单独按墙体规则判"
+      ],
+      [
+        "OD_*",
+        "ignore",
+        "室外物体不参与室内落地/贴墙判据"
+      ],
+      [
+        "DC_WallLampBase*",
+        "attached",
+        "壁灯墙座：实测真实间隙 20.0mm（base 圆盘 h=0.02 绕 Y 转 90° → 沿 X 只占 0.01，盘面外沿停在 -3.98/3.98/2.98）。env-decor-v2 确认这是 cdecor.py 的真实建模偏移、非齐平件，但视觉不可察觉（藏在支臂根与灯罩阴影里）；归 attached 且保留真值备查"
+      ],
+      [
+        "DC_WallLampShade*",
+        "attached",
+        "env-decor-v2 确认：灯罩被支臂推出墙面是设计（照亮墙面），不判贴墙"
+      ],
+      [
+        "DC_WallLampBulb*",
+        "attached",
+        "env-decor-v2 确认：灯泡在罩内、被支臂推出，不判贴墙"
+      ],
+      [
+        "DC_WallLampArm*",
+        "attached",
+        "env-decor-v2 确认：支臂本身连接墙座与灯罩，不判贴墙"
+      ],
+      [
+        "BA_WallLamp*",
+        "wall",
+        "§1.1 壁灯挂墙（吧台区域）"
+      ],
+      [
+        "*StringLight*",
+        "hang",
+        "Lead 裁决：吊挂灯串本来就悬在空中（悬空 2343mm 是设计），按 hanging 处理不判落地"
+      ],
+      [
+        "*Sign_Cafe*",
+        "attached",
+        "Lead 裁决：店招贴墙，40mm 容差可接受，按附着物处理"
+      ],
+      [
+        "*Cove_*",
+        "hang",
+        "天花灯带（吊顶跌级内沿），吸顶安装不判落地"
+      ],
+      [
+        "*Pendant*",
+        "hang",
+        "吊灯全部构件（罩/泡/线/吸顶盘/吊杆），吊挂安装"
+      ],
+      [
+        "DC_ChalkTray*",
+        "attached",
+        "env-decor-v2 实测：粉笔托距墙 17mm，在框内"
+      ],
+      [
+        "DC_ChalkTex*",
+        "attached",
+        "env-decor-v2 实测：黑板贴图面距墙 60mm，在框内"
+      ],
+      [
+        "DC_ChalkBoard*",
+        "attached",
+        "env-decor-v2 实测：黑板背板距墙 37mm，在框内（assigned attached）"
+      ],
+      [
+        "*Handle*",
+        "attached",
+        "把手（门/壶/杯/锅）：附着于主体，不判落地（Lead 裁决）"
+      ],
+      [
+        "DS_Vent*",
+        "component",
+        "展示柜通风条/通风框/凹槽，柜体内部件，不判落地与贴墙（v6 实测误报：VentFrame 被判挂墙物、报离墙 2444mm）"
+      ],
+      [
+        "*Knob*",
+        "attached",
+        "旋钮：附着于主体"
+      ],
+      [
+        "*_Door*",
+        "attached",
+        "柜门/门板：铰接于柜体（含编号变体 .001）"
+      ],
+      [
+        "*Shelf*",
+        "attached",
+        "层板/搁板/托架：固定于柜体或墙体"
+      ],
+      [
+        "*Bracket*",
+        "attached",
+        "支架/托架：固定于主体"
+      ],
+      [
+        "*Deco*",
+        "attached",
+        "装饰件（椅饰/桌面摆件）：附着于主体"
+      ],
+      [
+        "*Cushion*",
+        "attached",
+        "坐垫：放在座面上"
+      ],
+      [
+        "*Cloth*",
+        "attached",
+        "桌布/垂布：铺在桌面并垂边"
+      ],
+      [
+        "*Ribbon*",
+        "attached",
+        "系带/缎带：附着于主体"
+      ],
+      [
+        "*Art",
+        "attached",
+        "画面/艺术品：嵌在相框内"
+      ],
+      [
+        "*Tray*",
+        "attached",
+        "托盘：放在桌上或手上（女仆托盘另有专项检查）"
+      ],
+      [
+        "DC_Cove*",
+        "hang",
+        "顶棚暗藏灯带/灯槽，吸顶安装，不参与落地判据（v5 实测 z≈2.88）"
+      ],
+      [
+        "*SpotBody*",
+        "hang",
+        "吸顶射灯灯体（v5 实测 z≈2.78），吸顶安装"
+      ],
+      [
+        "*Spot*Base*",
+        "hang",
+        "吸顶射灯底座"
+      ],
+      [
+        "*Noren*",
+        "hang",
+        "暖帘，挂在门头横杆上，不落地"
+      ],
+      [
+        "*Curtain*",
+        "hang",
+        "纱帘/窗帘，挂轨安装（§11.2 纱帘不得穿天花）"
+      ],
+      [
+        "*Chime*",
+        "hang",
+        "风铃，吊挂"
+      ],
+      [
+        "*WallSconce*",
+        "wall",
+        "壁灯变体"
+      ],
+      [
+        "*Frame_*",
+        "wall",
+        "相框（含 Art/Mat/B/L/R/T 分件），挂墙（§1.1 相框挂右墙）"
+      ],
+      [
+        "*UmbrellaStand*",
+        "ground",
+        "伞架落地"
+      ],
+      [
+        "DC_Chalkboard*",
+        "wall",
+        "§1.1 黑板挂左墙"
+      ],
+      [
+        "DC_Frame*",
+        "wall",
+        "§1.1 相框挂右墙"
+      ],
+      [
+        "DC_WallLamp*",
+        "wall",
+        "§1.1 壁灯挂墙"
+      ],
+      [
+        "BA_WallLamp*",
+        "wall",
+        "§1.1 壁灯挂墙"
+      ],
+      [
+        "*Curtain*",
+        "hang",
+        "纱帘"
+      ]
+    ],
+    "wall_side_detect_mm": 40.0,
+    "hang_ceil_detect_mm": 450.0,
+    "_hang_ceil_detect_note": "吊挂/吸顶判定窗：顶面距天花 ≤450mm 且最低点 >1.4m 视为吊挂件。v5 实测原 60mm 太窄 —— DC_Cove（z=2.88，离天花 120mm）和吸顶射灯（2.78，离 220mm）全部没被判成 hang，落进『落地物』判据后报成悬空 2722–2870mm。"
+  },
+  "wall_mounted_expect": {
+    "_doc": "挂墙物应贴哪面墙（内墙面）。未列出时按几何就近推断。",
+    "DC_Chalkboard*": "-x",
+    "DC_Frame*": "+x",
+    "DC_WallLamp*": "-x,+x,+y",
+    "BA_Shelf*": "+y"
+  },
+  "aggregate_ground": [
+    {
+      "id": "maid_feet",
+      "group": "C_Maid",
+      "patterns": [
+        "*"
+      ],
+      "rule": "§11.3 女仆脚底 z=0",
+      "metric": "group_min_z_mm",
+      "tolerance_mm": [
+        -2.0,
+        2.0
+      ],
+      "note": "v1 实测：女仆 106 个网格的实际名字是 Apron/Arm/Skirt/Hand/Torso 等，**没有 MD_ 前缀**（只有托盘/杯子/蛋糕才叫 MD_*）。故用 patterns=['*'] 匹配整个 C_Maid 集合，不靠名字前缀。"
+    },
+    {
+      "id": "maid_props",
+      "group": "C_Maid",
+      "patterns": [
+        "MD_*"
+      ],
+      "rule": "§7 托盘道具必须在托盘内",
+      "metric": "props_aabb_in_tray",
+      "tolerance_mm": null,
+      "props": [
+        "MD_Cup",
+        "MD_CupHandle",
+        "MD_Saucer",
+        "MD_Plate",
+        "MD_PlateRuffle",
+        "MD_CakeBase",
+        "MD_CakeCream",
+        "MD_CakeTop",
+        "MD_Strawberry_0",
+        "MD_Strawberry_1",
+        "MD_Strawberry_2",
+        "MD_Coffee",
+        "MD_TrayMat"
+      ],
+      "container": [
+        "MD_Tray",
+        "MD_TrayRim"
+      ]
+    }
+  ],
+  "light": {
+    "phases": [
+      "morning",
+      "noon",
+      "dusk",
+      "night"
+    ],
+    "weathers": [
+      "clear",
+      "cloudy",
+      "rain"
+    ],
+    "resolution": [
+      1280,
+      720
+    ],
+    "samples": 24,
+    "render_dir": "renders/qc",
+    "thresholds": {
+      "dead_black_ratio_max": 0.08,
+      "blown_ratio_max": 0.002,
+      "mean_luma_min": 0.15,
+      "mean_luma_max": 0.65,
+      "cct_k": [
+        2700,
+        3000
+      ],
+      "cct_tolerance_k": 400
+    },
+    "cct_expect_by_phase": {
+      "_doc": [
+        "§11.4 的色温要求按**时段分组**判，不按单一 2700–3000K 判全场景。",
+        "Lead 2026-10-21 裁决放宽（依据：色彩管理改 AgX Medium High Contrast + 夜间 HDRI 是深蓝天空，",
+        "物理上夜间窗外本来就是冷蓝光，要求整幅画面 2700–3000K 不现实）：",
+        "  morning/noon 4200–6500K（自然光主导）",
+        "  dusk         2800–4200K（暖灯开始主导，天空余晖仍偏冷）",
+        "  night        2700–4200K（暖灯主导，允许天空蓝）",
+        "v3 实测夜间 5590–5677K 超出旧判据，据此放宽；Lead 同时加强暖光权重。"
+      ],
+      "morning": {
+        "group": "daylight",
+        "k": [
+          4200,
+          6500
+        ],
+        "note": "晨光：自然天光主导"
+      },
+      "noon": {
+        "group": "daylight",
+        "k": [
+          4200,
+          6500
+        ],
+        "note": "正午：日光最强"
+      },
+      "dusk": {
+        "group": "interior_warm",
+        "k": [
+          2800,
+          4200
+        ],
+        "note": "黄昏：暖灯开始主导 + 天空余晖"
+      },
+      "night": {
+        "group": "interior_warm",
+        "k": [
+          2700,
+          4200
+        ],
+        "note": "夜间：暖灯主导，允许天空蓝"
+      }
+    },
+    "color_management": {
+      "_doc": "v3 起 Lead 把色彩管理改为 AgX / Medium High Contrast。qc_light 会读取实际 setting 并写进报告，便于复核。",
+      "expect_view_transform": "AgX",
+      "expect_look": "AgX - Medium High Contrast"
+    },
+    "default_rig": {
+      "sun": {
+        "energy": 3.0,
+        "color": [
+          1.0,
+          0.92,
+          0.82
+        ]
+      },
+      "interior": {
+        "energy": 120.0,
+        "color": [
+          1.0,
+          0.79,
+          0.54
+        ]
+      },
+      "world": {
+        "strength": 0.35,
+        "color": [
+          0.62,
+          0.72,
+          0.95
+        ]
+      },
+      "phases": {
+        "morning": {
+          "sun_factor": 0.55,
+          "sun_elev_deg": 18,
+          "sun_azim_deg": 110,
+          "interior_factor": 0.75,
+          "world_factor": 0.9,
+          "world_color": [
+            0.78,
+            0.84,
+            0.95
+          ],
+          "interior_color": [
+            1.0,
+            0.87,
+            0.72
+          ]
+        },
+        "noon": {
+          "sun_factor": 1.0,
+          "sun_elev_deg": 62,
+          "sun_azim_deg": 150,
+          "interior_factor": 0.55,
+          "world_factor": 1.15,
+          "world_color": [
+            0.72,
+            0.82,
+            1.0
+          ],
+          "interior_color": [
+            1.0,
+            0.92,
+            0.82
+          ]
+        },
+        "dusk": {
+          "sun_factor": 0.7,
+          "sun_elev_deg": 8,
+          "sun_azim_deg": 250,
+          "interior_factor": 1.15,
+          "world_factor": 0.45,
+          "world_color": [
+            0.92,
+            0.7,
+            0.62
+          ],
+          "interior_color": [
+            1.0,
+            0.72,
+            0.45
+          ]
+        },
+        "night": {
+          "sun_factor": 0.03,
+          "sun_elev_deg": 30,
+          "sun_azim_deg": 300,
+          "interior_factor": 1.45,
+          "world_factor": 0.1,
+          "world_color": [
+            0.3,
+            0.38,
+            0.6
+          ],
+          "interior_color": [
+            1.0,
+            0.68,
+            0.4
+          ]
+        }
+      },
+      "weather": {
+        "clear": {
+          "sun_factor": 1.0,
+          "world_factor": 1.0,
+          "interior_factor": 1.0,
+          "fog_density": 0.0
+        },
+        "cloudy": {
+          "sun_factor": 0.35,
+          "world_factor": 1.35,
+          "interior_factor": 1.08,
+          "fog_density": 0.004
+        },
+        "rain": {
+          "sun_factor": 0.12,
+          "world_factor": 1.1,
+          "interior_factor": 1.22,
+          "fog_density": 0.012
+        }
+      }
+    }
+  },
+  "gltf": {
+    "max_bytes": 41943040,
+    "max_tris": 500000,
+    "tri_budget": {
+      "C_Room": 60000,
+      "C_Bar": 70000,
+      "C_Display": 40000,
+      "C_Seating": 70000,
+      "C_Decor": 60000,
+      "C_Outdoor": 35000,
+      "C_Maid": 260000
+    },
+    "total_budget": 500000,
+    "target_total": 420000,
+    "require_mime": true,
+    "require_embedded_images": true,
+    "allowed_image_mime": [
+      "image/jpeg",
+      "image/png",
+      "image/webp"
+    ],
+    "_allowed_image_mime_note": "v3 起 Lead 把贴图转 WebP。GLB 内嵌 WebP 是 glTF 2.0 允许的（EXT_texture_webp 亦可）；这里接受 webp，但会额外核对：若用了 image/webp 就必须在 extensionsUsed 里声明 EXT_texture_webp（若导出器走的是标准 image/webp mime 而非扩展，也接受，报告里记实际走法）。",
+    "allowed_extensions": [
+      "KHR_materials_emissive_strength",
+      "EXT_texture_webp",
+      "KHR_mesh_quantization",
+      "KHR_texture_transform",
+      "KHR_materials_sheen",
+      "KHR_materials_transmission",
+      "KHR_materials_volume",
+      "KHR_materials_ior",
+      "KHR_lights_punctual",
+      "KHR_materials_unlit",
+      "KHR_materials_specular",
+      "KHR_materials_clearcoat",
+      "KHR_materials_anisotropy",
+      "KHR_materials_dispersion",
+      "KHR_materials_iridescence",
+      "KHR_materials_variants"
+    ],
+    "require_color0_valid_accessor": true,
+    "maid_prefixless": [
+      "Apron",
+      "Arm",
+      "Arm.001",
+      "BackBow",
+      "Bodice",
+      "Brow",
+      "Brow.001",
+      "Button0",
+      "Button1",
+      "Collar",
+      "Cuff",
+      "Cuff.001",
+      "EyeHL1",
+      "EyeHL1.001",
+      "EyeHL2",
+      "EyeHL2.001",
+      "EyeWhite",
+      "EyeWhite.001",
+      "Foot",
+      "Foot.001",
+      "HairCap",
+      "Head",
+      "IrisLine_L_0",
+      "IrisLine_R_0",
+      "Leg",
+      "Leg.001",
+      "Lash",
+      "Mouth",
+      "Neck",
+      "Nose",
+      "Panties",
+      "Placket",
+      "Skirt",
+      "Sleeve",
+      "Sleeve.001",
+      "Sock",
+      "Sock.001",
+      "SockFoot",
+      "SockRim",
+      "SockRim.001",
+      "Torso"
+    ],
+    "_maid_prefixless_doc": "女仆本体 106 网格没有 MD_ 前缀（v3 实测），列在这里供 GLB 逐区块归属用；漏列的会在 (no_collection) 里暴露。",
+    "_v5_observed": {
+      "date": "2026-10-21",
+      "total_tris": 387283,
+      "glb_mb": 14.9,
+      "note": "Lead v5 实测；逐区块 tri 由 qc_gltf 自解析统计，此为预期参考值"
+    }
+  },
+  "report": {
+    "doc_json": "docs/qc_findings.json",
+    "doc_md": "docs/QC-REPORT.md",
+    "results_dir": ".scratch/qc/results",
+    "max_findings_inline": 120
+  }
+}

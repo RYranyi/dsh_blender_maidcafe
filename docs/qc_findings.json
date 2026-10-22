@@ -1,0 +1,1961 @@
+{
+  "schema": 1,
+  "generated_at": "2026-10-21T13:37:21+0800",
+  "tag": "frozen",
+  "verdict": "FAIL",
+  "per_check_verdict": {
+    "collide": "FAIL",
+    "pairs": "FAIL",
+    "light": "FAIL",
+    "gltf": "PASS"
+  },
+  "checks_not_run": [],
+  "scene_present": true,
+  "counts": {
+    "total": 45,
+    "FAIL": 34,
+    "WARN": 11,
+    "by_module": {
+      "cbar/Lead": 20,
+      "cdecor/env-decor-v2": 19,
+      "clight/Lead": 6
+    }
+  },
+  "findings": [
+    {
+      "id": "INT-BA_BackTop-BA_SinkBasin",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_BackTop",
+        "BA_SinkBasin"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.75,
+        0.88
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 35.0,
+        "overlap_tris": 10,
+        "depth_mm": 5.0,
+        "depth_vertex_mm": 5.0,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          1300.0,
+          345.0,
+          35.0
+        ],
+        "tris_a": 44,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 5.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 10 对三角形；顶点级穿透深度 5.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Backsplash-BA_ShelfUpright",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Backsplash",
+        "BA_ShelfUpright"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.975,
+        1.175
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 13,
+        "depth_mm": 10.0,
+        "depth_vertex_mm": 10.0,
+        "depth_centroid_mm": 1388.3333,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          45.0,
+          20.0,
+          250.0
+        ],
+        "tris_a": 12,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 13 对三角形；顶点级穿透深度 10.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Backsplash-BA_ShelfUpright.001",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Backsplash",
+        "BA_ShelfUpright.001"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.975,
+        1.175
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 9,
+        "depth_mm": 10.0,
+        "depth_vertex_mm": 10.0,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          45.0,
+          20.0,
+          250.0
+        ],
+        "tris_a": 12,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 9 对三角形；顶点级穿透深度 10.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Backsplash-RM_WainBack",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Backsplash",
+        "RM_WainBack"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.975,
+        1.175
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 8.0,
+        "overlap_tris": 11,
+        "depth_mm": 8.0,
+        "depth_vertex_mm": 8.0001,
+        "depth_centroid_mm": 2.0001,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          5600.0,
+          8.0,
+          50.0
+        ],
+        "tris_a": 12,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 8.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 11 对三角形；顶点级穿透深度 8.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_BarTop-BA_BarTopRet",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_BarTop",
+        "BA_BarTopRet"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        1.75,
+        1.51,
+        0.925
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 50.0,
+        "overlap_tris": 35,
+        "depth_mm": 7.4343,
+        "depth_vertex_mm": 7.4343,
+        "depth_centroid_mm": 19.3333,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          800.0,
+          800.0,
+          50.0
+        ],
+        "tris_a": 108,
+        "tris_b": 108
+      },
+      "rule": "§11.1 干涉：顶点级穿透 7.43mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 35 对三角形；顶点级穿透深度 7.434mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Espresso_Body-DC_DessertTray_KnifeBlade",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Espresso_Body",
+        "DC_DessertTray_KnifeBlade"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        2.55,
+        1.525,
+        1.16
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 27.75,
+        "overlap_tris": 16,
+        "depth_mm": 27.75,
+        "depth_vertex_mm": 27.75,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          31.596,
+          98.03,
+          27.75
+        ],
+        "tris_a": 188,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：顶点级穿透 27.75mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 16 对三角形；顶点级穿透深度 27.750mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Espresso_Body-DC_DessertTray_Plate",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Espresso_Body",
+        "DC_DessertTray_Plate"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        2.55,
+        1.525,
+        1.16
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 12.0,
+        "overlap_tris": 44,
+        "depth_mm": 12.0,
+        "depth_vertex_mm": 12.0,
+        "depth_centroid_mm": 11.0095,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          55.0,
+          285.0,
+          12.0
+        ],
+        "tris_a": 188,
+        "tris_b": 188
+      },
+      "rule": "§11.1 干涉：顶点级穿透 12.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 44 对三角形；顶点级穿透深度 12.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Espresso_Body-DC_DessertTray_Rim",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Espresso_Body",
+        "DC_DessertTray_Rim"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        2.55,
+        1.525,
+        1.16
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 34,
+        "depth_mm": 20.0,
+        "depth_vertex_mm": 794.7066,
+        "depth_centroid_mm": 19.9659,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          58.0,
+          288.0,
+          20.0
+        ],
+        "tris_a": 188,
+        "tris_b": 92
+      },
+      "rule": "§11.1 干涉：顶点级穿透 20.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 34 对三角形；顶点级穿透深度 20.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Pour_CupCoffee-BA_Pour_Server",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Pour_CupCoffee",
+        "BA_Pour_Server"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        1.44,
+        1.57,
+        1.038
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 11.544,
+        "overlap_tris": 24,
+        "depth_mm": 8.5821,
+        "depth_vertex_mm": 8.5821,
+        "depth_centroid_mm": 5.0236,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          11.544,
+          72.0,
+          46.0
+        ],
+        "tris_a": 68,
+        "tris_b": 238
+      },
+      "rule": "§11.1 干涉：顶点级穿透 8.58mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 24 对三角形；顶点级穿透深度 8.582mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_1-DC_WallLampArm_2",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Shelf_1",
+        "DC_WallLampArm_2"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        1.95
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 10.0,
+        "overlap_tris": 18,
+        "depth_mm": 10.0001,
+        "depth_vertex_mm": 10.0024,
+        "depth_centroid_mm": 6.6629,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          2110.0,
+          10.0,
+          12.5
+        ],
+        "tris_a": 44,
+        "tris_b": 204
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 18 对三角形；顶点级穿透深度 10.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_1-DC_WallLampBase_2",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Shelf_1",
+        "DC_WallLampBase_2"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        1.95
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 34,
+        "depth_mm": 12.5001,
+        "depth_vertex_mm": 12.5001,
+        "depth_centroid_mm": 12.5001,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          2150.0,
+          20.0,
+          62.5
+        ],
+        "tris_a": 44,
+        "tris_b": 76
+      },
+      "rule": "§11.1 干涉：顶点级穿透 12.50mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 34 对三角形；顶点级穿透深度 12.500mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Syrup_Tray-DC_DessertTray_Plate",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Syrup_Tray",
+        "DC_DessertTray_Plate"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        3.3,
+        1.51,
+        0.958
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 12.0,
+        "overlap_tris": 56,
+        "depth_mm": 7.0,
+        "depth_vertex_mm": 7.0,
+        "depth_centroid_mm": 7.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          205.0,
+          165.0,
+          12.0
+        ],
+        "tris_a": 108,
+        "tris_b": 188
+      },
+      "rule": "§11.1 干涉：顶点级穿透 7.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 56 对三角形；顶点级穿透深度 7.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Syrup_Tray-DC_DessertTray_Rim",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Syrup_Tray",
+        "DC_DessertTray_Rim"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        3.3,
+        1.51,
+        0.958
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 12.0,
+        "overlap_tris": 45,
+        "depth_mm": 12.0,
+        "depth_vertex_mm": 381.4812,
+        "depth_centroid_mm": 7.0572,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          208.0,
+          168.0,
+          12.0
+        ],
+        "tris_a": 108,
+        "tris_b": 92
+      },
+      "rule": "§11.1 干涉：顶点级穿透 12.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 45 对三角形；顶点级穿透深度 12.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Syrup_Tray-DC_DessertTray_Slice2",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "BA_Syrup_Tray",
+        "DC_DessertTray_Slice2"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        3.3,
+        1.51,
+        0.958
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 17.998,
+        "overlap_tris": 27,
+        "depth_mm": 10.9821,
+        "depth_vertex_mm": 10.9821,
+        "depth_centroid_mm": 191.0078,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          38.326,
+          17.998,
+          26.0
+        ],
+        "tris_a": 108,
+        "tris_b": 116
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.98mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 27 对三角形；顶点级穿透深度 10.982mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_ChalkTex-DC_ShelfTop",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_ChalkTex",
+        "DC_ShelfTop"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.94,
+        1.5,
+        1.85
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 10.0,
+        "overlap_tris": 9,
+        "depth_mm": 10.0,
+        "depth_vertex_mm": 1197.5747,
+        "depth_centroid_mm": 594.1516,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          10.0,
+          373.0,
+          394.0
+        ],
+        "tris_a": 2,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 9 对三角形；顶点级穿透深度 10.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Cove_N-RM_CeilRimN",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_Cove_N",
+        "RM_CeilRimN"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        0.0,
+        2.43,
+        2.88
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 5.0,
+        "overlap_tris": 10,
+        "depth_mm": 5.0002,
+        "depth_vertex_mm": 5.0005,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          7450.0,
+          5.0,
+          30.0
+        ],
+        "tris_a": 12,
+        "tris_b": 108
+      },
+      "rule": "§11.1 干涉：顶点级穿透 5.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 10 对三角形；顶点级穿透深度 5.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Cove_S-RM_CeilRimS",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_Cove_S",
+        "RM_CeilRimS"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        0.0,
+        -2.43,
+        2.88
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 5.0,
+        "overlap_tris": 10,
+        "depth_mm": 5.0002,
+        "depth_vertex_mm": 5.0005,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          7450.0,
+          5.0,
+          30.0
+        ],
+        "tris_a": 12,
+        "tris_b": 108
+      },
+      "rule": "§11.1 干涉：顶点级穿透 5.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 10 对三角形；顶点级穿透深度 5.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Curtain_0-RM_WainLeft",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_Curtain_0",
+        "RM_WainLeft"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.8082,
+        -2.843,
+        1.49
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 8.0,
+        "overlap_tris": 20,
+        "depth_mm": 8.0,
+        "depth_vertex_mm": 8.0001,
+        "depth_centroid_mm": 6.8173,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          8.0,
+          182.0,
+          650.0
+        ],
+        "tris_a": 568,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 8.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 20 对三角形；顶点级穿透深度 8.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_DecoPlate_0-DC_ShelfBoard_4",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_DecoPlate_0",
+        "DC_ShelfBoard_4"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.795,
+        1.654,
+        1.66
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 111.0,
+        "overlap_tris": 59,
+        "depth_mm": 8.7479,
+        "depth_vertex_mm": 8.7479,
+        "depth_centroid_mm": 9.1199,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          245.0,
+          115.0,
+          111.0
+        ],
+        "tris_a": 166,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：顶点级穿透 8.75mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 59 对三角形；顶点级穿透深度 8.748mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_DecoPlate_1-DC_ShelfBoard_4",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_DecoPlate_1",
+        "DC_ShelfBoard_4"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.475,
+        2.814,
+        1.66
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 111.0,
+        "overlap_tris": 59,
+        "depth_mm": 8.7479,
+        "depth_vertex_mm": 8.7479,
+        "depth_centroid_mm": 9.1199,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          245.0,
+          127.0,
+          111.0
+        ],
+        "tris_a": 166,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：顶点级穿透 8.75mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 59 对三角形；顶点级穿透深度 8.748mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantCanopy_LT_P1-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantCanopy_LT_P1",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -2.9,
+        -2.0,
+        2.825
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 17.5,
+        "overlap_tris": 40,
+        "depth_mm": 17.5001,
+        "depth_vertex_mm": 17.5002,
+        "depth_centroid_mm": 7.8335,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          605.0,
+          505.0,
+          17.5
+        ],
+        "tris_a": 156,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 17.50mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 40 对三角形；顶点级穿透深度 17.500mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantCanopy_LT_P2-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantCanopy_LT_P2",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -2.55,
+        1.05,
+        2.825
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 17.5,
+        "overlap_tris": 40,
+        "depth_mm": 17.5001,
+        "depth_vertex_mm": 17.5002,
+        "depth_centroid_mm": 7.8335,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          955.0,
+          1455.0,
+          17.5
+        ],
+        "tris_a": 156,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 17.50mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 40 对三角形；顶点级穿透深度 17.500mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantCanopy_LT_P3-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantCanopy_LT_P3",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        1.85,
+        1.5,
+        2.825
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 17.5,
+        "overlap_tris": 40,
+        "depth_mm": 17.5001,
+        "depth_vertex_mm": 17.5002,
+        "depth_centroid_mm": 7.8335,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          1655.0,
+          1005.0,
+          17.5
+        ],
+        "tris_a": 156,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 17.50mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 40 对三角形；顶点级穿透深度 17.500mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantWire_LT_P1-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantWire_LT_P1",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -2.9,
+        -2.0,
+        2.5875
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 16,
+        "depth_mm": 19.9997,
+        "depth_vertex_mm": 19.9997,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          554.5,
+          454.5,
+          20.0
+        ],
+        "tris_a": 28,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 20.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 16 对三角形；顶点级穿透深度 20.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantWire_LT_P2-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantWire_LT_P2",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -2.55,
+        1.05,
+        2.6075
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 16,
+        "depth_mm": 19.9997,
+        "depth_vertex_mm": 19.9997,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          904.5,
+          1404.5,
+          20.0
+        ],
+        "tris_a": 28,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 20.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 16 对三角形；顶点级穿透深度 20.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_PendantWire_LT_P3-RM_CeilCenter",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_PendantWire_LT_P3",
+        "RM_CeilCenter"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        1.85,
+        1.5,
+        2.5675
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 16,
+        "depth_mm": 19.9997,
+        "depth_vertex_mm": 19.9997,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          1604.5,
+          954.5,
+          20.0
+        ],
+        "tris_a": 28,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 20.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 16 对三角形；顶点级穿透深度 20.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_ShelfBack-DC_ShelfPlinth",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_ShelfBack",
+        "DC_ShelfPlinth"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.635,
+        2.94,
+        1.025
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 20.0,
+        "overlap_tris": 11,
+        "depth_mm": 19.9999,
+        "depth_vertex_mm": 1969.9999,
+        "depth_centroid_mm": 1286.6666,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          630.0,
+          20.0,
+          80.0
+        ],
+        "tris_a": 12,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：顶点级穿透 20.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 11 对三角形；顶点级穿透深度 20.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_WallLampArm_2-DC_WallLampBase_2",
+      "kind": "interference",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [
+        "DC_WallLampArm_2",
+        "DC_WallLampBase_2"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        0.6,
+        2.98,
+        2.0
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 10.0,
+        "overlap_tris": 27,
+        "depth_mm": 10.0,
+        "depth_vertex_mm": 40.0,
+        "depth_centroid_mm": 9.0237,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          60.0,
+          10.0,
+          50.0
+        ],
+        "tris_a": 204,
+        "tris_b": 76
+      },
+      "rule": "§11.1 干涉：顶点级穿透 10.00mm ≥ 5mm 容差",
+      "note": "BVH 世界空间求交命中 27 对三角形；顶点级穿透深度 10.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Backsplash-RM_ChairRail_N",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Backsplash",
+        "RM_ChairRail_N"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.975,
+        1.175
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 18.0,
+        "overlap_tris": 26,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 14.667,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          5600.0,
+          18.0,
+          72.5
+        ],
+        "tris_a": 12,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：三角形相交 26 对、AABB 重叠 18.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 26 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_1-BA_ShelfUpright",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Shelf_1",
+        "BA_ShelfUpright"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        1.95
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 45.0,
+        "overlap_tris": 28,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          45.0,
+          200.0,
+          512.5
+        ],
+        "tris_a": 44,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：三角形相交 28 对、AABB 重叠 45.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 28 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_1-BA_ShelfUpright.001",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Shelf_1",
+        "BA_ShelfUpright.001"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        1.95
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 45.0,
+        "overlap_tris": 28,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 0.0,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          45.0,
+          200.0,
+          512.5
+        ],
+        "tris_a": 44,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：三角形相交 28 对、AABB 重叠 45.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 28 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_2-BA_ShelfUpright",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Shelf_2",
+        "BA_ShelfUpright"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        2.45
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 12.5,
+        "overlap_tris": 24,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 12.5,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          45.0,
+          200.0,
+          12.5
+        ],
+        "tris_a": 44,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：三角形相交 24 对、AABB 重叠 12.50mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 24 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Shelf_2-BA_ShelfUpright.001",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Shelf_2",
+        "BA_ShelfUpright.001"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        0.55,
+        2.88,
+        2.45
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 12.5,
+        "overlap_tris": 24,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 12.5,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          45.0,
+          200.0,
+          12.5
+        ],
+        "tris_a": 44,
+        "tris_b": 12
+      },
+      "rule": "§11.1 干涉：三角形相交 24 对、AABB 重叠 12.50mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 24 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-BA_Syrup_Tray-DC_DessertTray_Slice1",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "BA_Syrup_Tray",
+        "DC_DessertTray_Slice1"
+      ],
+      "module": "cbar",
+      "owner": "Lead",
+      "location": [
+        3.3,
+        1.51,
+        0.958
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 26.0,
+        "overlap_tris": 56,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 7.6667,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          84.615,
+          59.73,
+          26.0
+        ],
+        "tris_a": 108,
+        "tris_b": 116
+      },
+      "rule": "§11.1 干涉：三角形相交 56 对、AABB 重叠 26.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 56 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_ChalkFrame_R-DC_ShelfTop",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "DC_ChalkFrame_R",
+        "DC_ShelfTop"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.958,
+        2.1175,
+        1.85
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 24.0,
+        "overlap_tris": 30,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 1.3335,
+        "depth_uncertain": false,
+        "overlap_axes_mm": [
+          24.0,
+          585.0,
+          430.0
+        ],
+        "tris_a": 44,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：三角形相交 30 对、AABB 重叠 24.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 30 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_ChalkTray-DC_ShelfSide_L",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "DC_ChalkTray",
+        "DC_ShelfSide_L"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.948,
+        1.5,
+        1.203
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 37.0,
+        "overlap_tris": 32,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 12.6667,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          37.0,
+          580.0,
+          859.5
+        ],
+        "tris_a": 44,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：三角形相交 32 对、AABB 重叠 37.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 32 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Cove_E-RM_CeilRimE",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "DC_Cove_E",
+        "RM_CeilRimE"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        3.43,
+        0.0,
+        2.88
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 5.0,
+        "overlap_tris": 26,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 5.0012,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          5.0,
+          4900.0,
+          30.0
+        ],
+        "tris_a": 12,
+        "tris_b": 108
+      },
+      "rule": "§11.1 干涉：三角形相交 26 对、AABB 重叠 5.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 26 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Cove_W-RM_CeilRimW",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "DC_Cove_W",
+        "RM_CeilRimW"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.43,
+        0.0,
+        2.88
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 5.0,
+        "overlap_tris": 26,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 5.0012,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          5.0,
+          4900.0,
+          30.0
+        ],
+        "tris_a": 12,
+        "tris_b": 108
+      },
+      "rule": "§11.1 干涉：三角形相交 26 对、AABB 重叠 5.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 26 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "INT-DC_Curtain_0-RM_ChairRail_W",
+      "kind": "interference",
+      "verdict": "待确认",
+      "severity": "WARN",
+      "objects": [
+        "DC_Curtain_0",
+        "RM_ChairRail_W"
+      ],
+      "module": "cdecor",
+      "owner": "env-decor-v2",
+      "location": [
+        -3.8082,
+        -2.843,
+        1.49
+      ],
+      "metrics": {
+        "aabb_mtv_mm": 18.0,
+        "overlap_tris": 22,
+        "depth_mm": 0.0,
+        "depth_vertex_mm": 0.0,
+        "depth_centroid_mm": 7.1667,
+        "depth_uncertain": true,
+        "overlap_axes_mm": [
+          18.0,
+          182.0,
+          672.5
+        ],
+        "tris_a": 568,
+        "tris_b": 44
+      },
+      "rule": "§11.1 干涉：三角形相交 22 对、AABB 重叠 18.00mm，但顶点级穿透 0.000mm（顶点退化到共面）→ 深度不确定，请 qc_pairs 点名复核",
+      "note": "BVH 世界空间求交命中 22 对三角形；顶点级穿透深度 0.000mm（取两物体顶点落在对方内部的最近距离最大值，非质心代理值）",
+      "evidence": {
+        "bvh": "world_space_frompolygons",
+        "depth_method": "vertex(depth_centroid_disagrees)",
+        "aabb_only_would_report": true
+      },
+      "scope": null,
+      "source_kind": "collide",
+      "source_file": "collide_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_dusk_clear",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3347,
+        "dead_black_ratio": 0.00321,
+        "blown_ratio": 0.0,
+        "cct_k": 5578.4,
+        "median_luma": 0.2973,
+        "std_luma": 0.2033,
+        "mean_rgb": [
+          0.4133,
+          0.3214,
+          0.2351
+        ],
+        "r_over_b": 1.7582
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5578K 不在 [interior_warm 组] 期望 2800–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_dusk_clear.png",
+        "shot": "lt_dusk_clear",
+        "phase": "dusk",
+        "weather": "clear"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_dusk_cloudy",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3339,
+        "dead_black_ratio": 0.03109,
+        "blown_ratio": 0.0,
+        "cct_k": 5534.7,
+        "median_luma": 0.2912,
+        "std_luma": 0.2205,
+        "mean_rgb": [
+          0.415,
+          0.32,
+          0.2325
+        ],
+        "r_over_b": 1.7852
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5535K 不在 [interior_warm 组] 期望 2800–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_dusk_cloudy.png",
+        "shot": "lt_dusk_cloudy",
+        "phase": "dusk",
+        "weather": "cloudy"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_dusk_rain",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3611,
+        "dead_black_ratio": 0.00015,
+        "blown_ratio": 0.0,
+        "cct_k": 5562.4,
+        "median_luma": 0.3248,
+        "std_luma": 0.2099,
+        "mean_rgb": [
+          0.4438,
+          0.3471,
+          0.2568
+        ],
+        "r_over_b": 1.7279
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5562K 不在 [interior_warm 组] 期望 2800–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_dusk_rain.png",
+        "shot": "lt_dusk_rain",
+        "phase": "dusk",
+        "weather": "rain"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_night_clear",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3593,
+        "dead_black_ratio": 0.00022,
+        "blown_ratio": 0.0,
+        "cct_k": 5520.6,
+        "median_luma": 0.323,
+        "std_luma": 0.2093,
+        "mean_rgb": [
+          0.449,
+          0.3439,
+          0.248
+        ],
+        "r_over_b": 1.8106
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5521K 不在 [interior_warm 组] 期望 2700–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_night_clear.png",
+        "shot": "lt_night_clear",
+        "phase": "night",
+        "weather": "clear"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_night_cloudy",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3573,
+        "dead_black_ratio": 0.02355,
+        "blown_ratio": 0.0,
+        "cct_k": 5556.1,
+        "median_luma": 0.3198,
+        "std_luma": 0.2271,
+        "mean_rgb": [
+          0.4492,
+          0.3413,
+          0.2446
+        ],
+        "r_over_b": 1.8368
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5556K 不在 [interior_warm 组] 期望 2700–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_night_cloudy.png",
+        "shot": "lt_night_cloudy",
+        "phase": "night",
+        "weather": "cloudy"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    },
+    {
+      "id": "LIGHT-lt_night_rain",
+      "kind": "lighting",
+      "verdict": "FAIL",
+      "severity": "FAIL",
+      "objects": [],
+      "module": "clight",
+      "owner": "Lead",
+      "location": null,
+      "metrics": {
+        "mean_luma": 0.3868,
+        "dead_black_ratio": 0.0,
+        "blown_ratio": 0.0,
+        "cct_k": 5504.0,
+        "median_luma": 0.3547,
+        "std_luma": 0.215,
+        "mean_rgb": [
+          0.4807,
+          0.3706,
+          0.2707
+        ],
+        "r_over_b": 1.776
+      },
+      "rule": "§11.4 4 时段 × 晴/多云/雨：无死黑、无过曝、色温 2700–3000K",
+      "note": "色温估计 5504K 不在 [interior_warm 组] 期望 2700–4200K",
+      "evidence": {
+        "render": "renders\\qc\\lt_night_rain.png",
+        "shot": "lt_night_rain",
+        "phase": "night",
+        "weather": "rain"
+      },
+      "scope": null,
+      "source_kind": "light",
+      "source_file": "light_frozen.json"
+    }
+  ],
+  "groups": {
+    "cbar/Lead": [
+      "INT-BA_BackTop-BA_SinkBasin",
+      "INT-BA_Backsplash-BA_ShelfUpright",
+      "INT-BA_Backsplash-BA_ShelfUpright.001",
+      "INT-BA_Backsplash-RM_WainBack",
+      "INT-BA_BarTop-BA_BarTopRet",
+      "INT-BA_Espresso_Body-DC_DessertTray_KnifeBlade",
+      "INT-BA_Espresso_Body-DC_DessertTray_Plate",
+      "INT-BA_Espresso_Body-DC_DessertTray_Rim",
+      "INT-BA_Pour_CupCoffee-BA_Pour_Server",
+      "INT-BA_Shelf_1-DC_WallLampArm_2",
+      "INT-BA_Shelf_1-DC_WallLampBase_2",
+      "INT-BA_Syrup_Tray-DC_DessertTray_Plate",
+      "INT-BA_Syrup_Tray-DC_DessertTray_Rim",
+      "INT-BA_Syrup_Tray-DC_DessertTray_Slice2",
+      "INT-BA_Backsplash-RM_ChairRail_N",
+      "INT-BA_Shelf_1-BA_ShelfUpright",
+      "INT-BA_Shelf_1-BA_ShelfUpright.001",
+      "INT-BA_Shelf_2-BA_ShelfUpright",
+      "INT-BA_Shelf_2-BA_ShelfUpright.001",
+      "INT-BA_Syrup_Tray-DC_DessertTray_Slice1"
+    ],
+    "cdecor/env-decor-v2": [
+      "INT-DC_ChalkTex-DC_ShelfTop",
+      "INT-DC_Cove_N-RM_CeilRimN",
+      "INT-DC_Cove_S-RM_CeilRimS",
+      "INT-DC_Curtain_0-RM_WainLeft",
+      "INT-DC_DecoPlate_0-DC_ShelfBoard_4",
+      "INT-DC_DecoPlate_1-DC_ShelfBoard_4",
+      "INT-DC_PendantCanopy_LT_P1-RM_CeilCenter",
+      "INT-DC_PendantCanopy_LT_P2-RM_CeilCenter",
+      "INT-DC_PendantCanopy_LT_P3-RM_CeilCenter",
+      "INT-DC_PendantWire_LT_P1-RM_CeilCenter",
+      "INT-DC_PendantWire_LT_P2-RM_CeilCenter",
+      "INT-DC_PendantWire_LT_P3-RM_CeilCenter",
+      "INT-DC_ShelfBack-DC_ShelfPlinth",
+      "INT-DC_WallLampArm_2-DC_WallLampBase_2",
+      "INT-DC_ChalkFrame_R-DC_ShelfTop",
+      "INT-DC_ChalkTray-DC_ShelfSide_L",
+      "INT-DC_Cove_E-RM_CeilRimE",
+      "INT-DC_Cove_W-RM_CeilRimW",
+      "INT-DC_Curtain_0-RM_ChairRail_W"
+    ],
+    "clight/Lead": [
+      "LIGHT-lt_dusk_clear",
+      "LIGHT-lt_dusk_cloudy",
+      "LIGHT-lt_dusk_rain",
+      "LIGHT-lt_night_clear",
+      "LIGHT-lt_night_cloudy",
+      "LIGHT-lt_night_rain"
+    ]
+  },
+  "calibration": {
+    "collide_calib": {
+      "verdict": "PASS",
+      "file": "collide_calib.json"
+    }
+  },
+  "scene": {
+    "blend": "scene\\maid_cafe.blend",
+    "bytes": 60506544,
+    "mtime": "2026-10-21 13:30:24",
+    "md5": "ef352fabebd18aa7ce66d95d3f1428fa"
+  },
+  "sources": {
+    "collide": "collide_frozen.json",
+    "pairs": "pairs_frozen.json",
+    "light": "light_frozen.json",
+    "gltf": "gltf_frozen.json"
+  },
+  "rules": {
+    "path": "blender\\qc\\qc_rules.json",
+    "md5": "0195a99ba3550ef44b876093e337f78d"
+  },
+  "legend": {
+    "verdict": {
+      "PASS": "全部判据通过",
+      "FAIL": "有硬判据未通过",
+      "待确认": "有 WARN，或有关键项未运行/证据不足，不能算通过"
+    },
+    "severity": {
+      "FAIL": "硬判据违反（契约 §11 明确数值）",
+      "WARN": "超出目标但未越硬上限，或证据不足",
+      "INFO": "记录性信息"
+    }
+  }
+}

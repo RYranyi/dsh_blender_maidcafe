@@ -1,0 +1,58 @@
+# 统一换行符策略，避免 Windows 检出后产生整文件假 diff
+* text=auto eol=lf
+
+# ── 二进制文件：不做换行/编码转换 ──
+*.blend   binary
+*.blend1  binary
+*.glb     binary
+*.mp4     binary
+*.png     binary
+*.jpg     binary
+*.jpeg    binary
+*.webp    binary
+*.gif     binary
+*.ico     binary
+*.hdr     binary
+*.exr     binary
+*.ogg     binary
+*.mp3     binary
+*.wav     binary
+*.ttf     binary
+*.ttc     binary
+*.woff    binary
+*.woff2   binary
+*.zip     binary
+*.7z      binary
+
+# ── 文本文件：显式声明 UTF-8，避免编辑器按 GBK 解读导致中文乱码 ──
+# 这些后缀统一按 UTF-8 + LF 处理
+*.md        text working-tree-encoding=UTF-8 eol=lf
+*.markdown  text working-tree-encoding=UTF-8 eol=lf
+*.txt       text working-tree-encoding=UTF-8 eol=lf
+*.html      text working-tree-encoding=UTF-8 eol=lf
+*.htm       text working-tree-encoding=UTF-8 eol=lf
+*.css       text working-tree-encoding=UTF-8 eol=lf
+*.js        text working-tree-encoding=UTF-8 eol=lf
+*.mjs       text working-tree-encoding=UTF-8 eol=lf
+*.cjs       text working-tree-encoding=UTF-8 eol=lf
+*.json      text working-tree-encoding=UTF-8 eol=lf
+*.py        text working-tree-encoding=UTF-8 eol=lf
+*.srt       text working-tree-encoding=UTF-8 eol=lf
+*.ass       text working-tree-encoding=UTF-8 eol=lf
+*.yml       text working-tree-encoding=UTF-8 eol=lf
+*.yaml      text working-tree-encoding=UTF-8 eol=lf
+*.toml      text working-tree-encoding=UTF-8 eol=lf
+*.sh        text working-tree-encoding=UTF-8 eol=lf
+
+# ── git 显示时把大二进制当二进制，不尝试 diff ──
+renders/video/*.mp4  binary
+scene/*.glb          binary
+
+# ── 生成物：vendored three.js 不做 diff ──
+js/vendor/three.module.js  linguist-vendored
+js/vendor/GLTFLoader.js    linguist-vendored
+js/vendor/OrbitControls.js linguist-vendored
+js/vendor/**               linguist-vendored
+
+# ── 语言统计：文档不参与代码占比 ──
+docs/**  linguist-documentation

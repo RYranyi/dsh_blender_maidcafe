@@ -1,0 +1,57 @@
+# ══════════════════════════════════════════════════════════════
+#  日式女仆咖啡馆 · Git 忽略规则
+# ══════════════════════════════════════════════════════════════
+
+# ── 版权受限：第三方商业音乐，**不要公开分发** ──
+# assets/music/*.ogg 是 flap+frog 的作品，版权归原作者。
+# 仓库不含这些文件；需要时自行购买/下载后放入 assets/music/ 即可
+# （文件名与 audio.js 里的 MUSIC_TRACKS 一一对应，见 docs/ASSETS-CREDITS.md）
+assets/music/*.ogg
+
+# ── 体积过大：可从 PolyHaven 免费重新下载（CC0） ──
+# 网页运行只需要 scene/maid_cafe.glb（贴图已内嵌），不需要这些原始素材
+assets/models/
+assets/textures/
+assets/tex/
+
+# ── Blender 工程源文件（55 MB，可用 blender/cbuild.py 重新生成） ──
+scene/*.blend
+scene/*.blend1
+scene/*.partial.blend
+
+# ── 渲染中间产物 ──
+renders/_preview/
+renders/_seq/
+renders/_sheet/
+renders/_verify/
+renders/video/_tmp/
+renders/video/_verify/
+renders/video/_log/
+renders/video/stills/
+renders/video/shots/
+
+# ── 系统 / IDE ──
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Python ──
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# ── Node ──
+node_modules/
+npm-debug.log*
+
+# ── 临时 / 诊断产物 ──
+.scratch/
+*.tmp
+*.log
+dsh_*.py
+docs/_*.json

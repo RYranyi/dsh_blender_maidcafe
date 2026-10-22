@@ -1,0 +1,3187 @@
+{
+ "version": "shelf-v2",
+ "generated_by": "cbuild.py",
+ "room": {
+  "x": [
+   -4.0,
+   4.0
+  ],
+  "y": [
+   -3.0,
+   3.0
+  ],
+  "z": [
+   0.0,
+   3.0
+  ],
+  "wall_t": 0.16,
+  "wainscot_z": 0.95
+ },
+ "anchors": {
+  "win": [
+   [
+    -3.7,
+    0.72
+   ],
+   [
+    0.35,
+    2.58
+   ]
+  ],
+  "door": [
+   [
+    1.15,
+    0.0
+   ],
+   [
+    2.45,
+    2.2
+   ]
+  ],
+  "ceiling_recess_z": 2.86,
+  "bar_top_z": 0.95,
+  "espresso": [
+   [
+    2.15,
+    2.95
+   ],
+   [
+    1.3,
+    1.75
+   ]
+  ],
+  "register": [
+   [
+    -0.08,
+    0.42
+   ],
+   [
+    1.42,
+    1.82
+   ]
+  ],
+  "display_front": [
+   -1.6,
+   0.55,
+   0.0
+  ],
+  "display_center": [
+   -0.9400000000000001,
+   0.8150000000000001,
+   0.0
+  ],
+  "shelf_z": [
+   0.42,
+   0.78,
+   1.12
+  ],
+  "table_01_top": [
+   -2.95,
+   -2.05,
+   0.74
+  ],
+  "CH_01_1": [
+   -3.4588,
+   -1.732,
+   0.0
+  ],
+  "CH_01_2": [
+   -2.4412,
+   -1.732,
+   0.0
+  ],
+  "table_02_top": [
+   -1.05,
+   -2.1,
+   0.74
+  ],
+  "CH_02_1": [
+   -1.6138,
+   -1.8948,
+   0.0
+  ],
+  "CH_02_2": [
+   -1.05,
+   -1.5,
+   0.0
+  ],
+  "CH_02_3": [
+   -0.4862,
+   -1.8948,
+   0.0
+  ],
+  "table_05_top": [
+   3.05,
+   -0.95,
+   0.74
+  ],
+  "CH_05_1": [
+   3.05,
+   -0.35,
+   0.0
+  ],
+  "CH_05_2": [
+   3.05,
+   -1.55,
+   0.0
+  ],
+  "CH_Stool_1": [
+   0.55,
+   0.82,
+   0.74
+  ],
+  "CH_Stool_2": [
+   1.7,
+   0.82,
+   0.74
+  ],
+  "pendant_positions": [
+   [
+    -2.9,
+    -2.0,
+    2.1
+   ],
+   [
+    -2.55,
+    1.05,
+    2.14
+   ],
+   [
+    1.85,
+    1.5,
+    2.06
+   ]
+  ],
+  "chalkboard": [
+   -3.92,
+   0.0,
+   1.85
+  ],
+  "noren": [
+   [
+    1.1,
+    2.5
+   ],
+   [
+    1.42,
+    2.22
+   ]
+  ],
+  "sky_dome_name": "OD_SkyDome",
+  "sky_dome_radius": 40.0,
+  "window_lit_names": [
+   "OD_WindowLit_0_3",
+   "OD_WindowLit_0_5",
+   "OD_WindowLit_0_10",
+   "OD_WindowLit_1_1",
+   "OD_WindowLit_1_3",
+   "OD_WindowLit_1_4",
+   "OD_WindowLit_1_6",
+   "OD_WindowLit_1_7",
+   "OD_WindowLit_1_8",
+   "OD_WindowLit_1_11",
+   "OD_WindowLit_1_12",
+   "OD_WindowLit_1_14",
+   "OD_WindowLit_1_16",
+   "OD_WindowLit_1_18",
+   "OD_WindowLit_2_0",
+   "OD_WindowLit_2_1",
+   "OD_WindowLit_2_4",
+   "OD_WindowLit_2_5",
+   "OD_WindowLit_2_7",
+   "OD_WindowLit_2_10",
+   "OD_WindowLit_2_11",
+   "OD_WindowLit_2_12",
+   "OD_WindowLit_2_14",
+   "OD_WindowLit_2_17",
+   "OD_WindowLit_3_0",
+   "OD_WindowLit_3_1",
+   "OD_WindowLit_3_2",
+   "OD_WindowLit_3_5",
+   "OD_WindowLit_3_6",
+   "OD_WindowLit_3_9",
+   "OD_WindowLit_3_10",
+   "OD_WindowLit_3_11",
+   "OD_WindowLit_3_13",
+   "OD_WindowLit_3_15",
+   "OD_WindowLit_4_1",
+   "OD_WindowLit_4_3",
+   "OD_WindowLit_4_4",
+   "OD_WindowLit_4_9",
+   "OD_WindowLit_4_10",
+   "OD_WindowLit_4_13",
+   "OD_WindowLit_5_0",
+   "OD_WindowLit_5_3",
+   "OD_WindowLit_5_4",
+   "OD_WindowLit_5_5",
+   "OD_WindowLit_5_6",
+   "OD_WindowLit_5_9",
+   "OD_WindowLit_5_11",
+   "OD_WindowLit_5_13",
+   "OD_WindowLit_5_14",
+   "OD_WindowLit_5_17",
+   "OD_WindowLit_5_22",
+   "OD_WindowLit_6_1",
+   "OD_WindowLit_6_2",
+   "OD_WindowLit_6_6",
+   "OD_WindowLit_7_2",
+   "OD_WindowLit_7_3",
+   "OD_WindowLit_7_7",
+   "OD_WindowLit_7_8",
+   "OD_WindowLit_7_9",
+   "OD_WindowLit_7_12",
+   "OD_WindowLit_7_14",
+   "OD_WindowLit_7_17",
+   "OD_WindowLit_7_18",
+   "OD_WindowLit_7_19"
+  ],
+  "window_lit_count": 64,
+  "sidewalk_top_z": 0.0,
+  "road_top_z": -0.14,
+  "curb_h": 0.14,
+  "bldg_front_y": -9.6,
+  "street_lamps": [
+   {
+    "name": "OD_Lamp_0",
+    "x": -3.0,
+    "y": -4.35,
+    "head_z": 3.74
+   },
+   {
+    "name": "OD_Lamp_1",
+    "x": 2.4,
+    "y": -4.35,
+    "head_z": 3.74
+   }
+  ],
+  "street_x": [
+   -24.0,
+   24.0
+  ],
+  "maid_pos": [
+   -1.85,
+   -0.25,
+   0.0
+  ],
+  "maid_rot_z_deg": 42.0,
+  "maid_height": 1.467,
+  "tray_top_z": 0.742,
+  "steam_node": "MD_Steam_0",
+  "body_aabb": [
+   [
+    -2.23794,
+    -0.65333,
+    -0.0
+   ],
+   [
+    -1.45463,
+    0.13777,
+    1.46682
+   ]
+  ],
+  "cam_default": {
+   "pos": [
+    1.85,
+    -2.55,
+    1.55
+   ],
+   "target": [
+    -1.2,
+    0.5,
+    1.05
+   ]
+  },
+  "tables": [
+   {
+    "name": "TB_01",
+    "x": -2.95,
+    "y": -2.05
+   },
+   {
+    "name": "TB_02",
+    "x": -1.05,
+    "y": -2.1
+   },
+   {
+    "name": "TB_05",
+    "x": 3.05,
+    "y": -0.95
+   }
+  ],
+  "window": {
+   "x": [
+    -3.7,
+    0.35
+   ],
+   "z": [
+    0.72,
+    2.58
+   ]
+  },
+  "bar": {
+   "main": {
+    "x": [
+     -0.2,
+     3.7
+    ],
+    "y": [
+     1.15,
+     1.87
+    ]
+   },
+   "top_z": 0.95
+  },
+  "display": {
+   "x": [
+    -1.6,
+    -0.28
+   ],
+   "y": [
+    0.55,
+    1.08
+   ],
+   "z": [
+    0.0,
+    1.36
+   ]
+  },
+  "street": {
+   "sidewalk_y": [
+    -4.6,
+    -3.0
+   ],
+   "road_y": [
+    -9.2,
+    -5.2
+   ],
+   "bldg_y": [
+    -15.0,
+    -9.6
+   ]
+  }
+ },
+ "colliders": [
+  {
+   "name": "RM_WallFront_0",
+   "aabb": [
+    [
+     -4.0,
+     -3.16,
+     0.0
+    ],
+    [
+     -3.7,
+     -3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_1",
+   "aabb": [
+    [
+     -3.7,
+     -3.16,
+     0.0
+    ],
+    [
+     0.35,
+     -3.0,
+     0.72
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_2",
+   "aabb": [
+    [
+     -3.7,
+     -3.16,
+     2.58
+    ],
+    [
+     0.35,
+     -3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_3",
+   "aabb": [
+    [
+     0.35,
+     -3.16,
+     0.72
+    ],
+    [
+     1.15,
+     -3.0,
+     2.58
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_4",
+   "aabb": [
+    [
+     0.35,
+     -3.16,
+     2.58
+    ],
+    [
+     1.15,
+     -3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_5",
+   "aabb": [
+    [
+     0.35,
+     -3.16,
+     0.0
+    ],
+    [
+     1.15,
+     -3.0,
+     0.72
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_6",
+   "aabb": [
+    [
+     1.15,
+     -3.16,
+     2.2
+    ],
+    [
+     2.45,
+     -3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallFront_7",
+   "aabb": [
+    [
+     2.45,
+     -3.16,
+     0.0
+    ],
+    [
+     4.0,
+     -3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallBack",
+   "aabb": [
+    [
+     -4.0,
+     3.0,
+     0.0
+    ],
+    [
+     4.0,
+     3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallLeft",
+   "aabb": [
+    [
+     -4.16,
+     -3.0,
+     0.0
+    ],
+    [
+     -4.0,
+     3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WallRight",
+   "aabb": [
+    [
+     4.0,
+     -3.0,
+     0.0
+    ],
+    [
+     4.16,
+     3.0,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_L",
+   "aabb": [
+    [
+     -4.0,
+     -3.18,
+     0.0
+    ],
+    [
+     -3.7,
+     -3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_M",
+   "aabb": [
+    [
+     0.35,
+     -3.18,
+     0.0
+    ],
+    [
+     1.15,
+     -3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_R",
+   "aabb": [
+    [
+     2.45,
+     -3.18,
+     0.0
+    ],
+    [
+     4.0,
+     -3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_UnderWin",
+   "aabb": [
+    [
+     -3.7,
+     -3.18,
+     0.0
+    ],
+    [
+     0.35,
+     -3.16,
+     0.72
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_AboveWin",
+   "aabb": [
+    [
+     -3.7,
+     -3.18,
+     2.58
+    ],
+    [
+     0.35,
+     -3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinF_AboveDoor",
+   "aabb": [
+    [
+     1.15,
+     -3.18,
+     2.2
+    ],
+    [
+     2.45,
+     -3.16,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_SkinB",
+   "aabb": [
+    [
+     -4.0,
+     3.16,
+     0.0
+    ],
+    [
+     4.0,
+     3.18,
+     3.0
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainFront_L",
+   "aabb": [
+    [
+     -4.0,
+     -3.0,
+     0.0
+    ],
+    [
+     -3.7,
+     -2.982,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainFront_R",
+   "aabb": [
+    [
+     2.45,
+     -3.0,
+     0.0
+    ],
+    [
+     4.0,
+     -2.982,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainFront_M",
+   "aabb": [
+    [
+     0.35,
+     -3.0,
+     0.0
+    ],
+    [
+     1.15,
+     -2.982,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainBack",
+   "aabb": [
+    [
+     -4.0,
+     2.982,
+     0.0
+    ],
+    [
+     4.0,
+     3.0,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainLeft",
+   "aabb": [
+    [
+     -4.0,
+     -3.0,
+     0.0
+    ],
+    [
+     -3.982,
+     3.0,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "RM_WainRight",
+   "aabb": [
+    [
+     3.982,
+     -3.0,
+     0.0
+    ],
+    [
+     4.0,
+     3.0,
+     0.95
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "ROOM_BOUNDS",
+   "aabb": [
+    [
+     -4.0,
+     -3.0,
+     0.0
+    ],
+    [
+     4.0,
+     3.0,
+     3.0
+    ]
+   ],
+   "kind": "room"
+  },
+  {
+   "name": "BA_BarMain_Body",
+   "aabb": [
+    [
+     -0.2,
+     1.15,
+     0.1
+    ],
+    [
+     3.7,
+     1.87,
+     0.9
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_Kick",
+   "aabb": [
+    [
+     -0.17,
+     1.18,
+     0.0
+    ],
+    [
+     3.67,
+     1.84,
+     0.1
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_Door0",
+   "aabb": [
+    [
+     -0.188,
+     1.149,
+     0.11
+    ],
+    [
+     0.772,
+     1.167,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_DHandle0",
+   "aabb": [
+    [
+     0.731,
+     1.126,
+     0.69
+    ],
+    [
+     0.743,
+     1.146,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_Door1",
+   "aabb": [
+    [
+     0.784,
+     1.149,
+     0.11
+    ],
+    [
+     1.744,
+     1.167,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_DHandle1",
+   "aabb": [
+    [
+     1.703,
+     1.126,
+     0.69
+    ],
+    [
+     1.715,
+     1.146,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_Door2",
+   "aabb": [
+    [
+     1.756,
+     1.149,
+     0.11
+    ],
+    [
+     2.716,
+     1.167,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_DHandle2",
+   "aabb": [
+    [
+     2.675,
+     1.126,
+     0.69
+    ],
+    [
+     2.687,
+     1.146,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_Door3",
+   "aabb": [
+    [
+     2.728,
+     1.149,
+     0.11
+    ],
+    [
+     3.688,
+     1.167,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarMain_DHandle3",
+   "aabb": [
+    [
+     3.647,
+     1.126,
+     0.69
+    ],
+    [
+     3.659,
+     1.146,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_Body",
+   "aabb": [
+    [
+     2.98,
+     1.15,
+     0.1
+    ],
+    [
+     3.7,
+     2.92,
+     0.9
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_Kick",
+   "aabb": [
+    [
+     3.01,
+     1.18,
+     0.0
+    ],
+    [
+     3.67,
+     2.89,
+     0.1
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_Door0",
+   "aabb": [
+    [
+     2.992,
+     2.903,
+     0.11
+    ],
+    [
+     3.334,
+     2.921,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_DHandle0",
+   "aabb": [
+    [
+     3.021,
+     2.924,
+     0.69
+    ],
+    [
+     3.033,
+     2.944,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_Door1",
+   "aabb": [
+    [
+     3.346,
+     2.903,
+     0.11
+    ],
+    [
+     3.688,
+     2.921,
+     0.85
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BarRet_DHandle1",
+   "aabb": [
+    [
+     3.375,
+     2.924,
+     0.69
+    ],
+    [
+     3.387,
+     2.944,
+     0.79
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Body",
+   "aabb": [
+    [
+     -1.6,
+     2.55,
+     0.08
+    ],
+    [
+     2.7,
+     2.95,
+     0.86
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Kick",
+   "aabb": [
+    [
+     -1.57,
+     2.58,
+     0.0
+    ],
+    [
+     2.67,
+     2.92,
+     0.08
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Door0",
+   "aabb": [
+    [
+     -1.588,
+     2.549,
+     0.09
+    ],
+    [
+     -0.7424,
+     2.567,
+     0.81
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_DHandle0",
+   "aabb": [
+    [
+     -0.7834,
+     2.526,
+     0.65
+    ],
+    [
+     -0.7714,
+     2.546,
+     0.75
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Door1",
+   "aabb": [
+    [
+     -0.7304,
+     2.549,
+     0.09
+    ],
+    [
+     0.1152,
+     2.567,
+     0.81
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_DHandle1",
+   "aabb": [
+    [
+     0.0742,
+     2.526,
+     0.65
+    ],
+    [
+     0.0862,
+     2.546,
+     0.75
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Door2",
+   "aabb": [
+    [
+     0.1272,
+     2.549,
+     0.09
+    ],
+    [
+     0.9728,
+     2.567,
+     0.81
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_DHandle2",
+   "aabb": [
+    [
+     0.9318,
+     2.526,
+     0.65
+    ],
+    [
+     0.9438,
+     2.546,
+     0.75
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Door3",
+   "aabb": [
+    [
+     0.9848,
+     2.549,
+     0.09
+    ],
+    [
+     1.8304,
+     2.567,
+     0.81
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_DHandle3",
+   "aabb": [
+    [
+     1.7894,
+     2.526,
+     0.65
+    ],
+    [
+     1.8014,
+     2.546,
+     0.75
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_Door4",
+   "aabb": [
+    [
+     1.8424,
+     2.549,
+     0.09
+    ],
+    [
+     2.688,
+     2.567,
+     0.81
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_BackBar_DHandle4",
+   "aabb": [
+    [
+     2.647,
+     2.526,
+     0.65
+    ],
+    [
+     2.659,
+     2.546,
+     0.75
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Shelf_0",
+   "aabb": [
+    [
+     -1.6,
+     2.79,
+     1.4375
+    ],
+    [
+     2.7,
+     2.96,
+     1.4625
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Shelf_1",
+   "aabb": [
+    [
+     -1.6,
+     2.79,
+     1.9375
+    ],
+    [
+     2.7,
+     2.96,
+     1.9625
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Shelf_2",
+   "aabb": [
+    [
+     -1.6,
+     2.79,
+     2.4375
+    ],
+    [
+     2.7,
+     2.96,
+     2.4625
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Body",
+   "aabb": [
+    [
+     2.15,
+     1.3,
+     0.95
+    ],
+    [
+     2.95,
+     1.75,
+     1.37
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_CupWarm",
+   "aabb": [
+    [
+     2.18,
+     1.33,
+     1.37
+    ],
+    [
+     2.92,
+     1.72,
+     1.39
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Rail0",
+   "aabb": [
+    [
+     2.21,
+     1.318,
+     1.3875
+    ],
+    [
+     2.89,
+     1.332,
+     1.4225
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Rail1",
+   "aabb": [
+    [
+     2.21,
+     1.718,
+     1.3875
+    ],
+    [
+     2.89,
+     1.732,
+     1.4225
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Rail2",
+   "aabb": [
+    [
+     2.203,
+     1.315,
+     1.3875
+    ],
+    [
+     2.217,
+     1.735,
+     1.4225
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Rail3",
+   "aabb": [
+    [
+     2.883,
+     1.315,
+     1.3875
+    ],
+    [
+     2.897,
+     1.735,
+     1.4225
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_GaugeRim",
+   "aabb": [
+    [
+     2.285,
+     1.298,
+     1.225
+    ],
+    [
+     2.375,
+     1.31,
+     1.315
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Gauge",
+   "aabb": [
+    [
+     2.294,
+     1.296,
+     1.234
+    ],
+    [
+     2.366,
+     1.3,
+     1.306
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Group0",
+   "aabb": [
+    [
+     2.378,
+     1.278,
+     1.165
+    ],
+    [
+     2.462,
+     1.362,
+     1.255
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Portaf0",
+   "aabb": [
+    [
+     2.365,
+     1.215,
+     1.144
+    ],
+    [
+     2.475,
+     1.325,
+     1.166
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Handle0",
+   "aabb": [
+    [
+     2.40764,
+     1.115,
+     1.142
+    ],
+    [
+     2.43236,
+     1.265,
+     1.168
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Basket0",
+   "aabb": [
+    [
+     2.388,
+     1.213,
+     1.143
+    ],
+    [
+     2.452,
+     1.277,
+     1.173
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Group1",
+   "aabb": [
+    [
+     2.638,
+     1.278,
+     1.165
+    ],
+    [
+     2.722,
+     1.362,
+     1.255
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Portaf1",
+   "aabb": [
+    [
+     2.625,
+     1.215,
+     1.144
+    ],
+    [
+     2.735,
+     1.325,
+     1.166
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Handle1",
+   "aabb": [
+    [
+     2.66764,
+     1.115,
+     1.142
+    ],
+    [
+     2.69236,
+     1.265,
+     1.168
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Basket1",
+   "aabb": [
+    [
+     2.648,
+     1.213,
+     1.143
+    ],
+    [
+     2.712,
+     1.277,
+     1.173
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_SteamBase",
+   "aabb": [
+    [
+     2.884,
+     1.314,
+     1.145
+    ],
+    [
+     2.916,
+     1.346,
+     1.195
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_SteamWand",
+   "aabb": [
+    [
+     2.89241,
+     1.19507,
+     1.02395
+    ],
+    [
+     2.93776,
+     1.336,
+     1.17496
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Drip",
+   "aabb": [
+    [
+     2.33,
+     1.16,
+     0.95
+    ],
+    [
+     2.77,
+     1.34,
+     0.966
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat0",
+   "aabb": [
+    [
+     2.35,
+     1.161,
+     0.966
+    ],
+    [
+     2.75,
+     1.169,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat1",
+   "aabb": [
+    [
+     2.35,
+     1.18,
+     0.966
+    ],
+    [
+     2.75,
+     1.188,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat2",
+   "aabb": [
+    [
+     2.35,
+     1.199,
+     0.966
+    ],
+    [
+     2.75,
+     1.207,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat3",
+   "aabb": [
+    [
+     2.35,
+     1.218,
+     0.966
+    ],
+    [
+     2.75,
+     1.226,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat4",
+   "aabb": [
+    [
+     2.35,
+     1.237,
+     0.966
+    ],
+    [
+     2.75,
+     1.245,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat5",
+   "aabb": [
+    [
+     2.35,
+     1.256,
+     0.966
+    ],
+    [
+     2.75,
+     1.264,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat6",
+   "aabb": [
+    [
+     2.35,
+     1.275,
+     0.966
+    ],
+    [
+     2.75,
+     1.283,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat7",
+   "aabb": [
+    [
+     2.35,
+     1.294,
+     0.966
+    ],
+    [
+     2.75,
+     1.302,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_DripSlat8",
+   "aabb": [
+    [
+     2.35,
+     1.313,
+     0.966
+    ],
+    [
+     2.75,
+     1.321,
+     0.97
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Foot",
+   "aabb": [
+    [
+     2.21288,
+     1.347,
+     0.95
+    ],
+    [
+     2.24712,
+     1.383,
+     0.98
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Foot.001",
+   "aabb": [
+    [
+     2.21288,
+     1.667,
+     0.95
+    ],
+    [
+     2.24712,
+     1.703,
+     0.98
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Foot.002",
+   "aabb": [
+    [
+     2.85288,
+     1.347,
+     0.95
+    ],
+    [
+     2.88712,
+     1.383,
+     0.98
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "BA_Espresso_Foot.003",
+   "aabb": [
+    [
+     2.85288,
+     1.667,
+     0.95
+    ],
+    [
+     2.88712,
+     1.703,
+     0.98
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DS_DisplayCabinet",
+   "aabb": [
+    [
+     -1.613,
+     0.502,
+     0.0
+    ],
+    [
+     -0.267,
+     1.093,
+     1.36
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "TB_01",
+   "aabb": [
+    [
+     -3.33,
+     -2.43,
+     0.0
+    ],
+    [
+     -2.57,
+     -1.67,
+     0.74
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "CH_01_1",
+   "aabb": [
+    [
+     -3.76911,
+     -2.0386,
+     0.0
+    ],
+    [
+     -3.13193,
+     -1.44254,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "CH_01_2",
+   "aabb": [
+    [
+     -2.76209,
+     -2.04239,
+     0.0
+    ],
+    [
+     -2.12934,
+     -1.44254,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "TB_02",
+   "aabb": [
+    [
+     -1.43,
+     -2.48,
+     0.0
+    ],
+    [
+     -0.67,
+     -1.72,
+     0.74
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "CH_02_1",
+   "aabb": [
+    [
+     -1.91486,
+     -2.17375,
+     0.0
+    ],
+    [
+     -1.30145,
+     -1.6316,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "CH_02_2",
+   "aabb": [
+    [
+     -1.25764,
+     -1.75962,
+     0.0
+    ],
+    [
+     -0.84236,
+     -1.22505,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "CH_02_3",
+   "aabb": [
+    [
+     -0.79191,
+     -2.17618,
+     0.0
+    ],
+    [
+     -0.18414,
+     -1.6316,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "TB_05",
+   "aabb": [
+    [
+     2.67,
+     -1.33,
+     0.0
+    ],
+    [
+     3.43,
+     -0.57,
+     0.74
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "CH_05_1",
+   "aabb": [
+    [
+     2.84236,
+     -0.60962,
+     0.0
+    ],
+    [
+     3.25764,
+     -0.07505,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "CH_05_2",
+   "aabb": [
+    [
+     2.84236,
+     -1.82495,
+     0.0
+    ],
+    [
+     3.25764,
+     -1.29038,
+     0.92
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "CH_Stool_1",
+   "aabb": [
+    [
+     0.36,
+     0.63104,
+     0.0
+    ],
+    [
+     0.74,
+     1.00896,
+     0.742
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "CH_Stool_2",
+   "aabb": [
+    [
+     1.51,
+     0.63104,
+     0.0
+    ],
+    [
+     1.89,
+     1.00896,
+     0.742
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfSide_L",
+   "aabb": [
+    [
+     -3.95,
+     1.55,
+     0.0
+    ],
+    [
+     -3.92,
+     2.95,
+     2.05
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfSide_R",
+   "aabb": [
+    [
+     -3.35,
+     1.55,
+     0.0
+    ],
+    [
+     -3.32,
+     2.95,
+     2.05
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBack",
+   "aabb": [
+    [
+     -3.95,
+     2.93,
+     0.08
+    ],
+    [
+     -3.32,
+     2.95,
+     2.05
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfTop",
+   "aabb": [
+    [
+     -3.95,
+     1.55,
+     2.02
+    ],
+    [
+     -3.32,
+     2.95,
+     2.05
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfPlinth",
+   "aabb": [
+    [
+     -3.95,
+     1.55,
+     0.0
+    ],
+    [
+     -3.32,
+     2.95,
+     0.08
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_0",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     0.069
+    ],
+    [
+     -3.35,
+     2.925,
+     0.091
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_1",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     0.459
+    ],
+    [
+     -3.35,
+     2.925,
+     0.481
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_2",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     0.849
+    ],
+    [
+     -3.35,
+     2.925,
+     0.871
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_3",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     1.239
+    ],
+    [
+     -3.35,
+     2.925,
+     1.261
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_4",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     1.629
+    ],
+    [
+     -3.35,
+     2.925,
+     1.651
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfBoard_5",
+   "aabb": [
+    [
+     -3.92,
+     1.555,
+     2.009
+    ],
+    [
+     -3.35,
+     2.925,
+     2.031
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfVase",
+   "aabb": [
+    [
+     -3.68,
+     1.645,
+     0.481
+    ],
+    [
+     -3.59,
+     1.735,
+     0.651
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_PlantPot",
+   "aabb": [
+    [
+     -3.76,
+     -2.82,
+     0.0
+    ],
+    [
+     -3.28,
+     -2.34,
+     0.42
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_UmbrellaStand",
+   "aabb": [
+    [
+     0.91,
+     -2.96,
+     0.0
+    ],
+    [
+     1.19,
+     -2.68,
+     0.5
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfN_Board",
+   "aabb": [
+    [
+     -3.995,
+     0.7,
+     1.536
+    ],
+    [
+     -3.735,
+     1.44,
+     1.564
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfN_Bracket_0",
+   "aabb": [
+    [
+     -3.985,
+     0.789,
+     1.501
+    ],
+    [
+     -3.785,
+     0.811,
+     1.523
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfN_BracketV_0",
+   "aabb": [
+    [
+     -3.989,
+     0.789,
+     1.42
+    ],
+    [
+     -3.967,
+     0.811,
+     1.52
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfN_Bracket_1",
+   "aabb": [
+    [
+     -3.985,
+     1.329,
+     1.501
+    ],
+    [
+     -3.785,
+     1.351,
+     1.523
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfN_BracketV_1",
+   "aabb": [
+    [
+     -3.989,
+     1.329,
+     1.42
+    ],
+    [
+     -3.967,
+     1.351,
+     1.52
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfVase.001",
+   "aabb": [
+    [
+     -3.82378,
+     0.86061,
+     1.564
+    ],
+    [
+     -3.745,
+     0.93939,
+     1.804
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "DC_ShelfPlant",
+   "aabb": [
+    [
+     -3.87226,
+     1.21051,
+     1.564
+    ],
+    [
+     -3.745,
+     1.34949,
+     1.764
+    ]
+   ],
+   "kind": "solid"
+  },
+  {
+   "name": "OD_Bldg_0",
+   "kind": "solid",
+   "aabb": [
+    [
+     -24.0,
+     -15.0,
+     0.0
+    ],
+    [
+     -18.0,
+     -9.6,
+     8.6
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_1",
+   "kind": "solid",
+   "aabb": [
+    [
+     -18.0,
+     -15.0,
+     0.0
+    ],
+    [
+     -12.0,
+     -9.6,
+     12.4
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_2",
+   "kind": "solid",
+   "aabb": [
+    [
+     -12.0,
+     -15.0,
+     0.0
+    ],
+    [
+     -6.0,
+     -9.6,
+     10.2
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_3",
+   "kind": "solid",
+   "aabb": [
+    [
+     -6.0,
+     -15.0,
+     0.0
+    ],
+    [
+     0.0,
+     -9.6,
+     14.6
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_4",
+   "kind": "solid",
+   "aabb": [
+    [
+     0.0,
+     -15.0,
+     0.0
+    ],
+    [
+     6.0,
+     -9.6,
+     9.4
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_5",
+   "kind": "solid",
+   "aabb": [
+    [
+     6.0,
+     -15.0,
+     0.0
+    ],
+    [
+     12.0,
+     -9.6,
+     11.8
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_6",
+   "kind": "solid",
+   "aabb": [
+    [
+     12.0,
+     -15.0,
+     0.0
+    ],
+    [
+     18.0,
+     -9.6,
+     13.4
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bldg_7",
+   "kind": "solid",
+   "aabb": [
+    [
+     18.0,
+     -15.0,
+     0.0
+    ],
+    [
+     24.0,
+     -9.6,
+     8.9
+    ]
+   ]
+  },
+  {
+   "name": "OD_Tree_0",
+   "kind": "solid",
+   "aabb": [
+    [
+     -5.51,
+     -4.22,
+     0.0
+    ],
+    [
+     -5.1899999999999995,
+     -3.8999999999999995,
+     2.3
+    ]
+   ]
+  },
+  {
+   "name": "OD_Tree_1",
+   "kind": "solid",
+   "aabb": [
+    [
+     4.9399999999999995,
+     -4.22,
+     0.0
+    ],
+    [
+     5.26,
+     -3.8999999999999995,
+     2.55
+    ]
+   ]
+  },
+  {
+   "name": "OD_Tree_2",
+   "kind": "solid",
+   "aabb": [
+    [
+     8.39,
+     -4.18,
+     0.0
+    ],
+    [
+     8.71,
+     -3.8599999999999994,
+     2.15
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bin_0",
+   "kind": "solid",
+   "aabb": [
+    [
+     4.29,
+     -3.8099999999999996,
+     0.0
+    ],
+    [
+     4.81,
+     -3.29,
+     0.66
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bin_1",
+   "kind": "solid",
+   "aabb": [
+    [
+     -5.109999999999999,
+     -3.8600000000000003,
+     0.0
+    ],
+    [
+     -4.59,
+     -3.34,
+     0.66
+    ]
+   ]
+  },
+  {
+   "name": "OD_Hydrant",
+   "kind": "solid",
+   "aabb": [
+    [
+     -4.43,
+     -4.47,
+     0.0
+    ],
+    [
+     -4.17,
+     -4.21,
+     0.7
+    ]
+   ]
+  },
+  {
+   "name": "OD_Bench",
+   "kind": "solid",
+   "aabb": [
+    [
+     6.12,
+     -4.5200000000000005,
+     0.0
+    ],
+    [
+     7.680000000000001,
+     -4.0200000000000005,
+     0.8
+    ]
+   ]
+  },
+  {
+   "name": "MD_Body",
+   "aabb": [
+    [
+     -2.23794,
+     -0.65333,
+     -0.0
+    ],
+    [
+     -1.45463,
+     0.13777,
+     1.46682
+    ]
+   ],
+   "kind": "soft"
+  },
+  {
+   "name": "MD_Tray",
+   "aabb": [
+    [
+     -1.90554,
+     -0.54563,
+     0.728
+    ],
+    [
+     -1.56696,
+     -0.20704,
+     0.75012
+    ]
+   ],
+   "kind": "solid"
+  }
+ ],
+ "light_rig": {
+  "phases": {
+   "morning": {
+    "sun_rot": [
+     74.0,
+     0.0,
+     46.0
+    ],
+    "sun_energy": 2.5,
+    "sun_color": "#DCE9FF",
+    "sky": "#BFD8F2",
+    "ambient": 0.55,
+    "exposure": -0.15,
+    "indoor": 0.45,
+    "fog": 0.0
+   },
+   "noon": {
+    "sun_rot": [
+     22.0,
+     0.0,
+     12.0
+    ],
+    "sun_energy": 4.4,
+    "sun_color": "#FFF8EE",
+    "sky": "#CFE8FF",
+    "ambient": 0.85,
+    "exposure": -0.45,
+    "indoor": 0.25,
+    "fog": 0.0
+   },
+   "dusk": {
+    "sun_rot": [
+     72.0,
+     0.0,
+     -20.0
+    ],
+    "sun_energy": 2.8,
+    "sun_color": "#FFA95C",
+    "sky": "#F5C08A",
+    "ambient": 0.45,
+    "exposure": -0.2,
+    "indoor": 0.95,
+    "fog": 0.0
+   },
+   "night": {
+    "sun_rot": [
+     80.0,
+     0.0,
+     160.0
+    ],
+    "sun_energy": 0.1,
+    "sun_color": "#4C6FA8",
+    "sky": "#16233C",
+    "ambient": 0.16,
+    "exposure": 0.1,
+    "indoor": 1.75,
+    "fog": 0.0
+   }
+  },
+  "weather": {
+   "clear": {
+    "sun_mult": 1.0,
+    "ambient_mult": 1.0,
+    "fog": 0.0,
+    "cloud_cover": 0.0,
+    "rain": 0.0
+   },
+   "cloudy": {
+    "sun_mult": 0.38,
+    "ambient_mult": 1.7,
+    "fog": 0.012,
+    "cloud_cover": 0.85,
+    "rain": 0.0
+   },
+   "rain_light": {
+    "sun_mult": 0.24,
+    "ambient_mult": 1.45,
+    "fog": 0.02,
+    "cloud_cover": 0.9,
+    "rain": 0.25
+   },
+   "rain_med": {
+    "sun_mult": 0.18,
+    "ambient_mult": 1.35,
+    "fog": 0.032,
+    "cloud_cover": 0.95,
+    "rain": 0.55
+   },
+   "rain_heavy": {
+    "sun_mult": 0.12,
+    "ambient_mult": 1.2,
+    "fog": 0.05,
+    "cloud_cover": 1.0,
+    "rain": 0.85
+   },
+   "storm": {
+    "sun_mult": 0.08,
+    "ambient_mult": 1.1,
+    "fog": 0.045,
+    "cloud_cover": 1.0,
+    "rain": 1.0
+   }
+  },
+  "anchors": {
+   "sun_target": [
+    0,
+    0,
+    1.2
+   ],
+   "pendants": [
+    {
+     "pos": [
+      -2.9,
+      -2.0,
+      2.1
+     ],
+     "r": 0.19
+    },
+    {
+     "pos": [
+      -2.55,
+      1.05,
+      2.14
+     ],
+     "r": 0.21
+    },
+    {
+     "pos": [
+      1.85,
+      1.5,
+      2.06
+     ],
+     "r": 0.17
+    }
+   ],
+   "bar_spots": [
+    [
+     0.3,
+     1.35,
+     2.72
+    ],
+    [
+     1.9,
+     1.35,
+     2.72
+    ],
+    [
+     3.2,
+     1.35,
+     2.72
+    ]
+   ],
+   "display_spots": [
+    [
+     -1.29,
+     0.83,
+     2.55
+    ],
+    [
+     -0.59,
+     0.83,
+     2.55
+    ]
+   ],
+   "wall_lamps": [
+    [
+     -3.95,
+     -2.35,
+     1.95
+    ],
+    [
+     3.95,
+     -2.05,
+     1.95
+    ],
+    [
+     3.25,
+     -2.95,
+     1.95
+    ]
+   ],
+   "maid_fill": [
+    -1.1,
+    -1.3,
+    1.62
+   ],
+   "window_sky": [
+    -1.675,
+    -3.45,
+    1.7
+   ],
+   "window_sky_target": [
+    -1.675,
+    1.4,
+    1.15
+   ],
+   "indoor_base": {
+    "pendant": 55.0,
+    "bar_spot": 90.0,
+    "display_spot": 55.0,
+    "wall_lamp": 18.0,
+    "cove": 45.0,
+    "maid_fill": 42.0,
+    "window_sky": 260.0
+   },
+   "indoor_scale": {
+    "morning": 0.45,
+    "noon": 0.25,
+    "dusk": 0.95,
+    "night": 1.25
+   },
+   "window_sky_day": {
+    "morning": 1.0,
+    "noon": 1.35,
+    "dusk": 0.75,
+    "night": 0.1
+   }
+  },
+  "no_shadow_objects": [],
+  "lit_window_objects": [
+   "OD_WindowLit_0_10",
+   "OD_WindowLit_0_3",
+   "OD_WindowLit_0_5",
+   "OD_WindowLit_1_1",
+   "OD_WindowLit_1_11",
+   "OD_WindowLit_1_12",
+   "OD_WindowLit_1_14",
+   "OD_WindowLit_1_16",
+   "OD_WindowLit_1_18",
+   "OD_WindowLit_1_3",
+   "OD_WindowLit_1_4",
+   "OD_WindowLit_1_6",
+   "OD_WindowLit_1_7",
+   "OD_WindowLit_1_8",
+   "OD_WindowLit_2_0",
+   "OD_WindowLit_2_1",
+   "OD_WindowLit_2_10",
+   "OD_WindowLit_2_11",
+   "OD_WindowLit_2_12",
+   "OD_WindowLit_2_14",
+   "OD_WindowLit_2_17",
+   "OD_WindowLit_2_4",
+   "OD_WindowLit_2_5",
+   "OD_WindowLit_2_7",
+   "OD_WindowLit_3_0",
+   "OD_WindowLit_3_1",
+   "OD_WindowLit_3_10",
+   "OD_WindowLit_3_11",
+   "OD_WindowLit_3_13",
+   "OD_WindowLit_3_15",
+   "OD_WindowLit_3_2",
+   "OD_WindowLit_3_5",
+   "OD_WindowLit_3_6",
+   "OD_WindowLit_3_9",
+   "OD_WindowLit_4_1",
+   "OD_WindowLit_4_10",
+   "OD_WindowLit_4_13",
+   "OD_WindowLit_4_3",
+   "OD_WindowLit_4_4",
+   "OD_WindowLit_4_9",
+   "OD_WindowLit_5_0",
+   "OD_WindowLit_5_11",
+   "OD_WindowLit_5_13",
+   "OD_WindowLit_5_14",
+   "OD_WindowLit_5_17",
+   "OD_WindowLit_5_22",
+   "OD_WindowLit_5_3",
+   "OD_WindowLit_5_4",
+   "OD_WindowLit_5_5",
+   "OD_WindowLit_5_6",
+   "OD_WindowLit_5_9",
+   "OD_WindowLit_6_1",
+   "OD_WindowLit_6_2",
+   "OD_WindowLit_6_6",
+   "OD_WindowLit_7_12",
+   "OD_WindowLit_7_14",
+   "OD_WindowLit_7_17",
+   "OD_WindowLit_7_18",
+   "OD_WindowLit_7_19",
+   "OD_WindowLit_7_2",
+   "OD_WindowLit_7_3",
+   "OD_WindowLit_7_7",
+   "OD_WindowLit_7_8",
+   "OD_WindowLit_7_9"
+  ],
+  "hdri": {
+   "by_phase": {
+    "morning": "kiara_2_sunrise_1k.hdr",
+    "noon": "kloppenheim_06_puresky_1k.hdr",
+    "dusk": "evening_road_01_puresky_1k.hdr",
+    "night": "dikhololo_night_1k.hdr"
+   },
+   "strength": {
+    "morning": 0.62,
+    "noon": 0.7,
+    "dusk": 0.26,
+    "night": 0.07
+   },
+   "base_url": "assets/hdri/"
+  },
+  "window": {
+   "x": [
+    -3.7,
+    0.35
+   ],
+   "z": [
+    0.72,
+    2.58
+   ]
+  },
+  "room": {
+   "x": [
+    -4.0,
+    4.0
+   ],
+   "y": [
+    -3.0,
+    3.0
+   ],
+   "z": [
+    0,
+    3.0
+   ]
+  }
+ },
+ "fx_nodes": {
+  "window_glass_material": "MAT_Glass_Clear",
+  "steam_node": "MD_Steam_0",
+  "steam_nodes": [
+   "MD_Steam_0",
+   "MD_Steam_1",
+   "MD_Steam_2"
+  ],
+  "lamp_materials": [
+   "MAT_Emissive_Shade",
+   "MAT_Emissive_Bulb",
+   "MAT_Emissive_LED"
+  ],
+  "emissive_materials": [
+   "MAT_Emissive_Shade",
+   "MAT_Emissive_Bulb",
+   "MAT_Emissive_LED"
+  ],
+  "window_lit_material": "MAT_Window_Lit",
+  "puddle_material": "MAT_Puddle",
+  "rain_surface_y": -4.6
+ },
+ "material_names": [
+  "CashRegister_01",
+  "CashRegister_01_glass",
+  "MAT_Bark",
+  "MAT_Book_0",
+  "MAT_Book_1",
+  "MAT_Book_2",
+  "MAT_Book_3",
+  "MAT_Book_4",
+  "MAT_Book_5",
+  "MAT_Book_6",
+  "MAT_Book_7",
+  "MAT_Cake_Caramel",
+  "MAT_Cake_Carrot",
+  "MAT_Cake_Chocolate",
+  "MAT_Cake_Cream",
+  "MAT_Cake_Custard",
+  "MAT_Cake_Glaze",
+  "MAT_Cake_Macaron_Filling",
+  "MAT_Cake_Macaron_Pink",
+  "MAT_Cake_Macaron_Pistachio",
+  "MAT_Cake_Matcha",
+  "MAT_Cake_Matcha_Deep",
+  "MAT_Cake_Sponge",
+  "MAT_Cake_Strawberry",
+  "MAT_Cake_Tart_Shell",
+  "MAT_Case_Back",
+  "MAT_Ceramic_Glaze",
+  "MAT_Ceramic_Tile",
+  "MAT_Chair_Paint",
+  "MAT_ChalkStick_0",
+  "MAT_ChalkStick_1",
+  "MAT_ChalkStick_2",
+  "MAT_Chalk_Board",
+  "MAT_ChimePaper",
+  "MAT_Cream_White",
+  "MAT_CurbStone",
+  "MAT_Decor_DC_ChalkTex",
+  "MAT_Decor_DC_DoorSignTex",
+  "MAT_Decor_DC_Frame_0_Art",
+  "MAT_Decor_DC_Frame_1_Art",
+  "MAT_Decor_DC_NorenMain",
+  "MAT_Decor_Sign",
+  "MAT_Emissive_Bulb",
+  "MAT_Emissive_LED",
+  "MAT_Emissive_Shade",
+  "MAT_Fabric_Cotton",
+  "MAT_Fabric_Curtain",
+  "MAT_Fabric_Gingham",
+  "MAT_Fabric_Lace",
+  "MAT_Fabric_Linen",
+  "MAT_Fabric_Noren",
+  "MAT_FarGround",
+  "MAT_Glass_Case",
+  "MAT_Glass_Clear",
+  "MAT_Glass_Frost",
+  "MAT_Hydrant_Red",
+  "MAT_Liquid_Coffee",
+  "MAT_Liquid_Milk",
+  "MAT_Marble_Top",
+  "MAT_Metal_Black",
+  "MAT_Metal_Brass",
+  "MAT_Metal_Brushed",
+  "MAT_Metal_Grille",
+  "MAT_Metal_Steel",
+  "MAT_Out_Asphalt",
+  "MAT_Out_Brick",
+  "MAT_Out_Concrete",
+  "MAT_Out_Pavers",
+  "MAT_Out_Plaster",
+  "MAT_Paint_Accent",
+  "MAT_Paint_Cream",
+  "MAT_Paper",
+  "MAT_Paper_Menu",
+  "MAT_Paper_MenuCard",
+  "MAT_Plant_Blossom",
+  "MAT_Plant_Leaf",
+  "MAT_Plant_Leaf_Dark",
+  "MAT_Plant_Soil",
+  "MAT_Plant_Stem",
+  "MAT_Porcelain",
+  "MAT_Puddle",
+  "MAT_RoadPaint",
+  "MAT_SkyDome",
+  "MAT_Steam",
+  "MAT_StrawLeaf",
+  "MAT_Strawberry",
+  "MAT_Syrup_0",
+  "MAT_Syrup_1",
+  "MAT_Syrup_2",
+  "MAT_Syrup_3",
+  "MAT_Syrup_4",
+  "MAT_Syrup_5",
+  "MAT_Terracotta",
+  "MAT_Tray_Cloth",
+  "MAT_Umbrella_0",
+  "MAT_Umbrella_1",
+  "MAT_Window_Dark",
+  "MAT_Window_Lit",
+  "MAT_Wood_Counter",
+  "MAT_Wood_Dark",
+  "MAT_Wood_Herringbone",
+  "MAT_Wood_Oak",
+  "MAT_Wood_Shelf",
+  "MAT_Wood_Table",
+  "M_Brow",
+  "M_EyeLight",
+  "M_EyeRed",
+  "M_Hair",
+  "M_Iris",
+  "M_IrisLine",
+  "M_Lash",
+  "M_Mouth",
+  "M_Navy",
+  "M_Pearl",
+  "M_Satin",
+  "M_Sclera",
+  "M_Shoe",
+  "M_Skin",
+  "M_Sock",
+  "M_Sole",
+  "M_White",
+  "brass_vase_001",
+  "potted_plant_04",
+  "tea_set_01"
+ ],
+ "counts": {
+  "tris": 491171,
+  "objects": 1168,
+  "per_collection": {
+   "C_Room": {
+    "tris": 2432,
+    "objects": 68
+   },
+   "C_Bar": {
+    "tris": 30135,
+    "objects": 211
+   },
+   "C_Display": {
+    "tris": 22646,
+    "objects": 179
+   },
+   "C_Seating": {
+    "tris": 36740,
+    "objects": 24
+   },
+   "C_Decor": {
+    "tris": 155825,
+    "objects": 246
+   },
+   "C_Outdoor": {
+    "tris": 10296,
+    "objects": 334
+   },
+   "C_Maid": {
+    "tris": 233097,
+    "objects": 106
+   },
+   "C_Helper": {
+    "tris": 0,
+    "objects": 0
+   }
+  }
+ },
+ "modules": {
+  "croom": {
+   "tris": 2432,
+   "ms": 301,
+   "error": null
+  },
+  "cbar": {
+   "tris": 30099,
+   "ms": 4671,
+   "error": null
+  },
+  "cdisplay": {
+   "tris": 22646,
+   "ms": 6021,
+   "error": null
+  },
+  "cseating": {
+   "tris": 36740,
+   "ms": 8016,
+   "error": null
+  },
+  "cdecor": {
+   "tris": 47161,
+   "ms": 9037,
+   "error": null
+  },
+  "coutdoor": {
+   "tris": 11056,
+   "ms": 12141,
+   "error": null
+  },
+  "cmaid": {
+   "tris": 233097,
+   "ms": 22322,
+   "error": null
+  },
+  "clight": {
+   "tris": 0,
+   "ms": 11,
+   "error": null
+  }
+ },
+ "notes": {
+  "croom": "ceiling: recessed cove with emissive strip",
+  "cbar": "L-shaped marble bar, back bar shelving, espresso/grinder/pourover/syrup stations",
+  "cdisplay": "glass refrigerated display cabinet (base + 4 posts + 3 glass sides + glass top), 3 glass shelves w/ brass rails, 9 desserts on porcelain plates, interior LED strips + 2 brass spot shades, stainless top cap (instead of glass hood 1.36-1.62), 3 price tags with menu_card.png; carrot_cake decimation guarded (raw mesh degenerates; explode-guard).",
+  "cseating": "5 procedural turned-wood bistro tables, top z=0.74 exact, r=0.38; 13 painted chairs (724 tris each) + gingham cushion + back sash + bow; lace cloth per table (top z=0.743), props: vase+flower, A-frame menu card (menu_card.png upright), sugar bowl+spoon; 2 bar stools at seat_z=0.74 facing +Y; window-table chairs stay on the room-side arc so the glass wall reads clear",
+  "cdecor": "pendants:21; cove:4; wall_lamps:12; chalkboard:10; frames:12; noren:12; chime:5; bookshelf:87; curtains:14; spot_fixtures:15; plants:14; umbrella:7; door_sign:4; extra:54",
+  "coutdoor": "sidewalk top z=0.0 (flush with indoor floor); curb riser 0.14 to road -0.14; door threshold slab +12mm; road paint: 8 dashes + 2 edge lines, 3mm above asphalt; 8 far buildings, window boxes <=30/bldg, lit windows named OD_WindowLit_*; OD_Lamp_0 at (-3.0,-4.35), head emissive bulb z~3.74; OD_Lamp_1 at (2.4,-4.35), head emissive bulb z~3.74; street lamps are procedural (not street_lamp_01 asset, too heavy); puddles: 10 elliptical discs 3mm above sidewalk, rejection-sampled off obstacles; OD_SkyDome r=40, normals flipped inward, excluded from selfcheck framing",
+  "cmaid": "arms: 2-bone armature, baked tris 1334760->233097",
+  "clight": "sun + 15 indoor + 1 sky + maid fill"
+ },
+ "errors": {},
+ "shelf_decor": [
+  {
+   "name": "DC_Shf_tea_set_01",
+   "tris": 12000,
+   "aabb": [
+    [
+     -3.5798,
+     2.4533,
+     1.2609
+    ],
+    [
+     -2.6333,
+     2.9518,
+     1.431
+    ]
+   ]
+  },
+  {
+   "name": "DC_Shf_wine_bottles_01",
+   "tris": 10000,
+   "aabb": [
+    [
+     -3.4535,
+     2.5875,
+     1.6509
+    ],
+    [
+     -2.7596,
+     2.6701,
+     1.991
+    ]
+   ]
+  }
+ ]
+}

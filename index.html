@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light" />
+    <title>日式女仆咖啡馆 · 时间与天气</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- 3D 舞台（canvas 由 scene.js 注入） -->
+      <div id="stage" aria-label="三维咖啡馆场景"></div>
+
+      <!-- 载入进度 -->
+      <div id="loader" class="card loader">
+        <div class="loader-title">正在准备店面…</div>
+        <div class="loadbar"><i id="loadbar-fill"></i></div>
+        <div class="loadmeta">
+          <span id="loadlabel" class="hint">读取场景清单</span>
+          <span id="loadpct" class="loadpct">0%</span>
+        </div>
+      </div>
+
+      <!-- 首屏进入遮罩（浏览器自动播放限制：必须先有用户手势） -->
+      <div id="enter">
+        <div class="enter-card">
+          <div class="enter-logo" aria-hidden="true">☕</div>
+          <h1>日式女仆咖啡馆</h1>
+          <p class="enter-sub">灯光、雨声与一杯热咖啡</p>
+                    
+          </div>
+
+          <!-- 资源加载进度（进场景前就在这显示） -->
+          <div class="enter-load" id="enter-load" hidden>
+            <div class="enter-load-bar"><i id="enter-load-fill"></i></div>
+            <div class="enter-load-meta">
+              <span id="enter-load-label">准备中…</span>
+              <span id="enter-load-pct">0%</span>
+            </div>
+          </div>
+
+          <button id="enter-btn" class="btn primary" type="button" disabled>加载中…</button>
+          <p class="tiny">进入后可拖动旋转视角 · 滚轮缩放 · 右键平移</p>
+        </div>
+      </div>
+
+      <!-- HUD -->
+      <div id="hud" class="hidden">
+        <div id="left-dock" class="left-dock">
+      <section id="panel-time" class="card panel panel-time">
+          <button class="panel-eye" type="button" data-panel="panel-time" title="隐藏此面板" aria-label="隐藏此面板">
+            <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z" fill="currentColor"/></svg>
+          </button>
+          <div class="row">
+            <span class="cap">时间</span>
+            <span id="time-label" class="val">傍晚 18:00</span>
+          </div>
+          <input id="time-slider" class="slider" type="range" min="0" max="24" step="0.25" value="18" aria-label="一天中的时间（小时）" />
+          <div class="ticks"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+        </section>
+
+        
+      <!-- 亮度滑块（常驻，独立于视角栏） -->
+      <section id="panel-bright" class="card panel panel-bright">
+        <button class="panel-eye" type="button" data-panel="panel-bright" title="隐藏此面板" aria-label="隐藏此面板">
+            <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z" fill="currentColor"/></svg>
+          </button>
+          <div class="row">
+          <span class="cap">亮度</span>
+          <span id="brightness-val" class="val">100%</span>
+        </div>
+        <input id="brightness" class="slider bright-slider" type="range"
+               min="0.15" max="2.0" step="0.01" value="1"
+               aria-label="场景亮度倍率（15%–200%）" />
+        <div class="bright-ticks">
+          <span>15%</span><span>50%</span><span>100%</span><span>150%</span><span>200%</span>
+        </div>
+      </section>
+
+      <section id="panel-weather" class="card panel panel-weather">
+          <button class="panel-eye" type="button" data-panel="panel-weather" title="隐藏此面板" aria-label="隐藏此面板">
+            <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z" fill="currentColor"/></svg>
+          </button>
+          <div class="row">
+            <span class="cap">天气</span>
+            <span id="weather-label" class="val">晴天</span>
+          </div>
+          <div class="weather-main" role="group" aria-label="天气">
+            <button class="btn seg" type="button" data-weather="clear">晴天</button>
+            <button class="btn seg" type="button" data-weather="cloudy">多云</button>
+            <button class="btn seg" type="button" data-rain-toggle="1">雨天</button>
+          </div>
+          <div id="rain-sub" class="weather-sub hidden" role="group" aria-label="雨势">
+            <button class="btn seg small" type="button" data-weather="rain_light">小雨</button>
+            <button class="btn seg small" type="button" data-weather="rain_med">中雨</button>
+            <button class="btn seg small" type="button" data-weather="rain_heavy">大雨</button>
+            <button class="btn seg small" type="button" data-weather="storm">雷阵雨</button>
+          </div>
+        </section>
+
+      </div><!-- /left-dock -->
+        <section id="panel-audio" class="card panel panel-audio">
+          <button class="panel-eye" type="button" data-panel="panel-audio" title="隐藏音频面板" aria-label="隐藏音频面板">
+            <svg viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path d="M12 5c-5 0-9 4.5-9 7s4 7 9 7 9-4.5 9-7-4-7-9-7zm0 11a4 4 0 110-8 4 4 0 010 8z" fill="currentColor"/></svg>
+          </button>
+          <div class="row">
+            <span class="cap">♪ 音乐音量</span>
+            <span id="music-vol-label" class="val">45%</span>
+          </div>
+          <input id="music-vol" class="slider" type="range" min="0" max="100" step="1" value="45" aria-label="背景音乐音量" />
+
+          <div class="row">
+            <span class="cap">☂ 雨声音量</span>
+            <span id="rain-vol-label" class="val">60%</span>
+          </div>
+          <input id="rain-vol" class="slider" type="range" min="0" max="100" step="1" value="60" aria-label="雨声音量" />
+
+          <!-- 背景音乐：曲目信息 + 控制 -->
+          <div class="music-box">
+            <div class="music-now">
+              <span class="music-note">♪</span>
+              <span id="music-title" class="music-title">—</span>
+            </div>
+            <div class="music-ctl">
+              <button id="btn-music-prev" class="btn tiny ghost" type="button" title="上一首" aria-label="上一首">⏮</button>
+              <button id="btn-music-next" class="btn tiny ghost" type="button" title="下一首" aria-label="下一首">⏭</button>
+              <button id="btn-music-random" class="btn tiny ghost" type="button" title="随机一首" aria-label="随机一首">⤨</button>
+              <select id="music-select" class="music-select" aria-label="选择曲目">
+                <option value="">选择曲目…</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row wrap">
+            <span id="audio-note" class="hint hidden">音频模块未就绪</span>
+          </div>
+        </section>
+
+        <div id="status-tag" class="tag hidden">模型未就绪 · 占位场景</div>
+      <div id="fps" class="fps hidden">-- fps</div>
+      </div>
+    </div>
+
+    <!-- 视角控制条（固定在**右下角**，避开左下的天气面板） -->
+    <div id="view-bar" class="view-bar hidden">
+      <div class="view-bar-head">
+        <span class="view-bar-cap">视角</span>
+        <span id="view-mode-hint" class="view-bar-hint">拖动看 · WASD 走 · 滚轮缩放</span>
+      </div>
+      <div id="view-presets" class="view-presets"></div>
+      <div class="view-bar-tip">
+        <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> 移动 ·
+        <kbd>空格</kbd><kbd>C</kbd> 升降 ·
+        <kbd>Shift</kbd> 加速 ·
+        <kbd>V</kbd> 环绕 ·
+        <kbd>H</kbd> 沉浸
+       路</div>
+    </div>
+
+
+    
+    </div>
+
+    <noscript><p class="noscript">本页面需要 JavaScript 与 WebGL2。</p></noscript>
+
+    <!-- ══════════════════════════════════════════════════════════════
+         白屏自诊断：这个页面用 ES module + fetch 加载 3D 模型，
+         浏览器的 file:// 协议会把它们全部按 CORS 拒绝 —— 必然白屏。
+         所以先检测协议，给出明确的中文指引，而不是让用户对着白屏猜。
+         ══════════════════════════════════════════════════════════════ -->
+    <div id="fatal-help" hidden>
+      <div class="fatal-card">
+        <h2 id="fatal-title">无法加载 3D 场景</h2>
+        <p id="fatal-reason"></p>
+        <div class="fatal-fix">
+          <p class="fatal-fix-cap">解决办法</p>
+          <pre id="fatal-cmd"></pre>
+          <p class="fatal-fix-note" id="fatal-note"></p>
+        </div>
+        <p class="fatal-path" id="fatal-path"></p>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var help = document.getElementById('fatal-help');
+        var title = document.getElementById('fatal-title');
+        var reason = document.getElementById('fatal-reason');
+        var cmd = document.getElementById('fatal-cmd');
+        var note = document.getElementById('fatal-note');
+        var pathEl = document.getElementById('fatal-path');
+
+        function showFatal(t, why, c, n) {
+          if (!help) return;
+          title.textContent = t;
+          reason.textContent = why;
+          cmd.textContent = c;
+          note.textContent = n || '';
+          pathEl.textContent = '当前地址：' + location.href;
+          help.hidden = false;
+          var ld = document.getElementById('loader');
+          if (ld) ld.style.display = 'none';
+        }
+        window.__showFatal = showFatal;
+
+        // 1) file:// 直接拦下（最常见的原因）
+        if (location.protocol === 'file:') {
+          showFatal(
+            '请用本地服务器打开（不能双击 index.html）',
+            '这个页面需要用 ES module 与 fetch 读取 3D 模型、HDRI 与场景清单。' +
+            '浏览器的 file:// 协议出于安全限制会拒绝这些请求，所以双击打开一定是白屏。',
+            '双击项目根目录的「启动预览.bat」\n' +
+            '或者在此目录执行：\n' +
+            '    python serve.py',
+            '然后浏览器访问 http://127.0.0.1:8000/index.html'
+          );
+          return;
+        }
+
+        // 2) 运行时错误兜底
+        window.addEventListener('error', function (e) {
+          var msg = (e && (e.message || (e.error && e.error.message))) || '未知错误';
+          var src = (e && e.filename) ? ('\n来源：' + e.filename + ':' + e.lineno) : '';
+          if (/module|import|Failed to fetch|CORS|MIME/i.test(msg)) {
+            showFatal('脚本或模型加载失败', msg + src,
+              '确认服务器已启动且端口正确：\n    python serve.py',
+              '按 F12 打开控制台可看到完整报错。');
+          }
+        });
+
+        // 3) WebGL2 检查
+        try {
+          var cvs = document.createElement('canvas');
+          var gl = cvs.getContext('webgl2');
+          if (!gl) {
+            showFatal('浏览器不支持 WebGL2',
+              '这个场景需要 WebGL2。请用较新版本的 Chrome / Edge / Firefox。',
+              '', '');
+          }
+        } catch (e) { /* 忽略 */ }
+
+        // 4) 6 秒还没就绪就提示（避免用户对着「正在准备店面…」干等）
+        setTimeout(function () {
+          if (help.hidden && !(window.__CAFE__ && window.__CAFE__.entered)) {
+            var ld = document.getElementById('loader');
+            var lbl = document.getElementById('loadlabel');
+            if (lbl && ld && ld.style.display !== 'none') {
+              lbl.textContent = '加载较慢…如果长时间无反应，按 F12 看控制台报错';
+            }
+          }
+        }, 6000);
+      })();
+    </script>
+
+    <script type="module" src="./js/app.js"></script>
+    <!-- 沉浸模式下的退出按钮（平时隐藏） -->
+  <button id="immersive-exit" class="immersive-exit" type="button" hidden
+          title="退出沉浸观看（再按 H，或点此按钮）">✕ 退出沉浸</button>
+
+</body>
+</html>

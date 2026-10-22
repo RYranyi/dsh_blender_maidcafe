@@ -1,0 +1,643 @@
+{
+  "version": 1,
+  "sampleRate": 44100,
+  "format": "ogg",
+  "basePath": "/assets/audio/",
+  "generatedFrom": "tools/audio/build_assets.py + make_manifest.py",
+  "totalBytes": 7899419,
+  "mix": {
+    "bedTargetRmsDbfs": -20.0,
+    "sfxPeakCeilingDbfs": -3.0,
+    "defaultFadeInMs": 1200,
+    "defaultFadeOutMs": 1500,
+    "maxConcurrentOneShots": 6,
+    "note": "床层 RMS 统一 -20dBFS；事件音峰值 -3dBFS；交叉淡化 1-2s"
+  },
+  "sounds": {
+    "amb_morning": {
+      "file": "amb_morning.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1200,
+      "fadeOutMs": 1200,
+      "category": "ambience",
+      "layer": "time_bed",
+      "durationSec": 60.0,
+      "peakDbfs": -5.17,
+      "rmsDbfs": -20.76,
+      "bytes": 1040627
+    },
+    "amb_noon": {
+      "file": "amb_noon.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1200,
+      "fadeOutMs": 1200,
+      "category": "ambience",
+      "layer": "time_bed",
+      "durationSec": 60.0,
+      "peakDbfs": -4.57,
+      "rmsDbfs": -20.96,
+      "bytes": 949791
+    },
+    "amb_dusk": {
+      "file": "amb_dusk.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1200,
+      "fadeOutMs": 1200,
+      "category": "ambience",
+      "layer": "time_bed",
+      "durationSec": 60.0,
+      "peakDbfs": -5.16,
+      "rmsDbfs": -20.34,
+      "bytes": 835451
+    },
+    "amb_night": {
+      "file": "amb_night.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1200,
+      "fadeOutMs": 1200,
+      "category": "ambience",
+      "layer": "time_bed",
+      "durationSec": 60.0,
+      "peakDbfs": -5.62,
+      "rmsDbfs": -20.73,
+      "bytes": 1098622
+    },
+    "amb_rain_light": {
+      "file": "amb_rain_light.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1500,
+      "fadeOutMs": 1500,
+      "category": "weather",
+      "layer": "weather_bed",
+      "durationSec": 30.0,
+      "peakDbfs": -3.77,
+      "rmsDbfs": -21.07,
+      "bytes": 588038
+    },
+    "amb_rain_med": {
+      "file": "amb_rain_med.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1500,
+      "fadeOutMs": 1500,
+      "category": "weather",
+      "layer": "weather_bed",
+      "durationSec": 30.0,
+      "peakDbfs": -5.68,
+      "rmsDbfs": -20.93,
+      "bytes": 563817
+    },
+    "amb_rain_heavy": {
+      "file": "amb_rain_heavy.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1500,
+      "fadeOutMs": 1500,
+      "category": "weather",
+      "layer": "weather_bed",
+      "durationSec": 30.0,
+      "peakDbfs": -5.36,
+      "rmsDbfs": -20.92,
+      "bytes": 570224
+    },
+    "amb_wind": {
+      "file": "amb_wind.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1500,
+      "fadeOutMs": 1500,
+      "category": "weather",
+      "layer": "weather_bed",
+      "durationSec": 30.0,
+      "peakDbfs": -6.78,
+      "rmsDbfs": -21.01,
+      "bytes": 517668
+    },
+    "amb_storm": {
+      "file": "amb_storm.ogg",
+      "loop": true,
+      "gain": 0.0,
+      "fadeInMs": 1500,
+      "fadeOutMs": 1500,
+      "category": "weather",
+      "layer": "weather_bed",
+      "durationSec": 30.0,
+      "peakDbfs": -5.29,
+      "rmsDbfs": -20.88,
+      "bytes": 561881
+    },
+    "sfx_thunder_far": {
+      "file": "sfx_thunder_far.ogg",
+      "loop": false,
+      "gain": -4.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "thunder",
+      "layer": "one_shot",
+      "durationSec": 6.0,
+      "peakDbfs": -6.4,
+      "rmsDbfs": -25.65,
+      "bytes": 93934
+    },
+    "sfx_thunder_mid": {
+      "file": "sfx_thunder_mid.ogg",
+      "loop": false,
+      "gain": -2.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "thunder",
+      "layer": "one_shot",
+      "durationSec": 5.5,
+      "peakDbfs": -5.32,
+      "rmsDbfs": -24.73,
+      "bytes": 77281
+    },
+    "sfx_thunder_close": {
+      "file": "sfx_thunder_close.ogg",
+      "loop": false,
+      "gain": 0.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "thunder",
+      "layer": "one_shot",
+      "durationSec": 5.0,
+      "peakDbfs": -5.94,
+      "rmsDbfs": -21.22,
+      "bytes": 77749
+    },
+    "sfx_lightning_crack": {
+      "file": "sfx_lightning_crack.ogg",
+      "loop": false,
+      "gain": -6.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "thunder",
+      "layer": "one_shot",
+      "durationSec": 2.0,
+      "peakDbfs": -6.35,
+      "rmsDbfs": -33.15,
+      "bytes": 35207
+    },
+    "sfx_cup_clink": {
+      "file": "sfx_cup_clink.ogg",
+      "loop": false,
+      "gain": -8.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_ware",
+      "layer": "one_shot",
+      "durationSec": 2.0,
+      "peakDbfs": -5.53,
+      "rmsDbfs": -27.68,
+      "bytes": 37513
+    },
+    "sfx_saucer": {
+      "file": "sfx_saucer.ogg",
+      "loop": false,
+      "gain": -10.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_ware",
+      "layer": "one_shot",
+      "durationSec": 2.0,
+      "peakDbfs": -5.91,
+      "rmsDbfs": -28.81,
+      "bytes": 35454
+    },
+    "sfx_machine_preheat": {
+      "file": "sfx_machine_preheat.ogg",
+      "loop": false,
+      "gain": -9.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_machine",
+      "layer": "one_shot",
+      "durationSec": 5.0,
+      "peakDbfs": -5.69,
+      "rmsDbfs": -19.44,
+      "bytes": 57461
+    },
+    "sfx_espresso_extract": {
+      "file": "sfx_espresso_extract.ogg",
+      "loop": false,
+      "gain": -8.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_machine",
+      "layer": "one_shot",
+      "durationSec": 6.0,
+      "peakDbfs": -6.58,
+      "rmsDbfs": -18.5,
+      "bytes": 100454
+    },
+    "sfx_steam_wand": {
+      "file": "sfx_steam_wand.ogg",
+      "loop": false,
+      "gain": -10.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_machine",
+      "layer": "one_shot",
+      "durationSec": 4.0,
+      "peakDbfs": -5.26,
+      "rmsDbfs": -18.24,
+      "bytes": 70197
+    },
+    "sfx_grinder": {
+      "file": "sfx_grinder.ogg",
+      "loop": false,
+      "gain": -9.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_machine",
+      "layer": "one_shot",
+      "durationSec": 4.0,
+      "peakDbfs": -5.53,
+      "rmsDbfs": -19.02,
+      "bytes": 70075
+    },
+    "sfx_fridge": {
+      "file": "sfx_fridge.ogg",
+      "loop": false,
+      "gain": -14.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "cafe_machine",
+      "layer": "one_shot",
+      "durationSec": 6.0,
+      "peakDbfs": -5.41,
+      "rmsDbfs": -17.7,
+      "bytes": 71249
+    },
+    "sfx_bell_chime": {
+      "file": "sfx_bell_chime.ogg",
+      "loop": false,
+      "gain": -8.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "entrance",
+      "layer": "one_shot",
+      "durationSec": 1.99,
+      "peakDbfs": -6.31,
+      "rmsDbfs": -26.99,
+      "bytes": 33791
+    },
+    "sfx_door_bell": {
+      "file": "sfx_door_bell.ogg",
+      "loop": false,
+      "gain": -7.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "entrance",
+      "layer": "one_shot",
+      "durationSec": 4.0,
+      "peakDbfs": -4.74,
+      "rmsDbfs": -17.86,
+      "bytes": 73629
+    },
+    "sfx_noren": {
+      "file": "sfx_noren.ogg",
+      "loop": false,
+      "gain": -12.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "entrance",
+      "layer": "one_shot",
+      "durationSec": 2.5,
+      "peakDbfs": -6.54,
+      "rmsDbfs": -21.59,
+      "bytes": 44528
+    },
+    "sfx_cash_ding": {
+      "file": "sfx_cash_ding.ogg",
+      "loop": false,
+      "gain": -8.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "counter",
+      "layer": "one_shot",
+      "durationSec": 2.0,
+      "peakDbfs": -5.88,
+      "rmsDbfs": -27.74,
+      "bytes": 24013
+    },
+    "sfx_page": {
+      "file": "sfx_page.ogg",
+      "loop": false,
+      "gain": -13.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "paper",
+      "layer": "one_shot",
+      "durationSec": 2.0,
+      "peakDbfs": -6.38,
+      "rmsDbfs": -27.03,
+      "bytes": 38923
+    },
+    "sfx_chair": {
+      "file": "sfx_chair.ogg",
+      "loop": false,
+      "gain": -12.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "furniture",
+      "layer": "one_shot",
+      "durationSec": 3.0,
+      "peakDbfs": -6.25,
+      "rmsDbfs": -24.15,
+      "bytes": 50758
+    },
+    "sfx_rollup": {
+      "file": "sfx_rollup.ogg",
+      "loop": false,
+      "gain": -6.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "shop",
+      "layer": "one_shot",
+      "durationSec": 6.0,
+      "peakDbfs": -6.03,
+      "rmsDbfs": -18.88,
+      "bytes": 114921
+    },
+    "sfx_clean_steam": {
+      "file": "sfx_clean_steam.ogg",
+      "loop": false,
+      "gain": -9.0,
+      "fadeInMs": 10,
+      "fadeOutMs": 60,
+      "category": "shop",
+      "layer": "one_shot",
+      "durationSec": 4.0,
+      "peakDbfs": -6.07,
+      "rmsDbfs": -27.11,
+      "bytes": 66163
+    }
+  },
+  "presets": {
+    "morning": {
+      "beds": [
+        "amb_morning"
+      ],
+      "events": [
+        {
+          "key": "sfx_page",
+          "weight": 3
+        },
+        {
+          "key": "sfx_cup_clink",
+          "weight": 3
+        },
+        {
+          "key": "sfx_bell_chime",
+          "weight": 2
+        },
+        {
+          "key": "sfx_chair",
+          "weight": 2
+        },
+        {
+          "key": "sfx_machine_preheat",
+          "weight": 2
+        },
+        {
+          "key": "sfx_cash_ding",
+          "weight": 1
+        }
+      ]
+    },
+    "noon": {
+      "beds": [
+        "amb_noon"
+      ],
+      "events": [
+        {
+          "key": "sfx_cup_clink",
+          "weight": 4
+        },
+        {
+          "key": "sfx_saucer",
+          "weight": 3
+        },
+        {
+          "key": "sfx_door_bell",
+          "weight": 3
+        },
+        {
+          "key": "sfx_espresso_extract",
+          "weight": 3
+        },
+        {
+          "key": "sfx_fridge",
+          "weight": 1
+        },
+        {
+          "key": "sfx_cash_ding",
+          "weight": 2
+        },
+        {
+          "key": "sfx_page",
+          "weight": 2
+        }
+      ]
+    },
+    "dusk": {
+      "beds": [
+        "amb_dusk"
+      ],
+      "events": [
+        {
+          "key": "sfx_cup_clink",
+          "weight": 3
+        },
+        {
+          "key": "sfx_door_bell",
+          "weight": 3
+        },
+        {
+          "key": "sfx_noren",
+          "weight": 2
+        },
+        {
+          "key": "sfx_cash_ding",
+          "weight": 2
+        },
+        {
+          "key": "sfx_steam_wand",
+          "weight": 2
+        },
+        {
+          "key": "sfx_chair",
+          "weight": 2
+        }
+      ]
+    },
+    "night": {
+      "beds": [
+        "amb_night"
+      ],
+      "events": [
+        {
+          "key": "sfx_cup_clink",
+          "weight": 2
+        },
+        {
+          "key": "sfx_saucer",
+          "weight": 2
+        },
+        {
+          "key": "sfx_noren",
+          "weight": 2
+        },
+        {
+          "key": "sfx_page",
+          "weight": 2
+        },
+        {
+          "key": "sfx_clean_steam",
+          "weight": 1
+        },
+        {
+          "key": "sfx_fridge",
+          "weight": 1
+        }
+      ]
+    }
+  },
+  "weather": {
+    "clear": {
+      "beds": [],
+      "events": [],
+      "note": "晴天无天气床，只保留时间床"
+    },
+    "cloudy": {
+      "beds": [
+        "amb_wind"
+      ],
+      "gainDb": -8.0,
+      "events": [],
+      "note": "阴天挂一层很轻的风（音量由 gainDb 压低）"
+    },
+    "rain_light": {
+      "beds": [
+        "amb_rain_light"
+      ],
+      "events": [
+        {
+          "key": "sfx_cup_clink",
+          "weight": 1
+        }
+      ]
+    },
+    "rain_med": {
+      "beds": [
+        "amb_rain_med"
+      ],
+      "events": []
+    },
+    "rain_heavy": {
+      "beds": [
+        "amb_rain_heavy"
+      ],
+      "events": []
+    },
+    "storm": {
+      "beds": [
+        "amb_storm"
+      ],
+      "events": [
+        {
+          "key": "sfx_thunder_close",
+          "weight": 3
+        },
+        {
+          "key": "sfx_thunder_mid",
+          "weight": 3
+        },
+        {
+          "key": "sfx_thunder_far",
+          "weight": 2
+        }
+      ]
+    }
+  },
+  "lightning": {
+    "nearProbability": 0.45,
+    "near": {
+      "minMs": 300,
+      "maxMs": 1200,
+      "keys": [
+        "sfx_thunder_close"
+      ],
+      "note": "近雷：光后 0.3-1.2s 炸响，同时播闪电高频裂响"
+    },
+    "far": {
+      "minMs": 800,
+      "maxMs": 2600,
+      "keys": [
+        "sfx_thunder_mid",
+        "sfx_thunder_far"
+      ],
+      "note": "远雷：光后 0.8-2.6s 才听到，低频滚雷"
+    },
+    "crackKey": "sfx_lightning_crack",
+    "crackGainDb": -6,
+    "nearKey": "sfx_thunder_close",
+    "midKey": "sfx_thunder_mid",
+    "farKey": "sfx_thunder_far",
+    "cooldownMs": 400,
+    "note": "网页 notifyLightning() 触发：引擎 emit lightning 做白光爆闪，并按本规则延时播雷"
+  },
+  "timings": {
+    "weather": {
+      "clear": {
+        "minMs": 9000,
+        "maxMs": 20000
+      },
+      "cloudy": {
+        "minMs": 9000,
+        "maxMs": 20000
+      },
+      "rain_light": {
+        "minMs": 8000,
+        "maxMs": 16000
+      },
+      "rain_med": {
+        "minMs": 8000,
+        "maxMs": 16000
+      },
+      "rain_heavy": {
+        "minMs": 7000,
+        "maxMs": 14000
+      },
+      "storm": {
+        "minMs": 3000,
+        "maxMs": 10000
+      }
+    },
+    "timePhase": {
+      "morning": {
+        "minMs": 6000,
+        "maxMs": 14000
+      },
+      "noon": {
+        "minMs": 5000,
+        "maxMs": 12000
+      },
+      "dusk": {
+        "minMs": 6000,
+        "maxMs": 14000
+      },
+      "night": {
+        "minMs": 10000,
+        "maxMs": 22000
+      }
+    },
+    "note": "storm 下引擎走闪电调度（3-10s 一次），其余按 events 权重随机"
+  }
+}

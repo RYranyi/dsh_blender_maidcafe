@@ -1,0 +1,48 @@
+{
+  "three": "0.160.0",
+  "generatedBy": "tools/web/prepare-vendor.mjs",
+  "files": [
+    {
+      "dst": "three.module.js",
+      "bytes": 1272972,
+      "md5": "a762b8588c6a",
+      "skipped": true,
+      "bareThreeLeft": false
+    },
+    {
+      "dst": "OrbitControls.js",
+      "bytes": 29880,
+      "md5": "1946a49bce5b",
+      "skipped": true,
+      "bareThreeLeft": false
+    },
+    {
+      "dst": "BufferGeometryUtils.js",
+      "bytes": 31918,
+      "md5": "e6b02c76a1e9",
+      "skipped": true,
+      "bareThreeLeft": false
+    },
+    {
+      "dst": "GLTFLoader.js",
+      "bytes": 108527,
+      "md5": "271ccadb423a",
+      "skipped": true,
+      "bareThreeLeft": false
+    },
+    {
+      "dst": "RectAreaLightUniformsLib.js",
+      "bytes": 313866,
+      "md5": "875c980e0ae9",
+      "skipped": true,
+      "bareThreeLeft": false
+    },
+    {
+      "dst": "RGBELoader.js",
+      "bytes": 11389,
+      "md5": "61f2c0b29193",
+      "skipped": false,
+      "bareThreeLeft": false
+    }
+  ]
+}
