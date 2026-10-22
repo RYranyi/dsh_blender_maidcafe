@@ -2,7 +2,16 @@
 
 > 一间 8m × 6m 的日式女仆咖啡馆：Blender 程序化建模 + Three.js 实时网页 + 3 分钟光影介绍片。
 
-![女仆特写](renders/final/hero_maid.png)
+| 女仆特写 | 正午全景 | 黄昏 | 夜晚 |
+|:--:|:--:|:--:|:--:|
+| ![maid](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_maid.png) | ![noon](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_noon.png) | ![dusk](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_dusk.png) | ![night](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_night.png) |
+
+| 清晨 | 雨天 | 雷雨夜 | 窗外夜景 |
+|:--:|:--:|:--:|:--:|
+| ![morning](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_morning.png) | ![rain](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_rain_noon.png) | ![storm](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_storm_night.png) | ![win](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/final/hero_window_night.png) |
+
+> 上图是网页里 4 时段 × 不同天气的实际渲染截图。
+
 
 **Q 版女仆双手捧托盘（草莓蛋糕 + 咖啡），烘焙导出 21.7 MB 单文件 GLB；
 网页支持 4 档时间光照 × 6 种天气；另附 180 秒真 3D 动画介绍片（无音轨）。**
@@ -256,6 +265,10 @@ node tools/test_round2.mjs
 ## 八、视频
 
 **文件**：`renders/video/maid_cafe_lighting_180s.mp4`
+
+| 白模（线框） | 白模（实体） | 吧台 | 甜品柜 |
+|:--:|:--:|:--:|:--:|
+| ![w1](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/audit/v_ne.png) | ![w2](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/audit/v_nw.png) | ![bar](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/audit/v_bar.png) | ![disp](https://gh-proxy.com/https://raw.githubusercontent.com/RYranyi/dsh_blender_maidcafe/main/renders/audit/v_display.png) |
 
 | 项 | 值 |
 |---|---|
