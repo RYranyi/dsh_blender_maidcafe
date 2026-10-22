@@ -16,10 +16,10 @@ import math
 import subprocess
 import numpy as np
 
-FFMPEG = r'E:\dsh\.tools\MinGit\cmd\ffmpeg.exe'
-FFPROBE = r'E:\dsh\.tools\MinGit\cmd\ffprobe.exe'
+FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
+FFPROBE = os.environ.get("FFPROBE", "ffprobe")
 SR = 44100
-TMP = r'E:\dsh\maid_cafe\.scratch\audio-dev\tmp'
+TMP = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".scratch", "audio-dev", "tmp")
 
 os.makedirs(TMP, exist_ok=True)
 

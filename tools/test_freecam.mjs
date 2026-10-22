@@ -96,7 +96,7 @@ globalThis.localStorage = {
 };
 
 /* ── 载入被测类 ────────────────────────────────────────────────── */
-const { FreeCam } = await import('file:///E:/dsh/maid_cafe/js/freecam.js');
+const { FreeCam } = await import(new URL('../js/freecam.js', import.meta.url).href);
 
 let pass = 0, fail = 0;
 function ok(cond, name, extra = '') {

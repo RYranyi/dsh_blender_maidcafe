@@ -23,7 +23,7 @@ import sys
 import json
 from mathutils import Vector, Matrix, Euler
 
-HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else r"E:\dsh\maid_cafe\blender"
+HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.getcwd()
 if HERE not in sys.path:
     sys.path.append(HERE)
 
@@ -837,7 +837,7 @@ def setup_engine(engine="eevee", samples=32, res=(800, 600)):
     return sc
 
 
-def selfcheck(module_name, objects, outdir=r"E:\dsh\maid_cafe\renders\modules",
+def selfcheck(module_name, objects, outdir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "renders", "modules"),
               views=None, res=(880, 660), samples=24, engine="eevee",
               ground=True, extra_setup=None):
     """模块自检：三点光 + 相机 + 渲染多视角，返回图片路径列表。

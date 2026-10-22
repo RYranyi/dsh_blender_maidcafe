@@ -8,8 +8,9 @@
  * ⑤ 开灯规则（黄昏→凌晨 / 雨 / 多云）+ 多云朦胧感加强
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/';
+const R = fileURLToPath(new URL('../', import.meta.url));
 const fc = fs.readFileSync(R + 'js/freecam.js', 'utf8');
 const scn = fs.readFileSync(R + 'js/scene.js', 'utf8');
 const wea = fs.readFileSync(R + 'js/weather.js', 'utf8');

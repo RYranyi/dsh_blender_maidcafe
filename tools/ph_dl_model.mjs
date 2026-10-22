@@ -7,8 +7,9 @@
 // Records .scratch/asset-scout/models_downloaded.json
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = "E:/dsh/maid_cafe";
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const MODELS = path.join(ROOT, "assets/models");
 const SCRATCH = path.join(ROOT, ".scratch/asset-scout");
 fs.mkdirSync(MODELS, { recursive: true });

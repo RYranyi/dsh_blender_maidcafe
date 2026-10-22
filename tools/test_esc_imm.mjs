@@ -6,8 +6,9 @@
  *   B. 按 H 下半屏全黑 → 沉浸模式必须真正全屏 + 重算 canvas 尺寸
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/';
+const R = fileURLToPath(new URL('../', import.meta.url));
 const files = {
   app: fs.readFileSync(R + 'js/app.js', 'utf8'),
   freecam: fs.readFileSync(R + 'js/freecam.js', 'utf8'),

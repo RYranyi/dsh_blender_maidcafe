@@ -1,8 +1,8 @@
 # 解压素材 zip 包并盘点内容（bundled python，避免落 %TEMP%）
 import os, sys, zipfile, json
 
-DL = r'E:\dsh\maid_cafe\.scratch\audio-dev\dl'
-RAW = r'E:\dsh\maid_cafe\.scratch\audio-dev\raw'
+DL = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".scratch", "audio-dev", "dl")
+RAW = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".scratch", "audio-dev", "raw")
 os.makedirs(RAW, exist_ok=True)
 
 AUDIO_EXT = ('.wav', '.ogg', '.mp3', '.flac', '.m4a', '.aiff', '.aif')
@@ -45,6 +45,6 @@ for name in sorted(os.listdir(DL)):
     except Exception as ex:
         print(f'\n### {stem} EXTRACT FAIL: {ex}')
 
-with open(r'E:\dsh\maid_cafe\.scratch\audio-dev\pack_inventory.json', 'w', encoding='utf-8') as f:
+with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".scratch", "audio-dev", "pack_inventory.json"), 'w', encoding='utf-8') as f:
     json.dump(report, f, ensure_ascii=False, indent=2)
 print('\nTOTAL audio files:', sum(v['count'] for v in report.values()))

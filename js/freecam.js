@@ -1,7 +1,7 @@
 /**
  * freecam.js —— 自由飞行视角（照搬 bedroom_scene 的成功方案）
  *
- * 设计来源：E:\dsh\bedroom_scene\website\app.js 的 fly 控制器
+ * 设计来源：<参考项目>/website/app.js 的 fly 控制器
  *   之所以不用 OrbitControls 做主控：OrbitControls 是「绕目标转」，
  *   走动时相机跟着 target 飘，手感很差。bedroom_scene 那套是
  *   「自己维护 pos/yaw/pitch/roll + 速度阻尼」，WASD 是真的往前走，

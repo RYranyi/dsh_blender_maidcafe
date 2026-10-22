@@ -1,7 +1,8 @@
 import json
+import os
 import struct
 
-P = r"E:\dsh\maid_cafe\scene\maid_cafe.glb"
+P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scene", "maid_cafe.glb")
 with open(P, "rb") as f:
     f.read(12)
     jlen, jtype = struct.unpack("<II", f.read(8))

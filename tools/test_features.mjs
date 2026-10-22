@@ -8,8 +8,9 @@
  *   D. 音乐音量与雨声音量分开控制
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/';
+const R = fileURLToPath(new URL('../', import.meta.url));
 const fc = fs.readFileSync(R + 'js/freecam.js', 'utf8');
 const app = fs.readFileSync(R + 'js/app.js', 'utf8');
 const scn = fs.readFileSync(R + 'js/scene.js', 'utf8');

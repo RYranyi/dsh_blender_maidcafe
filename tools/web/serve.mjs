@@ -1,11 +1,11 @@
 #!/usr/bin/env node
 /**
- * serve.mjs —— 零依赖静态服务器（只服务 E:\dsh\maid_cafe）。
+ * serve.mjs —— 零依赖静态服务器（只服务 <项目根>）。
  *
  * 用法：
  *   node tools/web/serve.mjs            # 自动选 7800–7899 第一个空闲端口
  *   node tools/web/serve.mjs 8080       # 指定端口
- *   node tools/web/serve.mjs --port 8080 --root E:\dsh\maid_cafe
+ *   node tools/web/serve.mjs --port 8080 --root <项目根>
  *
  * 输出一行 `READY http://127.0.0.1:<port>`（脚本化验收用）。
  * 安全：只允许 GET/HEAD，路径规范化后必须落在 root 内。

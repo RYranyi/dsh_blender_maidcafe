@@ -6,7 +6,7 @@
 ## 0. 目录与写入范围（严格不越界）
 
 ```
-E:\dsh\maid_cafe\
+<项目根>/
 ├─ CONTRACT.md              # 本文件（只读，Lead 维护）
 ├─ index.html               # web-dev
 ├─ css\style.css            # web-dev
@@ -36,7 +36,7 @@ E:\dsh\maid_cafe\
 ```
 
 **写入范围硬约束**：每人只写自己名下的文件。`.blend` 成品与 `scene_manifest.json` 只由 Lead 的 cbuild.py 产出。
-**临时目录**：一律 `<项目根>/.scratch/<任务名>/`；严禁写 `C:\Users\win10` 与 `%TEMP%`；收工前清空自己的 scratch。
+**临时目录**：一律 `<项目根>/.scratch/<任务名>/`；严禁写 `<用户目录>` 与 `%TEMP%`；收工前清空自己的 scratch。
 
 ## 1. 坐标系与空间（**硬性，不可改**）
 
@@ -153,7 +153,7 @@ def build(P, C, M, assets):
 
 ## 7. 女仆改造要求（cmaid.py，Lead）
 
-- 导入 `E:\dsh\maid_chibi\procedural_v2\chibi_maid_USER.blend` 的 68 个网格（按集合 01_Head…06_Details 保留层级），**整体缩放 1.30**，使身高 ≈1.33 m（Q 版比例，站在真人尺度咖啡馆里是「小手办大场景」的可爱感；网格 1.02 m 原高过矮）。
+- 导入 `<女仆源模型>/procedural_v2/chibi_maid_USER.blend` 的 68 个网格（按集合 01_Head…06_Details 保留层级），**整体缩放 1.30**，使身高 ≈1.33 m（Q 版比例，站在真人尺度咖啡馆里是「小手办大场景」的可爱感；网格 1.02 m 原高过矮）。
 - 减面：用 Decimate(Collapse) 把总量从 1.33M 降到 ~250k；头部/脸部/眼睛保证不被削成多边形，眼睛相关物体单独限制比值。
 - 姿态：原模型手臂下垂 → 通过绕肩点旋转左右上臂，使**双手在身前捧托盘**；如几何无法自然弯曲，采用「单手抬臂 + 托盘靠在掌上」方案，并确保袖口/裙摆无穿模。托盘（`MD_Tray`）位于双手上方 z≈0.86，直径 0.30。
 - 托盘上：`MD_Cake`（草莓小蛋糕，纸盘盛）+ `MD_Cup`（白瓷杯碟）+ `MD_Steam`（半透明蒸汽面片，网页可动画）。
@@ -162,8 +162,8 @@ def build(P, C, M, assets):
 ## 8. GLB 导出与场景清单（cbuild.py）
 
 - 导出：选中 `C_Room C_Bar C_Display C_Seating C_Decor C_Outdoor C_Maid`，`export_format='GLB'`，apply modifiers，+Y up（默认），贴图内嵌（JPEG 质量 80，法线/alpha 用 PNG），`export_lights=False`（网页自己打灯），`export_cameras=False`。
-- 目标：`E:\dsh\maid_cafe\scene\maid_cafe.glb`，**< 40 MB**，tri < 500k。
-- 同时产出 `E:\dsh\maid_cafe\scene\scene_manifest.json`：
+- 目标：`<项目根>/scene/maid_cafe.glb`，**< 40 MB**，tri < 500k。
+- 同时产出 `<项目根>/scene/scene_manifest.json`：
   ```json
   {"room":{"x":[-4,4],"y":[-3,3],"z":[0,3],"wall_t":0.16},
    "anchors":{"cam_default":{"pos":[...],"target":[...]}, "maid_pos":[...], ...},

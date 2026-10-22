@@ -22,8 +22,8 @@ if "--" in argv:
 else:
     argv = []
 
-MODELS_DIR = argv[0] if len(argv) > 0 else r"E:\dsh\maid_cafe\assets\models"
-OUT_JSON = argv[1] if len(argv) > 1 else r"E:\dsh\maid_cafe\.scratch\asset-scout\models_audit.json"
+MODELS_DIR = argv[0] if len(argv) > 0 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "models")
+OUT_JSON = argv[1] if len(argv) > 1 else os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".scratch", "asset-scout", "models_audit.json")
 BLEND_NAME_HINT = argv[2] if len(argv) > 2 else "_1k.blend"
 
 

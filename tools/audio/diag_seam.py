@@ -5,7 +5,7 @@ import numpy as np
 import dsp
 
 SR = dsp.SR
-OUT = r'E:\dsh\maid_cafe\assets\audio'
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "assets", "audio")
 
 print('=== 床层接缝：绝对跳变 vs 信号电平（真正的爆音判据）===')
 print(f'{"key":<18}{"dur":>6}{"seam_step":>12}{"seam/rms dB":>13}{"seam/peak dB":>14}{"med/p99":>12}')

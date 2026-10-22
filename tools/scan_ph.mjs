@@ -20,7 +20,7 @@ out.hdri = Object.keys(h).filter(n => /sky|sun|city|street|studio|outdoor|kloppe
 // models: furniture category
 const m = await (await fetch("https://api.polyhaven.com/assets?t=models")).json();
 out.models = Object.keys(m);
-fs.writeFileSync("E:/dsh/maid_cafe/tools/scan_polyhaven.json", JSON.stringify(out, null, 1));
+fs.writeFileSync(new URL("./scan_polyhaven.json", import.meta.url), JSON.stringify(out, null, 1));
 console.log("total textures", out.polyhaven_total, "models", out.models.length, "hdris-sample", out.hdri.length);
 for (const k of ["marble", "metal", "glass", "ceramic", "lace", "leather"]) console.log(k, "->", out.matches[k].slice(0, 25).join(", "));
 console.log("MODELS:", out.models.join(", "));

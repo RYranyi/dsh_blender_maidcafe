@@ -1,6 +1,6 @@
 import fs from "node:fs";
 
-const buf = fs.readFileSync("E:/dsh/maid_cafe/scene/maid_cafe.glb");
+const buf = fs.readFileSync(new URL("../scene/maid_cafe.glb", import.meta.url));
 const jsonLen = buf.readUInt32LE(12);
 const j = JSON.parse(buf.slice(20, 20 + jsonLen).toString("utf8"));
 // binary chunk header: 8 bytes (length, type) after JSON chunk

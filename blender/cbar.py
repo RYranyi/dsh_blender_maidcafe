@@ -9,7 +9,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals()
-                else r"E:\dsh\maid_cafe\blender")
+                else os.getcwd())
 import ccore as C
 import cprop as P
 import cmat as MAT
@@ -531,7 +531,7 @@ def _register(M_, COL, assets):
         import cassets as A
     except Exception:
         import sys
-        sys.path.insert(0, r"E:\dsh\maid_cafe\blender")
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         import cassets as A
     reg = P.REGISTER
     cx = (reg["x"][0] + reg["x"][1]) / 2

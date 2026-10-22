@@ -1,6 +1,6 @@
 # 日式女仆咖啡馆 · 网页端使用说明
 
-> 项目根：`E:\dsh\maid_cafe`　作者：web-dev　最后更新：2026-10-21
+> 项目根：`<项目根>`　作者：web-dev　最后更新：2026-10-21
 > 纯静态、零构建、零 CDN。Three.js 从 npm 包解出放在 `js/vendor/`。
 
 ---
@@ -10,7 +10,7 @@
 ### 1.1 最简：Python 自带 http.server
 
 ```powershell
-cd E:\dsh\maid_cafe
+cd <项目根>
 python -m http.server 7800
 # 浏览器打开 http://127.0.0.1:7800/index.html
 ```
@@ -18,9 +18,9 @@ python -m http.server 7800
 ### 1.2 推荐：项目自带零依赖静态服务器（会自动挑空闲端口，输出 READY 行）
 
 ```powershell
-E:\applications\nodejs\node.exe E:\dsh\maid_cafe\tools\web\serve.mjs
+node <项目根>/tools/web/serve.mjs
 # 输出：READY http://127.0.0.1:7800
-# 输出：ROOT  E:\dsh\maid_cafe
+# 输出：ROOT  <项目根>
 ```
 
 指定端口：`node tools/web/serve.mjs --port 8080`；详细日志：`--verbose`。
@@ -161,15 +161,15 @@ GLB 加载失败时**降级为占位场景**（墙体/吧台/圆桌/女仆胶囊
 
 ### vendor 重建
 ```powershell
-cd E:\dsh\maid_cafe\.scratch\webtools      # 任意临时目录
+cd <项目根>/.scratch/webtools      # 任意临时目录
 npm i three@0.160.0
-E:\applications\nodejs\node.exe E:\dsh\maid_cafe\tools\web\prepare-vendor.mjs
+node <项目根>/tools/web/prepare-vendor.mjs
 ```
 脚本会自检 vendor 目录里没有残留裸 `'three'` 说明符。
 
 ### GLB 体检
 ```powershell
-E:\applications\nodejs\node.exe E:\dsh\maid_cafe\tools\web\check-glb.mjs
+node <项目根>/tools/web/check-glb.mjs
 # PASS ✓ / FAIL + 逐条错误原因；--json 出机器可读结果
 ```
 

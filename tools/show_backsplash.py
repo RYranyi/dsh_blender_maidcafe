@@ -1,4 +1,6 @@
-p = r"E:\dsh\maid_cafe\blender\cbar.py"
+import os
+
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "blender", "cbar.py")
 s = open(p, encoding="utf-8").read()
 orig = s
 

@@ -10,10 +10,11 @@
      → 沥水盘整个压在水槽正上方（覆盖了水槽开口），老兄说"水龙头下面没凹槽/方块错位"就是这个。
   4) 相框：需要看 DC_Frame_0/1 的 y 中心是否等高。
 """
+import os
 import re
 
 # ── 1) 窗台小物落到底 ──────────────────────────────────────────────────
-p = r"E:\dsh\maid_cafe\blender\cdecor_extra.py"
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "blender", "cdecor_extra.py")
 s = open(p, encoding="utf-8").read()
 # 找窗台小物的位置定义
 i = s.find("Candle_Jar")

@@ -6,7 +6,7 @@ import os, sys, json, subprocess, math
 import numpy as np
 from PIL import Image, ImageDraw
 
-FFMPEG = r'E:\dsh\.tools\MinGit\cmd\ffmpeg.exe'
+FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
 
 
 def decode(path, sr=22050, start=None, dur=None):

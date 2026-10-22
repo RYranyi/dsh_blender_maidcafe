@@ -5,8 +5,9 @@
 // .scratch/asset-scout/hdris_downloaded.json
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = "E:/dsh/maid_cafe";
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const OUT = path.join(ROOT, "assets/hdri");
 const SCRATCH = path.join(ROOT, ".scratch/asset-scout");
 fs.mkdirSync(OUT, { recursive: true });

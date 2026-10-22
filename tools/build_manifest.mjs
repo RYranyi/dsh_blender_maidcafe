@@ -3,8 +3,9 @@
 // Idempotent: regenerates the file from scratch data + live file sizes.
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = "E:/dsh/maid_cafe";
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const SCRATCH = path.join(ROOT, ".scratch/asset-scout");
 const ASSETS = path.join(ROOT, "assets");
 

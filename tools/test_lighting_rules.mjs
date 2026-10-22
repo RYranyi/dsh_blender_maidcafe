@@ -12,11 +12,12 @@
  * 用到的只是 THREE.Color / Color.lerp 等纯数学，Node 里可以直接跑。
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/';
+const R = fileURLToPath(new URL('../', import.meta.url));
 let mod;
 try {
-  mod = await import('file:///E:/dsh/maid_cafe/js/weather.js');
+  mod = await import(new URL('../js/weather.js', import.meta.url).href);
 } catch (e) {
   console.log('无法直接 import weather.js:', e.message);
   console.log('（three.module.js 依赖浏览器环境时跳过本测试）');

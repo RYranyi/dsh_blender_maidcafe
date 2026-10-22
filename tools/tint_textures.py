@@ -3,7 +3,7 @@ import os
 import sys
 from PIL import Image, ImageEnhance
 
-TEX = r"E:\dsh\maid_cafe\assets\tex"
+TEX = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "tex")
 OUT = os.path.join(TEX, "tinted")
 os.makedirs(OUT, exist_ok=True)
 

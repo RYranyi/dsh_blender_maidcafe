@@ -13,7 +13,7 @@ import os
 import json
 import datetime
 
-ROOT = r'E:\dsh\maid_cafe'
+ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 SCENE = os.path.join(ROOT, 'scene', 'maid_cafe.blend')
 MODULES = ['cprop.py', 'ccore.py', 'cmat.py', 'croom.py', 'cbar.py', 'cdisplay.py',
            'cseating.py', 'cdecor.py', 'coutdoor.py', 'clight.py', 'cmaid.py',

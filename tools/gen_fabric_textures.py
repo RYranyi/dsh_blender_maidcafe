@@ -6,7 +6,7 @@ import os
 import math
 from PIL import Image, ImageDraw, ImageFilter
 
-OUT = r"E:\dsh\maid_cafe\assets\tex\generated"
+OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "tex", "generated")
 os.makedirs(OUT, exist_ok=True)
 S = 512
 

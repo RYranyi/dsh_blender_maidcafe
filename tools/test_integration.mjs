@@ -8,8 +8,9 @@
  * 这类问题静态检查能提前抓到，不用等运行时报错。
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/';
+const R = fileURLToPath(new URL('../', import.meta.url));
 const app = fs.readFileSync(R + 'js/app.js', 'utf8');
 const html = fs.readFileSync(R + 'index.html', 'utf8');
 const css = fs.readFileSync(R + 'css/style.css', 'utf8');

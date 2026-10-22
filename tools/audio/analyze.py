@@ -9,7 +9,7 @@
 import os, sys, json, subprocess, glob, math
 import numpy as np
 
-FFMPEG = r'E:\dsh\.tools\MinGit\cmd\ffmpeg.exe'
+FFMPEG = os.environ.get("FFMPEG", "ffmpeg")
 SR = 44100
 
 

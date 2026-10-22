@@ -2,7 +2,7 @@
  * test_audio_engine.mjs —— 用真实浏览器（Edge via CDP）验收 audio.js
  *
  * 不依赖 playwright：用 Node 原生 WebSocket 直连 Chrome DevTools Protocol。
- * 临时 profile 强制落在 .scratch，绝不写 C:\Users\win10。
+ * 临时 profile 强制落在 .scratch，绝不写 <用户目录>。
  *
  * 验收项：
  *   1. init() 加载 manifest + 全部 buffer 成功

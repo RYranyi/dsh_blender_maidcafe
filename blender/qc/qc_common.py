@@ -37,7 +37,7 @@ def qc_dir():
     try:
         return os.path.dirname(os.path.abspath(__file__))
     except NameError:
-        return r"E:\dsh\maid_cafe\blender\qc"
+        return os.getcwd()
 
 
 def project_root(rules=None):

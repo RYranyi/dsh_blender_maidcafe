@@ -6,7 +6,7 @@ video_shots.py —— 2 分钟介绍视频的动态镜头渲染（只加相机/�
 """
 import bpy, sys, os, json, math
 from mathutils import Vector
-sys.path.insert(0, r"E:\dsh\maid_cafe\blender")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ccore as C
 import cprop as P
 import clight

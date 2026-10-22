@@ -20,7 +20,7 @@
 
 用法：
   # 主路径（推荐）：插件外部校验器
-  blender_rt_plan(op="gltf_validate", args={path:"E:/dsh/maid_cafe/scene/maid_cafe.glb"})
+  blender_rt_plan(op="gltf_validate", args={path:"<项目根>/scene/maid_cafe.glb"})
   # 本脚本（补充：给逐区块 tri、内嵌统计、accessor 合法性）
   blender_rt_headless(script_file=".../qc_gltf.py", engine="none",
                       args="--glb scene/maid_cafe.glb")

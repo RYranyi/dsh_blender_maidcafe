@@ -6,7 +6,7 @@
  */
 import fs from 'node:fs';
 
-const MAN = 'E:/dsh/maid_cafe/scene/scene_manifest.json';
+const MAN = new URL('../scene/scene_manifest.json', import.meta.url);
 const m = JSON.parse(fs.readFileSync(MAN, 'utf8'));
 const rig = m.light_rig || {};
 const phases = rig.phases || {};

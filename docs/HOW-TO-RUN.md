@@ -32,7 +32,7 @@ python serve.py
   ║   日式女仆咖啡馆 · 本地预览服务器                     ║
   ╚══════════════════════════════════════════════════════╝
 
-   根目录： E:\dsh\maid_cafe
+   根目录： <项目根>
    地址：   http://127.0.0.1:8000/index.html
 ```
 
@@ -155,3 +155,20 @@ http://127.0.0.1:8000/index.html?auto=1&time=21.5&weather=storm
 | `scene/scene_manifest.json` | 场景清单（锚点/灯光/材质名） |
 | `assets/hdri/*.hdr` | 4 张环境贴图（对应 4 档时间） |
 | `assets/audio/` | 28 条循环音频 |
+
+---
+
+## 重新生成素材（可选）
+
+`blender/` 与 `tools/` 下的脚本都按**脚本自身所在目录**推导项目根，不写死机器路径，
+所以仓库克隆到任何位置都能直接跑。唯一的外部依赖是 **ffmpeg**：
+`tools/audio/*.py` 默认调用 `PATH` 上的 `ffmpeg` / `ffprobe`，
+装在别处时用环境变量指定：
+
+```powershell
+$env:FFMPEG  = "<ffmpeg 目录>\ffmpeg.exe"
+$env:FFPROBE = "<ffmpeg 目录>\ffprobe.exe"
+```
+
+（只影响音频素材的重新生成，不影响网页运行。）
+

@@ -23,7 +23,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals()
-                else r"E:\dsh\maid_cafe\blender")
+                else os.getcwd())
 import ccore as C
 import cprop as P
 import cmat as MAT
@@ -696,7 +696,7 @@ def build(P_, C_, M_, assets):
 # ══════════════════════════════════════════════════════════════════════
 if __name__ == "__main__":
     bpy.ops.wm.read_factory_settings(use_empty=True)
-    bpy.ops.wm.open_mainfile(filepath=r"E:\dsh\maid_cafe\scene\maid_cafe.blend")
+    bpy.ops.wm.open_mainfile(filepath=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scene", "maid_cafe.blend"))
     M = MAT.palette()
     res = build(P, C, M, {})
     C.log("built", len(res["objects"]), res["tris"])

@@ -5,15 +5,15 @@
     MAID_ONLY_SHOT=hero_noon blender -b -P ...   # 只出某一张（环境变量）
 """
 import bpy, sys, os, json
-sys.path.insert(0, r"E:\dsh\maid_cafe\blender")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import ccore as C, cprop as P, clight
 
-bpy.ops.wm.open_mainfile(filepath=r"E:\dsh\maid_cafe\scene\maid_cafe.blend")
+bpy.ops.wm.open_mainfile(filepath=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scene", "maid_cafe.blend"))
 sc = bpy.context.scene
 lights = clight.build_lights()
 vol = clight.add_render_volume(0.0014)
 C.setup_engine("eevee", 48, (1600, 900))
-outdir = r"E:\dsh\maid_cafe\renders\final"
+outdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "renders", "final")
 os.makedirs(outdir, exist_ok=True)
 ONLY = os.environ.get("MAID_ONLY_SHOT", "")
 

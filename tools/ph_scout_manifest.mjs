@@ -1,11 +1,12 @@
 // Resolve the asset-scout wishlist against the live PolyHaven API.
 // usage: node ph_scout_manifest.mjs
-// Writes E:\dsh\maid_cafe\.scratch\asset-scout\resolved.json
+// Writes <项目根>/.scratch/asset-scout/resolved.json
 //   { textures:[{key,role,res,id,name,authors,categories,downloads,max_resolution}], models:[...], hdris:[...], missing:[...] }
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
-const ROOT = "E:/dsh/maid_cafe";
+const ROOT = fileURLToPath(new URL("../", import.meta.url));
 const SCRATCH = path.join(ROOT, ".scratch/asset-scout");
 fs.mkdirSync(SCRATCH, { recursive: true });
 const wish = JSON.parse(fs.readFileSync(path.join(ROOT, "tools/ph_wishlist.json"), "utf8"));

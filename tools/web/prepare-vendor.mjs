@@ -7,9 +7,9 @@
  * 为相对路径 `./three.module.js`（浏览器 ES module 没有 import map 时不能解析裸名）。
  *
  * 用法：
- *   cd E:\dsh\maid_cafe\.scratch\web\npm
- *   E:\applications\nodejs\npm.cmd i three@0.160.0
- *   E:\applications\nodejs\node.exe E:\dsh\maid_cafe\tools\web\prepare-vendor.mjs
+ *   cd <项目根>/.scratch/web/npm
+ *   npm i three@0.160.0
+ *   node <项目根>/tools/web/prepare-vendor.mjs
  *
  * 幂等：重复跑覆盖同名文件，内容一致则跳过写入。
  */

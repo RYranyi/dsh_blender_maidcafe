@@ -24,8 +24,8 @@
 
 用法
 ------------------------------------------------------------------
-  真场景：blender_rt_headless(script_file="E:/dsh/maid_cafe/blender/qc/qc_collide.py",
-                 file="E:/dsh/maid_cafe/scene/maid_cafe.blend", engine="none",
+  真场景：blender_rt_headless(script_file="<项目根>/blender/qc/qc_collide.py",
+                 file="<项目根>/scene/maid_cafe.blend", engine="none",
                  args="--scope C_Seating --tag v1")
   自测校准：args="--calib"（自建 11 个已知用例，不需要真场景）
 """

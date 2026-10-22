@@ -10,8 +10,9 @@
  *       和对应模块里实际定义的方法名做差集。
  */
 import fs from 'node:fs';
+import { fileURLToPath } from "node:url";
 
-const R = 'E:/dsh/maid_cafe/js/';
+const R = fileURLToPath(new URL('../js/', import.meta.url));
 const read = (f) => fs.readFileSync(R + f, 'utf8');
 
 const files = {
@@ -96,7 +97,7 @@ console.log('\n关键方法：');
   const app = files.app;
   ok(/function\s+bindBrightnessUI/.test(app), 'app.js 定义 bindBrightnessUI');
   ok(/bindBrightnessUI\(\);/.test(app), 'app.js 调用 bindBrightnessUI()');
-  const h = fs.readFileSync('E:/dsh/maid_cafe/index.html', 'utf8');
+  const h = fs.readFileSync(new URL('../index.html', import.meta.url), 'utf8');
   ok(/id="brightness"/.test(h), 'index.html 有 #brightness 滑条');
   ok(/id="brightness-val"/.test(h), 'index.html 有 #brightness-val 标签');
 }
@@ -104,11 +105,11 @@ console.log('\n关键方法：');
 // 曝光公式数值
 console.log('\n曝光数值（系数 0.78）：');
 {
-  const m = JSON.parse(fs.readFileSync('E:/dsh/maid_cafe/scene/scene_manifest.json', 'utf8'));
+  const m = JSON.parse(fs.readFileSync(new URL('../scene/scene_manifest.json', import.meta.url), 'utf8'));
   const ph = m.light_rig.phases;
   const clamp = (v, a, b) => (v < a ? a : v > b ? b : v);
   // 从 weather.js 里读真实系数，避免测试与实现脱节
-  const wjs = fs.readFileSync('E:/dsh/maid_cafe/js/weather.js', 'utf8');
+  const wjs = fs.readFileSync(new URL('../js/weather.js', import.meta.url), 'utf8');
   const km = wjs.match(/Math\.pow\(2, stops\) \* ([0-9.]+), ([0-9.]+), ([0-9.]+)\)/);
   const EXP_K = km ? parseFloat(km[1]) : 0.6;
   const EXP_LO = km ? parseFloat(km[2]) : 0.34;

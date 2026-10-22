@@ -25,7 +25,7 @@ import json
 import time
 import importlib
 
-HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else r"E:\dsh\maid_cafe\blender"
+HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() else os.getcwd()
 if HERE not in sys.path:
     sys.path.insert(0, HERE)
 

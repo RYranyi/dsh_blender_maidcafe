@@ -25,7 +25,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals()
-                else r"E:\dsh\maid_cafe\blender")
+                else os.getcwd())
 import ccore as C
 import cprop as P
 import cmat as MAT
@@ -766,7 +766,7 @@ if __name__ == "__main__":
     Y0, Y1 = P.DISPLAY["y"]
     cx = (X0 + X1) / 2.0
     cy = (Y0 + Y1) / 2.0
-    C.selfcheck(MODULE, res["objects"], outdir=r"E:\dsh\maid_cafe\renders\modules",
+    C.selfcheck(MODULE, res["objects"], outdir=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "renders", "modules"),
                 res=(960, 720), samples=32,
                 views=[
                     # 机位按 P.DISPLAY 动态算：Lead 调柜子位置后自检图自动跟上，

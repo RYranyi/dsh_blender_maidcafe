@@ -20,7 +20,7 @@ import sys
 from mathutils import Vector, Matrix, Euler
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals()
-                else r"E:\dsh\maid_cafe\blender")
+                else os.getcwd())
 import ccore as C
 import cprop as P
 import cmat as MAT
@@ -663,7 +663,7 @@ if __name__ == "__main__":
     res = build(P, C, M, {})
     objs = res["objects"]
     C.log("built", len(objs), res["tris"], res.get("anchors", {}).get("body_aabb"))
-    bpy.ops.wm.save_as_mainfile(filepath=r"E:\dsh\maid_cafe\scene\_maid_only.blend")
+    bpy.ops.wm.save_as_mainfile(filepath=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scene", "_maid_only.blend"))
     px, py = P.MAID_POS
     tgt = (px, py, 0.82)
     C.selfcheck(MODULE, objs, res=(900, 900), samples=32,

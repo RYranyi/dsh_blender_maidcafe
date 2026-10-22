@@ -30,7 +30,7 @@ import random
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__)) if "__file__" in globals() \
-    else r"E:\dsh\maid_cafe\blender"
+    else os.getcwd()
 if HERE not in sys.path:
     sys.path.insert(0, HERE)
 
@@ -763,7 +763,7 @@ if __name__ == "__main__":
     only = os.environ.get("MAID_SEAT_ONLY")
     only = only.split(",") if only else None
     res = build(P, C, M, {}, only=only)
-    outdir = os.environ.get("MAID_SEAT_OUT", r"E:\dsh\maid_cafe\renders\modules")
+    outdir = os.environ.get("MAID_SEAT_OUT", os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "renders", "modules"))
     t = P.TABLES[0]
     views = [
         {"name": "persp", "from": (t["x"] + 1.55, t["y"] - 1.85, 1.58),

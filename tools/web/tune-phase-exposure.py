@@ -1,6 +1,7 @@
+import os
 import re
 
-p = r"E:\dsh\maid_cafe\js\weather.js"
+p = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "js", "weather.js")
 s = open(p, encoding="utf-8").read()
 orig = s
 

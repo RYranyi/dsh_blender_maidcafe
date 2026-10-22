@@ -32,7 +32,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 # ---------------------------------------------------------------- 基础设置
 
-DEFAULT_OUT = r"E:\dsh\maid_cafe\assets\tex\generated"
+DEFAULT_OUT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "assets", "tex", "generated")
 FONT_DIR = r"C:\Windows\Fonts"
 
 FONT_FILES = {
@@ -940,7 +940,7 @@ def main(argv=None):
     ap.add_argument("--out", default=DEFAULT_OUT)
     ap.add_argument("--only", default=None, help="逗号分隔的产物名，只生成这些")
     ap.add_argument("--preview", action="store_true", help="额外写 400px 缩略图到 --preview-dir")
-    ap.add_argument("--preview-dir", default=r"E:\dsh\maid_cafe\.scratch\asset-scout\preview")
+    ap.add_argument("--preview-dir", default=os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", ".scratch", "asset-scout", "preview"))
     ap.add_argument("--force", action="store_true", help="即使已存在也重新生成")
     args = ap.parse_args(argv)
 
