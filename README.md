@@ -59,7 +59,7 @@ http://localhost:8000/
 | 文件 | 说明 |
 |---|---|
 | `assets/music/*.ogg` | **版权**：flap+frog 的商业音乐。仓库**不含**，自行购买后放入（文件名见 `docs/ASSETS-CREDITS.md`），或改 `js/audio.js` 的 `MUSIC_TRACKS` 用你自己的 |
-| `assets/models/` `assets/textures/` | 394 MB，PolyHaven CC0，可免费重下。**跑网页不需要**（GLB 已内嵌贴图），只在重新生成 Blender 场景时需要 |
+| `assets/models/` `assets/tex/` | 约 590 MB（models 495 MB + tex 95 MB），PolyHaven CC0，可免费重下。**跑网页不需要**（GLB 已内嵌贴图），只在重新生成 Blender 场景时需要 |
 
 **只有 music 缺失时网页仍能跑** —— 音乐播放器会提示「音频模块未就绪」，其余功能正常。
 
@@ -275,7 +275,7 @@ node tools/test_round2.mjs
 | 时长 | 180.00 s |
 | 分辨率 / 帧率 | 1920×1080 / 24 fps |
 | 帧数 | 4,320（真 3D 动画，非静帧推拉） |
-| 大小 | 103 MB |
+| 大小 | 61.6 MB（64,567,098 字节） |
 | 音轨 | **无**（刻意不加，音乐自配） |
 | 字幕 | 30 条中文，已烧录 |
 

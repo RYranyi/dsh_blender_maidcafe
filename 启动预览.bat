@@ -30,7 +30,7 @@ if %errorlevel%==0 (
 rem Fallback: Node.js
 where node >nul 2>nul
 if %errorlevel%==0 (
-  node "%~dp0server.js" %1
+  node "%~dp0tools\web\serve.mjs" %1
   goto :done
 )
 
@@ -38,7 +38,7 @@ echo   [ERROR] Python or Node.js not found.
 echo.
 echo   Please run one of the following (install Python or Node.js first):
 echo       python serve.py
-echo       node server.js
+echo       node tools\web\serve.mjs
 echo.
 pause
 

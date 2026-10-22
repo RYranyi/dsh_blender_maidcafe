@@ -184,6 +184,7 @@ DSH 沙箱内**直接 spawn `msedge.exe` 会 FATAL（mojo 0x5 拒绝访问）**�
 ## 6. 已验证的数字（v5 冻结版 GLB）
 
 GLB 指纹：`md5 D599BA1C0CE14384EA926E758F1626E7` / 15.38 MB / 391,341 tri / `GLB OK (WEBP)`。
+> 最终交付（v6）为 21.67 MB / 512,504 tri / 1,124 网格 / 148 材质，见 README。
 
 | 项目 | 值 |
 |---|---|

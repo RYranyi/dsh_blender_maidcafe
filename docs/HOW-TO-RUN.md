@@ -54,7 +54,7 @@ python serve.py --no-browser
 
 ```powershell
 cd <项目目录>
-node server.js 8000
+node tools/web/serve.mjs 8000
 ```
 
 然后访问 `http://127.0.0.1:8000/index.html`
@@ -149,12 +149,12 @@ http://127.0.0.1:8000/index.html?auto=1&time=21.5&weather=storm
 |---|---|
 | `启动预览.bat` | Windows 一键启动（双击即可） |
 | `serve.py` | Python 静态服务器（零依赖，推荐） |
-| `server.js` | Node.js 静态服务器（备选） |
+| `tools/web/serve.mjs` | Node.js 静态服务器（备选，零依赖） |
 | `index.html` | 网页入口 |
-| `scene/maid_cafe.glb` | 3D 模型（16.7 MB，单文件） |
+| `scene/maid_cafe.glb` | 3D 模型（21.67 MB，单文件） |
 | `scene/scene_manifest.json` | 场景清单（锚点/灯光/材质名） |
-| `assets/hdri/*.hdr` | 4 张环境贴图（对应 4 档时间） |
-| `assets/audio/` | 28 条循环音频 |
+| `assets/hdri/*.hdr` | 环境贴图：4 档时间各 1 张 |
+| `assets/audio/` | 雨声循环（`amb_rain_med.ogg`）；雷电是画面闪 + 雨声加重，无独立雷声样本 |
 
 ---
 
