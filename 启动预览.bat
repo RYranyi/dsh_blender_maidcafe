@@ -1,42 +1,42 @@
 @echo off
 cd /d "%~dp0"
-title 日式女仆咖啡馆 - 本地预览
+title Maid Cafe - Local Preview
 echo.
 echo ==================================================
-echo    日式女仆咖啡馆 - 本地预览服务器
+echo    Maid Cafe - Local Preview Server
 echo ==================================================
 echo.
-echo   index.html 使用 ES module + fetch 加载 3D 模型，
-echo   浏览器的 file:// 协议会拒绝这些请求（CORS），
-echo   所以必须通过本地 HTTP 服务器打开。
+echo   index.html uses ES module + fetch to load the 3D model.
+echo   The file:// protocol will be blocked by CORS,
+echo   so a local HTTP server is required.
 echo.
-echo   正在启动...
+echo   Starting...
 echo.
 
-rem 优先用 Python（本项目路径已配好）
+rem Prefer Python
 where python >nul 2>nul
 if %errorlevel%==0 (
   python "%~dp0serve.py" %1
   goto :done
 )
 
-rem 退回 py launcher
+rem Fallback: py launcher
 where py >nul 2>nul
 if %errorlevel%==0 (
   py "%~dp0serve.py" %1
   goto :done
 )
 
-rem 退回 Node
+rem Fallback: Node.js
 where node >nul 2>nul
 if %errorlevel%==0 (
   node "%~dp0server.js" %1
   goto :done
 )
 
-echo   [错误] 没找到 Python 或 Node.js。
+echo   [ERROR] Python or Node.js not found.
 echo.
-echo   请手动执行以下任一命令（需先安装 Python 或 Node.js）：
+echo   Please run one of the following (install Python or Node.js first):
 echo       python serve.py
 echo       node server.js
 echo.
